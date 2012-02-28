@@ -14,7 +14,7 @@ syntax on
 set background=dark
 
 " solarized color scheme
-" colorscheme solarized
+colorscheme solarized
 
 " set hlsearch
 " set ignorecase
