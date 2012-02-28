@@ -13,8 +13,9 @@ let mapleader = ","
 syntax on
 set background=dark
 
-" solarized color scheme
-colorscheme solarized
+" color scheme
+" colorscheme solarized
+" colorscheme wombat
 
 " set hlsearch
 " set ignorecase
