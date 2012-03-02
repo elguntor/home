@@ -15,7 +15,9 @@ set background=dark
 
 " color scheme
 " colorscheme solarized
-" colorscheme wombat
+" colorscheme koehler
+" colorscheme torte
+colorscheme emacs
 
 " set hlsearch
 " set ignorecase
