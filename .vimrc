@@ -24,8 +24,8 @@ colorscheme emacs
 set number
 filetype plugin indent on
 
-" make Y behave like other capitals, yank to end of line
-map Y y$
+" remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
 " convert spaces to tabs and vice-versa
 set ts=8
@@ -33,13 +33,13 @@ set ts=8
 :command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
 
 " map terminal to Control-b
-nmap <silent> <C-B> :ConqueTerm bash<CR>
+" nmap <silent> <C-B> :ConqueTerm bash<CR>
 
 " NERDtree plugin
-nmap <silent> <C-N> :NERDTreeToggle<CR>
+nmap <silent> <C-n> :NERDTreeToggle<CR>
 
-" remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+" make Y behave like other capitals, yank to end of line
+map Y y$
 
 " Map ,e and ,v to open files in the same directory as the current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
