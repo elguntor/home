@@ -1,0 +1,14 @@
+mysql.config.class=com.stokgrok.dataapi.conf.MySQLConfig
+mysql.user=root
+mysql.password=foobar
+mysql.host=localhost
+mysql.port=3306
+mysql.min_connections=10
+mysql.max_connections=512
+mysql.connection_timeout=60000
+
+couchdb.config.class=com.stokgrok.dataapi.conf.CouchDBConfig
+couchdb.user=user
+couchdb.password=password
+couchdb.host=host
+couchdb.port=5984

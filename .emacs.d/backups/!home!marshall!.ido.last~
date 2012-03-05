@@ -1,0 +1,47 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/marshall/src/stokgrok/data-api/" . "conf/")
+ ("/home/marshall/Calibre_Library/Alan Harris/" . "Sinatra_ Up and Running (2)/")
+ ("/home/marshall/Calibre_Library/" . "Alan Harris/")
+ ("/home/marshall/" . "Calibre_Library/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/marshall/src/stokgrok/data-api/test/"
+ "/home/marshall/src/stokgrok/data-api/conf/"
+ "/home/marshall/"
+ "/home/marshall/Calibre_Library/Alan Harris/Sinatra_ Up and Running (2)/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "data-api.properties"
+ "stokgrok_dao_spec.rb"
+ "my_emacs.rb"
+ ".emacs"
+ "foo.txt"
+ "Sinatra_ Up and Running - Alan Harris.epub"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/marshall/src/stokgrok/data-api/test/" (20223 45586) "stokgrok_dao_spec.rb" "apa_util_spec.rb" "calendar_util.rb" "configuration_spec.rb" "mysql_config_spec.rb" "data_api_test_common.rb" "./" "data-api.properties" "../" "data_api_guice_module_spec.rb" "couchdb_config_spec.rb" "date_util_spec.rb")
+
+ ("/home/marshall/src/stokgrok/data-api/conf/" (20222 33015) "./" "data-api.properties" "../")
+
+ ("/home/marshall/src/stokgrok/data-api/" (20222 30373) "Rakefile" "build/" ".classpath" ".project" "conf/" "test/" "./" "../" "src/")
+
+ ("/home/marshall/" (20221 16603) ".bash_logout" "workspace/" ".gconf/" ".m2/" "downloads/" ".dmrc" ".sudo_as_admin_successful" ".pulse/" ".recently-used" ".gem/" ".profile" ".thunderbird/" ".dropbox-dist-new/" ".dropbox-dist/" ".bashrc" "Dropbox/" ".ICEauthority" ".gtkrc-2.0-kde4" ".vim/" ".kde/" ".cache/" "docs/" ".nvidia-settings-rc" ".FBReader/" ".pki/" ".bzr.log" "Ubuntu One/" ".thumbnails/" ".sbt.cache.lock" ".dia/" ".wine/" "bin/" ".viminfo" ".bash_history" ".gegl-0.0/" ".macromedia/" ".e/" ".config/" ".gnupg/" "Desktop/" ".dropbox/" ".lesshst" ".xsession-errors" ".dbus/" ".local/" ".my.cnf" ".adobe/" ".dvdcss/" ".gnome2_private/" ".fontconfig/" ".gvfs/" ".mozilla/" ".gconfd/" ".esd_auth" ".Xauthority" ".ido.last" "./" ".subversion/" "media/" ".mysql_history" ".ssh/" ".lein/" ".bashrc~" "../" ".gnome2/" "Calibre_Library/" ".kdevduchain/" ".kchmviewer/" "src/" ".vimrc" ".emacs" "bak/" ".fonts.conf" "projects/" ".bundler/" ".jline-clojure.main.history" ".swt/" ".libreoffice/" ".ivy2/" ".efreet/" ".gstreamer-0.10/" ".pulse-cookie" ".mplayer/" ".gimp-2.6/" "tmp/" ".recentf" "Desktop-1/" ".emacs.d/")
+
+ ("/home/marshall/Calibre_Library/Alan Harris/Sinatra_ Up and Running (2)/" (20190 58543) "cover.jpg" "Sinatra_ Up and Running - Alan Harris.epub" "./" "../" "metadata.opf")
+
+ ("/home/marshall/Calibre_Library/Alan Harris/" (20190 58541) "Sinatra_ Up and Running (2)/" "./" "../")
+
+ ("/home/marshall/Calibre_Library/" (20193 34593) "John Schember/" "Alan Harris/" "./" "../" "metadata.db")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -1,0 +1,47 @@
+#!/usr/bin/env rake
+#
+# Rakefile use to build the StokGrok sub-project data-api
+#
+require 'fileutils'
+require 'rspec/core/rake_task'
+require "#{ENV['STOKGROK_HOME']}/includes"
+require "#{STOKGROK_HOME}/rake_tasks"
+
+DATA_API_BUILD_DIR = "build"
+DATA_API_SRC_DIR = "src"
+
+###################
+# top level targets
+
+task :default  => :jar
+
+desc "Cleans data-api"
+task :clean do
+	FileUtils.rm_rf(Dir.glob("#{DATA_API_BUILD_DIR}/*"))
+	FileUtils.rm(SG_DATA_API_JAR_FILE) unless !File.exists?(SG_DATA_API_JAR_FILE)
+end
+
+desc "Compiles the StokGrok data-api Java code"
+javac :compile do |t|
+	Dir.glob("#{LIB_DIR}/**/*.jar").select { |jar| t.classpath << jar }
+	Dir.glob("#{LIB_DIR}/**/*.zip").select { |zip| t.classpath << zip }
+	t.classpath << SG_COMMON_JAR_FILE
+	t.sourcepath << DATA_API_SRC_DIR
+	t.dest_dir = DATA_API_BUILD_DIR
+	t.debug = false
+	t.verbose = false
+end
+
+desc "Builds the jar file #{SG_DATA_API_JAR_FILE}"
+jar :jar => :compile do |t|
+	t.jar_file = SG_DATA_API_JAR_FILE
+	t.class_dir << DATA_API_BUILD_DIR
+	t.verbose = false
+end
+
+desc "Run all rspec tests"
+	RSpec::Core::RakeTask.new(:test => :compile)  do |spec|
+	spec.pattern = 'test/**/*_spec.rb'
+	spec.rspec_opts = ['-c -fd']
+end
+

@@ -1,0 +1,19 @@
+
+;; ----- smex-history -----
+(
+ linum-mode
+ replace-string
+ package-list-packages
+ longlines-mode
+ cd
+ 5x5
+ arp
+)
+
+;; ----- smex-data -----
+(
+ (longlines-mode . 1)
+ (linum-mode . 6)
+ (package-list-packages . 2)
+ (replace-string . 2)
+)
