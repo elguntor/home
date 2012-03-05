@@ -74,14 +74,14 @@ nmap <C-Left> <C-W><<C-W><
 nmap <C-Right> <C-W>><C-W>>
 
 " tab for auto completion
-function! SuperTab()
-	if (strpart(getline('.'),col('.')-2,1)=~'^\W\?$')
-		return "\<Tab>"
-	else
-		return "\<C-n>"
-	endif
-endfunction
-imap <Tab> <C-R>=SuperTab()<CR>
+" function! SuperTab()
+" 	if (strpart(getline('.'),col('.')-2,1)=~'^\W\?$')
+" 		return "\<Tab>"
+" 	else
+" 		return "\<C-n>"
+" 	endif
+" endfunction
+" imap <Tab> <C-R>=SuperTab()<CR>
 
 " status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]

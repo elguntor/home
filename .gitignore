@@ -78,3 +78,4 @@ projects/
 src/
 tmp/
 workspace/
+.vim/.netrwhist
