@@ -87,6 +87,13 @@ nmap <C-Right> <C-W>><C-W>>
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 set laststatus=2
 
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\.git$\|\.svn$',
+\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$',
+\ }
+
 "VimClojure
 "let vimfiles=$HOME . "/.vim"
 "let classpath = join(

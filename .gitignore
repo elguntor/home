@@ -79,3 +79,12 @@ src/
 tmp/
 workspace/
 .vim/.netrwhist
+.cola
+.eclim/
+.eclipse/
+.erlang.cookie
+.face.icon
+.fctsslvpnhistory
+.gitk
+.java/
+.lein/
