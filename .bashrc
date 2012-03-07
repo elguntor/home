@@ -91,7 +91,7 @@ export PATH="$PATH:/usr/local/jruby-1.6.7/bin"
 export JRUBY_OPTS=--1.9
 
 # stokgrok
-export STOKGROK_HOME=/home/mgunter/src/stokgrok
+export STOKGROK_HOME=/home/marshall/src/stokgrok
 
 # intellij
 export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
