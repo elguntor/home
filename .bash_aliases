@@ -33,6 +33,7 @@ alias clj='clj-env-dir'
 
 # git
 alias gb='git branch'
+alias gc='git commit'
 alias gco='git checkout'
 alias gm='git merge'
 alias gp='git pull'

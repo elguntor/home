@@ -10,7 +10,7 @@
 ;; remap the Meta key to control-x control-m
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 ;; remap backward kill word
-(global-set-key "\C-w" 'backward-kill-word)
+;; (global-set-key "\C-w" 'backward-kill-word)
 ;; remap kill region
 (global-set-key "\C-x\C-k" 'kill-region)
 ;; set the default indentation to tabs

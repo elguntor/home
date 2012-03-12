@@ -1,3 +1,5 @@
+.emacs.d/auto-save-list/*
+.emacs.d/places
 .FBReader/
 .ICEauthority
 .IdeaIC11/
