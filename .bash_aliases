@@ -34,5 +34,7 @@ alias clj='clj-env-dir'
 # git
 alias gb='git branch'
 alias gco='git checkout'
+alias gm='git merge'
 alias gp='git pull'
+alias gpo='git push origin'
 alias gs='git status'
