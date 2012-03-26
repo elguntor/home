@@ -35,9 +35,6 @@ set ts=8
 " map terminal to Control-b
 " nmap <silent> <C-B> :ConqueTerm bash<CR>
 
-" NERDtree plugin
-nmap <silent> <C-n> :NERDTreeToggle<CR>
-
 " make Y behave like other capitals, yank to end of line
 map Y y$
 
@@ -73,16 +70,6 @@ nmap <C-Down> <C-W>+<C-W>+
 nmap <C-Left> <C-W><<C-W><
 nmap <C-Right> <C-W>><C-W>>
 
-" tab for auto completion
-" function! SuperTab()
-" 	if (strpart(getline('.'),col('.')-2,1)=~'^\W\?$')
-" 		return "\<Tab>"
-" 	else
-" 		return "\<C-n>"
-" 	endif
-" endfunction
-" imap <Tab> <C-R>=SuperTab()<CR>
-
 " status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 set laststatus=2
@@ -93,6 +80,25 @@ let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|\.svn$',
 \ 'file': '\.class$|\.exe$\|\.so$\|\.dll$',
 \ }
+
+" absolute / relative line numbers
+function! NumberToggle()
+	if(&relativenumber ==1)
+		set number
+	else
+		set relativenumber
+	endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" set absolute numbers when vim loses focus
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+" set absolute numbers when in insert mode
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 "VimClojure
 "let vimfiles=$HOME . "/.vim"
