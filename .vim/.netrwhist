@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/marshall/media'
 let g:netrw_dirhist_2='/home/marshall/src/stokgrok/data-api/src/com/stokgrok/dataapi/conf'
 let g:netrw_dirhist_3='/home/marshall/src/stokgrok/price-server/test'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/marshall/src/stokgrok/message-server'
 let g:netrw_dirhist_6='../../var/log/couchdb'
 let g:netrw_dirhist_7='/usr/local/var/log/couchdb'
 let g:netrw_dirhist_8='/etc/network/if-up.d'
+let g:netrw_dirhist_9='/home/marshall/src/stokgrok/scripts/test'

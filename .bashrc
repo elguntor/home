@@ -92,6 +92,7 @@ export JRUBY_OPTS=--1.9
 
 # stokgrok
 export STOKGROK_HOME=/home/marshall/src/stokgrok
+export NLP_HOME=/home/marshall/src/stokgrok/nlp
 
 # intellij
 export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
