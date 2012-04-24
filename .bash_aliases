@@ -39,3 +39,10 @@ alias gm='git merge'
 alias gp='git pull'
 alias gpo='git push origin'
 alias gs='git status'
+
+# shh
+alias sshb='ssh mgunter@backtest.isentium.net'
+alias sshp1='ssh mgunter@prod01.isentium.net'
+alias sshp2='ssh mgunter@prod02.isentium.net'
+alias sshs='ssh mgunter@staging.isentium.net'
+alias sshi='ssh mgunter@itny.isentium.net'

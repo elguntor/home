@@ -88,3 +88,4 @@ workspace/
 .gitk
 .java/
 .lein/
+.vim/.netrwhist
