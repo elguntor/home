@@ -100,3 +100,10 @@ workspace/
 .selected_editor
 .visualvm/
 VirtualBox VMs/
+.compiz/
+.face
+.goutputstream-J0DAFW
+.gtk-bookmarks
+.mission-control/
+.pam_environment
+.xsession-errors.old
