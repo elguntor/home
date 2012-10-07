@@ -89,3 +89,14 @@ workspace/
 .java/
 .lein/
 .vim/.netrwhist
+.VirtualBox/
+.gtkrc-2.0
+.hwid
+.icedtea/
+.nbprofiler/
+.netbeans/
+.nv/
+.rnd
+.selected_editor
+.visualvm/
+VirtualBox VMs/

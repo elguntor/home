@@ -17,12 +17,17 @@ set background=dark
 " colorscheme solarized
 " colorscheme koehler
 " colorscheme torte
-colorscheme emacs
+" colorscheme emacs
+colorscheme Tomorrow
+" colorscheme Tomorrow-Night
 
 " set hlsearch
 " set ignorecase
 set number
 filetype plugin indent on
+
+" ctags
+set tags="$STOKGROK_HOME/tags/tags"
 
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e

@@ -46,3 +46,10 @@ alias sshp1='ssh mgunter@prod01.isentium.net'
 alias sshp2='ssh mgunter@prod02.isentium.net'
 alias sshs='ssh mgunter@staging.isentium.net'
 alias sshi='ssh mgunter@itny.isentium.net'
+
+# find
+alias fir='find -name "*.rb" | xargs grep'
+alias fij='find -name "*.java" | xargs grep'
+
+# netstat
+alias ng='sudo netstat -pant | grep'

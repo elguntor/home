@@ -4,8 +4,13 @@
 	ci = commit
 	br = branch
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	meld = /home/mgunter/bin/git-meld.pl
 [user]
 	name = Marshall Gunter
 	email = mgunter@isentium.com
 [core]
 	editor = vim
+[color]
+	ui = true
+[diff]
+	external = /home/mgunter/bin/git-diff.sh
