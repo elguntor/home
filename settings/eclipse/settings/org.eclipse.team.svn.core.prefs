@@ -1,5 +1,0 @@
-#Fri Oct 07 11:26:57 EDT 2011
-eclipse.preferences.version=1
-externalMigrateFromAuthorizationDatabase/isMigrated=true
-repositories/00f0e77ef8f000101b41f39b17bb35e2=00f0e77ef8f000101b41f39b17bb35e2;svn+ssh\://isserver/data/svnrepo/stokgrok/trunk;stokgrok;branches;tags;trunk;true;6c3bf90d-e5f4-42b0-8b72-ffb82016a7c7;svn+ssh\://isserver/data/svnrepo/stokgrok;;false;;;0
-migrateFromAuthorizationDatabase/isMigrated=true
