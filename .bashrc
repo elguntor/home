@@ -103,3 +103,9 @@ export GOBIN="$GOROOT/bin"
 export GOARCH="amd64"
 export GOOS="linux"
 export PATH="$PATH:$GOBIN"
+
+# vi bash
+set -o vi
+
+# MySQL prompt
+export MYSQL_PS1=:\\d@\\h> "
