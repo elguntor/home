@@ -108,4 +108,4 @@ export PATH="$PATH:$GOBIN"
 set -o vi
 
 # MySQL prompt
-export MYSQL_PS1=:\\d@\\h> "
+#export MYSQL_PS1=":\\d@\\h> "
