@@ -13,4 +13,4 @@
 [color]
 	ui = true
 [diff]
-	external = /home/mgunter/bin/git-diff.sh
+	external = /home/marshall/bin/git_diff.sh

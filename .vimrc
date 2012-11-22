@@ -1,10 +1,21 @@
 " pathogen
-call pathogen#infect()
-filetype off " On some Linux systems, this is necessary to make sure pathogen
-             " picks up ftdetect directories in plugins! :(
+set nocompatible
+filetype off
 
-" Load plugins from .vim/bundles using .vim/autoload/pathogen.vim
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" load Vundle...required
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'tpope/vim-fugitive'
+Bundle 'Conque-Shell'
+Bundle 'ctrlp.vim'
+Bundle 'Go-Syntax'
+Bundle 'Haml'
+Bundle 'vim-scala'
+Bundle 'Lokaltog/vim-easymotion'
 
 " change leader to ,
 let mapleader = ","
@@ -14,17 +25,12 @@ syntax on
 set background=dark
 
 " color scheme
-" colorscheme solarized
-" colorscheme koehler
-" colorscheme torte
-" colorscheme emacs
 colorscheme Tomorrow
-" colorscheme Tomorrow-Night
 
 " set hlsearch
 " set ignorecase
 set number
-filetype plugin indent on
+filetype plugin indent on " required by Vundle
 
 " ctags
 set tags="$STOKGROK_HOME/tags/tags"
@@ -36,9 +42,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set ts=8
 :command! -range=% -nargs=0 Tab2Space execute '<line1>,<line2>s#^\t\+#\=repeat(" ", len(submatch(0))*' . &ts . ')'
 :command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
-
-" map terminal to Control-b
-" nmap <silent> <C-B> :ConqueTerm bash<CR>
 
 " make Y behave like other capitals, yank to end of line
 map Y y$
@@ -104,27 +107,3 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " set absolute numbers when in insert mode
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-
-"VimClojure
-"let vimfiles=$HOME . "/.vim"
-"let classpath = join(
-"	\ [".",
-"	\ "classes",
-"	\  "lib/*",
-"	\  "/usr/local/lib/java",
-"	\  "/usr/local/lib",
-"	\  $HOME . "/.vim/lib/*",
-"	\ ], ":")
-"
-"let vimclojureRoot = $HOME . "/.vim/bundle/vimclojure-2.3.0"
-"let vimclojure#HighlightBuiltins=1
-"let vimclojure#HighlightContrib=1
-"let vimclojure#DynamicHighlighting=1
-"let vimclojure#ParenRainbow=1
-"let vimclojure#NailgunClient = vimclojureRoot."/lib/vimclojure-nailgun-client/ng"
-"let vimclojure#WantNailgun=1
-
-" Start vimclojure nailgun server (uses screen.vim to manage lifetime)
-" nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . ":" . vimclojureRoot . "/lib/*" . "vimclojure.nailgun.NGServer 127.0.0.1" <cr>
-" Start a generic Clojure repl (uses screen.vim)
-" nmap <silent> <Leader>sC :execute "ScreenShell java -cp \"" . classpath . "\" clojure.main" <cr>

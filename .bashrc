@@ -86,9 +86,9 @@ export CLOJURE_OPTS="-server"
 # leiningen
 export PATH="$PATH:/usr/local/leiningen/bin"
 
-# jruby
-export PATH="$PATH:/usr/local/jruby-1.6.7/bin"
-export JRUBY_OPTS=--1.9
+# jruby # this is set in /etc/profile.d/isentium-env.sh
+#export PATH="$PATH:/usr/local/jruby-1.6.7/bin"
+#export JRUBY_OPTS=--1.9
 
 # stokgrok
 export STOKGROK_HOME="$HOME/src/stokgrok"
@@ -109,3 +109,14 @@ set -o vi
 
 # MySQL prompt
 #export MYSQL_PS1=":\\d@\\h> "
+
+# creating a C REPL
+go_libs="-lm"
+go_flags="-g -Wall -include allheads.h -O3"
+alias go_c="clang -xc '-' $go_libs $go_flags"
+
+# Using a the C REPL...use a here document
+# go_c << '---'
+# int main(){printf("Hello\n");}
+# ---
+# ./a.out
