@@ -37,6 +37,7 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gm='git merge'
 alias gp='git pull'
+alias gpf='git pull;git fetch --tags'
 alias gpo='git push origin'
 alias gs='git status'
 

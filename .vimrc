@@ -1,4 +1,4 @@
-" pathogen
+" Vundle
 set nocompatible
 filetype off
 
@@ -14,6 +14,7 @@ Bundle 'Conque-Shell'
 Bundle 'ctrlp.vim'
 Bundle 'Go-Syntax'
 Bundle 'Haml'
+Bundle 'AutoClose'
 Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 
