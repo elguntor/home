@@ -3,7 +3,7 @@
 	co = checkout
 	ci = commit
 	br = branch
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --pretty=format:'%Cred%h %Cgreen%cd%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short
 	meld = /home/mgunter/bin/git-meld.pl
 [user]
 	name = Marshall Gunter
@@ -13,4 +13,4 @@
 [color]
 	ui = true
 [diff]
-	external = ~/bin/git_diff.sh
+	#external = ~/bin/git_diff.sh
