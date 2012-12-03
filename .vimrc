@@ -80,12 +80,14 @@ Bundle 'gmarik/vundle'
 
 " Bundles
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'Conque-Shell'
 Bundle 'ctrlp.vim'
 Bundle 'Go-Syntax'
 Bundle 'Haml'
 Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tGpg'
 
 filetype plugin indent on " required by Vundle
 

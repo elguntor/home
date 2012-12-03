@@ -107,6 +107,9 @@ export PATH="$PATH:$GOBIN"
 # vi bash
 set -o vi
 
+# gpg tty
+export GPG_TTY=`tty`
+
 # MySQL prompt
 #export MYSQL_PS1=":\\d@\\h> "
 
@@ -115,7 +118,7 @@ go_libs="-lm"
 go_flags="-g -Wall -include allheads.h -O3"
 alias go_c="clang -xc '-' $go_libs $go_flags"
 
-# Using a the C REPL...use a here document
+# Using the C REPL...use a here document
 # go_c << '---'
 # int main(){printf("Hello\n");}
 # ---
