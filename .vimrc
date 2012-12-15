@@ -34,6 +34,13 @@ set cinkeys-=0#
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
+
+" JsBeautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " }}}
 
 " Visual "{{{
@@ -88,6 +95,7 @@ Bundle 'Haml'
 Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tGpg'
+Bundle 'vim-jsbeautify'
 
 filetype plugin indent on " required by Vundle
 
