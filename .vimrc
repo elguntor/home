@@ -94,8 +94,8 @@ Bundle 'Go-Syntax'
 Bundle 'Haml'
 Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tGpg'
 Bundle 'vim-jsbeautify'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on " required by Vundle
 
