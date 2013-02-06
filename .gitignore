@@ -42,6 +42,7 @@
 .gitk
 .gnome2/
 .gnupg/
+.goutputstream*
 .goutputstream-J0DAFW
 .gstreamer-0.10/
 .gtk-bookmarks
@@ -50,6 +51,7 @@
 .hwid
 .icedtea/
 .ido.last
+.irb_history
 .irbrc
 .ivy2/
 .java/
@@ -95,6 +97,7 @@
 .thunderbird/
 .vim/.netrwhist
 .vim/.netrwhist
+.vim/bundle/vundle/.netrwhist
 .viminfo
 .visualvm/
 .wine/

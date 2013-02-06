@@ -28,9 +28,6 @@ alias emacs='emacs -nw'
 # rspec
 alias rs='rspec -fd -c --backtrace'
 
-# clojure
-alias clj='clj-env-dir'
-
 # git
 alias gb='git branch'
 alias gc='git commit'
@@ -47,7 +44,6 @@ alias sshi='ssh mgunter@itny.isentium.net'
 alias sshp1='ssh mgunter@prod01.isentium.net'
 alias sshp2='ssh mgunter@prod02.isentium.net'
 alias sshs='ssh mgunter@staging.isentium.net'
-alias sshi='ssh mgunter@itny.isentium.net'
 alias sshw='ssh mgunter@werewolf'
 
 # find
@@ -56,3 +52,7 @@ alias fij='find -name "*.java" | xargs grep'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
+
+# moving
+alias cdsg='cd $STOKGROK_HOME'
+alias cdnlp='cd $NLP_HOME'

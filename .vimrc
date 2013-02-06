@@ -1,8 +1,10 @@
 " General "{{{
 set nocompatible			" be iMproved
 
-set tags=./tags;$HOME			" walk directory tree upwards to $HOME looking for tags
+"set tags=./tags;$HOME			" walk directory tree upwards to $HOME looking for tags
+set tags=$STOKGROK_HOME/tags/tags
 
+set nobackup                            " do not back up files every time you :w, faster writes
 " set hlsearch				" highlight search
 set ignorecase				" case insensitive searching
 set smartcase				" unless the search contains a capital letter
@@ -35,12 +37,13 @@ set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do
 set cinwords+=for,switch,case
 
+" TODO map these to something besides ctrl-f
 " JsBeautify
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+" autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " }}}
 
 " Visual "{{{
@@ -96,6 +99,8 @@ Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
+Bundle 'taglist-plus'
+Bundle 'VimClojure'
 
 filetype plugin indent on " required by Vundle
 
@@ -117,8 +122,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-
-
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = {
@@ -138,9 +141,9 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
 " set absolute numbers when vim loses focus
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
 
 " set absolute numbers when in insert mode
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+"autocmd InsertEnter * :set number
+"autocmd InsertLeave * :set relativenumber

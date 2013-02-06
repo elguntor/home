@@ -92,7 +92,7 @@ export PATH="$PATH:/usr/local/leiningen/bin"
 
 # stokgrok
 export STOKGROK_HOME="$HOME/src/stokgrok"
-export NLP_HOME="$HOME/src/stokgrok/nlp"
+export NLP_HOME="$STOKGROK_HOME/nlp"
 
 # intellij
 export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
@@ -103,6 +103,10 @@ export GOBIN="$GOROOT/bin"
 export GOARCH="amd64"
 export GOOS="linux"
 export PATH="$PATH:$GOBIN"
+
+# storm
+export STORM_HOME="/usr/local/storm-0.8.2"
+export PATH="$PATH:$STORM_HOME/bin"
 
 # vi bash
 set -o vi
