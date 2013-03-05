@@ -3,7 +3,7 @@
 	co = checkout
 	ci = commit
 	br = branch
-	lg = log --pretty=format:'%Cred%h %Cgreen%cd%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --graph --abbrev-commit --date=short
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	meld = /home/mgunter/bin/git-meld.pl
 [user]
 	name = Marshall Gunter
