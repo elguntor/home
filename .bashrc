@@ -86,10 +86,6 @@ export CLOJURE_OPTS="-server"
 # leiningen
 export PATH="$PATH:/usr/local/leiningen/bin"
 
-# jruby # this is set in /etc/profile.d/isentium-env.sh
-#export PATH="$PATH:/usr/local/jruby-1.6.7/bin"
-#export JRUBY_OPTS=--1.9
-
 # stokgrok
 export STOKGROK_HOME="$HOME/src/stokgrok"
 export NLP_HOME="$STOKGROK_HOME/nlp"

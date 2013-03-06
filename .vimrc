@@ -66,8 +66,7 @@ set laststatus=2			" always show status line
 " make sure splits have at least a height of 5 lines
 " set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
-" we set winheight to be huge before winminheight, the winminheight set will
-" fail.
+" we set winheight to be huge before winminheight, the winminheight set will fail.
 " set winheight=5
 " set winminheight=5
 " set winheight=999
@@ -94,12 +93,14 @@ Bundle 'tpope/vim-surround'
 Bundle 'Conque-Shell'
 Bundle 'ctrlp.vim'
 Bundle 'Go-Syntax'
-Bundle 'Haml'
+Bundle 'haml.zip'
 Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
 Bundle 'VimClojure'
+Bundle 'RubySinatra'
+Bundle 'ruby.vim'
 
 filetype plugin indent on " required by Vundle
 
@@ -139,6 +140,15 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
+function! RubyToggle()
+	if(&expandtab ==0)
+		setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+	else
+		setlocal ts=8 softtabstop=8 shiftwidth=8 noexpandtab
+	endif
+endfunc
+
+nnoremap <C-r> :call RubyToggle()<cr>
 " set absolute numbers when vim loses focus
 ":au FocusLost * :set number
 ":au FocusGained * :set relativenumber
