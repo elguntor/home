@@ -99,7 +99,6 @@ Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
-Bundle 'taglist-plus'
 Bundle 'VimClojure'
 
 filetype plugin indent on " required by Vundle
