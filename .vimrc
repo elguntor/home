@@ -101,6 +101,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'VimClojure'
 Bundle 'RubySinatra'
 Bundle 'ruby.vim'
+Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on " required by Vundle
 
