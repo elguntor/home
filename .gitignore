@@ -39,6 +39,7 @@
 .gegl-0.0/
 .gem/
 .gimp-2.6/
+.gimp-2.8/
 .gitk
 .gnome2/
 .gnupg/
@@ -84,6 +85,7 @@
 .recentf
 .recently-used
 .rnd
+.rvm/
 .sabnzbd/
 .sbt.cache.lock
 .scala_history
