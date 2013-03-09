@@ -1,9 +1,18 @@
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	alias dir='dir --color=auto'
-	alias vdir='vdir --color=auto'
+unamestr=`uname`
+if [[ "$unamestr" == "Linux" ]];then
+	if [ -x /usr/bin/dircolors ]; then
+		test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+		alias ls='ls --color=auto'
+		alias dir='dir --color=auto'
+		alias vdir='vdir --color=auto'
+
+		alias grep='grep --color=auto'
+		alias fgrep='fgrep --color=auto'
+		alias egrep='egrep --color=auto'
+	fi
+elif [[ "$unamestr" == "Darwin" ]]; then
+	alias ls='ls -G'
 
 	alias grep='grep --color=auto'
 	alias fgrep='fgrep --color=auto'
@@ -45,6 +54,7 @@ alias sshp1='ssh mgunter@prod01.isentium.net'
 alias sshp2='ssh mgunter@prod02.isentium.net'
 alias sshs='ssh mgunter@staging.isentium.net'
 alias sshw='ssh mgunter@werewolf'
+alias sshse='ssh marshall@serenity'
 
 # find
 alias fir='find -name "*.rb" | xargs grep'

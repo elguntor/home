@@ -98,10 +98,10 @@ Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
-Bundle 'taglist-plus'
 Bundle 'VimClojure'
 Bundle 'RubySinatra'
 Bundle 'ruby.vim'
+Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on " required by Vundle
 

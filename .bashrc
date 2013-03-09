@@ -124,7 +124,13 @@ alias go_c="clang -xc '-' $go_libs $go_flags"
 # ---
 # ./a.out
 
+# Mac OSX
+unamestr=`uname`
+if [[ "$unamestr" == "Darwin" ]];then
+	export PATH=$PATH:/usr/local/mysql/bin
+	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
+fi
+
 # RVM
 [[ -s "/home/marshall/.rvm/scripts/rvm" ]] && source "/home/marshall/.rvm/scripts/rvm"
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
