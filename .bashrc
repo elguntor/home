@@ -123,3 +123,8 @@ alias go_c="clang -xc '-' $go_libs $go_flags"
 # int main(){printf("Hello\n");}
 # ---
 # ./a.out
+
+# RVM
+[[ -s "/home/marshall/.rvm/scripts/rvm" ]] && source "/home/marshall/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
