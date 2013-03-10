@@ -102,6 +102,7 @@ Bundle 'VimClojure'
 Bundle 'RubySinatra'
 Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on " required by Vundle
 

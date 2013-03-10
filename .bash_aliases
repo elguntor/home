@@ -66,3 +66,6 @@ alias ng='sudo netstat -pant | grep'
 # moving
 alias cdsg='cd $STOKGROK_HOME'
 alias cdnlp='cd $NLP_HOME'
+
+# current project
+alias cdcp='cd $HOME/Dropbox/src/padrino/sample_blog'
