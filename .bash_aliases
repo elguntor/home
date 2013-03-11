@@ -67,5 +67,9 @@ alias ng='sudo netstat -pant | grep'
 alias cdsg='cd $STOKGROK_HOME'
 alias cdnlp='cd $NLP_HOME'
 
+# postgres root
+alias pgroot='psql -U postgres -w -h localhost postgres'
+
 # current project
-alias cdcp='cd $HOME/Dropbox/src/padrino/sample_blog'
+alias cdcp='cd $HOME/Dropbox/src/padrino/sample_blog_haml'
+
