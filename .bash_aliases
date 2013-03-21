@@ -71,5 +71,5 @@ alias cdnlp='cd $NLP_HOME'
 alias pgroot='psql -U postgres -w -h localhost postgres'
 
 # current project
-alias cdcp='cd $HOME/Dropbox/src/padrino/sample_blog_haml'
+alias cdcp='cd $HOME/Dropbox/src/rails/sample_app'
 
