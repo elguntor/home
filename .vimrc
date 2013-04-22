@@ -79,7 +79,8 @@ nmap <C-Down> <C-W>+<C-W>+
 nmap <C-Left> <C-W><<C-W><
 nmap <C-Right> <C-W>><C-W>>
 
-filetype off
+" filetype off
+filetype plugin indent on " required by Vundle
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -103,11 +104,8 @@ Bundle 'RubySinatra'
 Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-flake8'
 
-filetype plugin indent on " required by Vundle
-
-" remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
 
 " convert spaces to tabs and vice-versa
 :command! -range=% -nargs=0 Tab2Space execute '<line1>,<line2>s#^\t\+#\=repeat(" ", len(submatch(0))*' . &ts . ')'
@@ -125,10 +123,14 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " CtrlP
-let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_prompt_mappings = {
+"\ 'AcceptSelection("e")': ['<c-t>'],
+"\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+"\ }
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|\.svn$',
-\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$',
+\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$|\.pyc$',
 \ }
 
 " absolute / relative line numbers
@@ -142,15 +144,28 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-function! RubyToggle()
-	if(&expandtab ==0)
-		setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
-	else
-		setlocal ts=8 softtabstop=8 shiftwidth=8 noexpandtab
-	endif
-endfunc
+" remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
 
-nnoremap <C-r> :call RubyToggle()<cr>
+
+" language specific options
+" python
+autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+" run flake8 before saving a python file
+autocmd BufWritePost *.py call Flake8()
+
+" ruby
+autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+" function! RubyOpts()
+" 	if(&expandtab ==0)
+" 		setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+" 	else
+" 		setlocal ts=8 softtabstop=8 shiftwidth=8 noexpandtab
+" 	endif
+" endfunc
+
+" nnoremap <C-r> :call RubyToggle()<cr>
+
 " set absolute numbers when vim loses focus
 ":au FocusLost * :set number
 ":au FocusGained * :set relativenumber

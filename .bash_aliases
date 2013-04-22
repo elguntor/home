@@ -54,11 +54,12 @@ alias sshp1='ssh mgunter@prod01.isentium.net'
 alias sshp2='ssh mgunter@prod02.isentium.net'
 alias sshs='ssh mgunter@staging.isentium.net'
 alias sshw='ssh mgunter@werewolf'
-alias sshse='ssh marshall@serenity'
+alias sshe='ssh marshall@elguntor.dyndns.org'
 
 # find
 alias fir='find -name "*.rb" | xargs grep'
 alias fij='find -name "*.java" | xargs grep'
+alias fip='find -name "*.py" | xargs grep'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
@@ -70,6 +71,9 @@ alias cdnlp='cd $NLP_HOME'
 # postgres root
 alias pgroot='psql -U postgres -w -h localhost postgres'
 
-# current project
-alias cdcp='cd $HOME/Dropbox/src/padrino/sample_blog_haml'
+# activate python
+alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 
+# current project
+alias cdcp='cd $HOME/Dropbox/src/yelp/'
+alias cov='google-chrome coverage/index.html'

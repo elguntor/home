@@ -12,6 +12,7 @@
 .compiz-1/
 .compiz/
 .config/
+.cups/
 .dbus/
 .dia/
 .directory
@@ -49,6 +50,7 @@
 .gtk-bookmarks
 .gtkrc-2.0
 .gtkrc-2.0-kde4
+.heroku/
 .hwid
 .icedtea/
 .ido.last
@@ -75,11 +77,16 @@
 .mysql_history
 .nbprofiler/
 .netbeans/
+.netrc
 .nv/
 .nvidia-settings-rc
+.opera/
 .pam_environment
+.pgpass
+.pip/
 .pki/
 .profile
+.psql_history
 .pulse-cookie
 .pulse/
 .recentf
@@ -97,6 +104,7 @@
 .swt/
 .thumbnails/
 .thunderbird/
+.twitter_oauth
 .vim/.netrwhist
 .vim/.netrwhist
 .vim/bundle/vundle/.netrwhist
@@ -105,9 +113,11 @@
 .wine/
 .xsession-errors
 .xsession-errors.old
+.zshrc
 Calibre_Library/
 Desktop/
 Dropbox/
+Ernest_Cline-Ready_Player_One.epub
 Ubuntu One/
 VirtualBox VMs/
 bak/
