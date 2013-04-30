@@ -12,6 +12,11 @@ set incsearch				" show matches while typing
 
 set number				" show line numbers
 set wildignore=*.o,*.obj,*.bak,*.exe	" tab complete ignores these
+set wildignore+=*.pyc,*.class,*.so,*.exe
+set wildignore+=.git/*,.svn/*,*.dll
+
+"\ 'dir':  '\.git$\|\.svn$',
+"\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$|\.pyc$',
 
 map Y y$				" make Y behave like other capitals, yank to end of line
 
@@ -120,6 +125,9 @@ Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
+"Bundle 'vim-django-support'
+"Bundle 'vim_django'
+"Bundle 'django.vim'
 " }}}
 
 " CtrlP"{{{
@@ -129,12 +137,24 @@ Bundle 'vim-flake8'
 "\ }
 " }}}
 
+" Syntastic General"{{{
+let g:syntastic_check_on_open=1
+" }}}
+
 " Languages "{{{
+" html
+autocmd Filetype html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+let g:flake8_max_line_length=250
 let g:syntastic_python_checkers=['flake8']
-" run flake8 before saving a python file
-" autocmd BufWritePost *.py call Flake8()
+let g:syntastic_python_flake8_args="--max-line-length=160"
+" django support
+" leader dt starts Command T in template directory corresponding to the application
+map <Leader>dt :VimDjangoCommandTTemplate<CR>
+" leader da starts Command T in the app directory
+map <Leader>da :VimDjangoCommandTApp<CR>
 
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab

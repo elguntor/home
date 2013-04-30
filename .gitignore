@@ -3,6 +3,7 @@
 .IdeaIC11/
 .VirtualBox/
 .Xauthority
+.Xauthority.*
 .adobe/
 .bash_history
 .bash_logout
