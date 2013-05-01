@@ -1,6 +1,7 @@
 .FBReader/
 .ICEauthority
 .IdeaIC11/
+.Skype/
 .VirtualBox/
 .Xauthority
 .Xauthority.*
@@ -29,6 +30,7 @@
 .emacs.d/places
 .erlang.cookie
 .esd_auth
+.everpad/
 .face
 .face.icon
 .fctsslvpnhistory

@@ -48,12 +48,13 @@ alias gpo='git push origin'
 alias gs='git status'
 
 # shh
-alias sshb='ssh mgunter@backtest.isentium.net'
-alias sshi='ssh mgunter@itny.isentium.net'
-alias sshp1='ssh mgunter@prod01.isentium.net'
-alias sshp2='ssh mgunter@prod02.isentium.net'
-alias sshs='ssh mgunter@staging.isentium.net'
-alias sshw='ssh mgunter@werewolf'
+#alias sshb='ssh mgunter@backtest.isentium.net'
+#alias sshi='ssh mgunter@itny.isentium.net'
+#alias sshp1='ssh mgunter@prod01.isentium.net'
+#alias sshp2='ssh mgunter@prod02.isentium.net'
+#alias sshs='ssh mgunter@staging.isentium.net'
+alias sshh='ssh marshall@hawk'
+alias sshw='ssh marshall@werewolf'
 alias sshe='ssh marshall@elguntor.dyndns.org'
 
 # find
@@ -65,8 +66,10 @@ alias fip='find -name "*.py" | xargs grep'
 alias ng='sudo netstat -pant | grep'
 
 # moving
-alias cdsg='cd $STOKGROK_HOME'
-alias cdnlp='cd $NLP_HOME'
+#alias cdsg='cd $STOKGROK_HOME'
+#alias cdnlp='cd $NLP_HOME'
+alias cdbi='cd $BUNCH_HOME/bunch-ios'
+alias cdbw='cd $BUNCH_HOME/bunch-web'
 
 # postgres root
 alias pgroot='psql -U postgres -w -h localhost postgres'
@@ -77,3 +80,6 @@ alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 # current project
 alias cdcp='cd $HOME/Dropbox/src/django-tutorial/mysite'
 #alias cov='google-chrome coverage/index.html'
+
+# put this in for git logging
+# git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
