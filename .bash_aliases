@@ -24,8 +24,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias dstat='dstat -cdngylm'
-alias iin='sudo cp /etc/network/interfaces.isentium /etc/network/interfaces && sudo /etc/init.d/networking restart'
-alias rin='sudo cp /etc/network/interfaces.reuters /etc/network/interfaces && sudo /etc/init.d/networking restart'
+#alias iin='sudo cp /etc/network/interfaces.isentium /etc/network/interfaces && sudo /etc/init.d/networking restart'
+#alias rin='sudo cp /etc/network/interfaces.reuters /etc/network/interfaces && sudo /etc/init.d/networking restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
