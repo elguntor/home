@@ -113,6 +113,7 @@
 .vim/bundle/vundle/.netrwhist
 .viminfo
 .visualvm/
+.w3af/
 .wine/
 .xsession-errors
 .xsession-errors.old
@@ -127,6 +128,7 @@ bak/
 bin/
 docs/
 downloads/
+jmeter.log
 media/
 projects/
 src/
