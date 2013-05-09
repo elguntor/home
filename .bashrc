@@ -86,10 +86,6 @@ export CLOJURE_OPTS="-server"
 # leiningen
 export PATH="$PATH:/usr/local/leiningen/bin"
 
-# stokgrok
-#export STOKGROK_HOME="$HOME/src/stokgrok"
-#export NLP_HOME="$STOKGROK_HOME/nlp"
-
 # bunch
 export BUNCH_HOME="$HOME/src"
 

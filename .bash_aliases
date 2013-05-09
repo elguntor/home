@@ -59,8 +59,6 @@ alias fip='find -name "*.py" | xargs grep'
 alias ng='sudo netstat -pant | grep'
 
 # moving
-#alias cdsg='cd $STOKGROK_HOME'
-#alias cdnlp='cd $NLP_HOME'
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web'
 
