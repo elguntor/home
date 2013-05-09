@@ -1,9 +1,10 @@
 " General "{{{
+autocmd! bufwritepost .vimrc source %	" auto reload .vimrc
 set nocompatible			" be iMproved
 filetype plugin indent on		" required by Vundle
 
+set encoding=utf-8			" I hate ASCII!
 set tags=./tags;$HOME			" walk directory tree upwards to $HOME looking for tags
-" set tags=$STOKGROK_HOME/tags/tags
 set ttyfast				" fast terminal
 set nobackup                            " do not back up files every time you :w, faster writes
 set ignorecase				" case insensitive searching
@@ -14,9 +15,6 @@ set number				" show line numbers
 set wildignore=*.o,*.obj,*.bak,*.exe	" tab complete ignores these
 set wildignore+=*.pyc,*.class,*.so,*.exe
 set wildignore+=.git/*,.svn/*,*.dll
-
-"\ 'dir':  '\.git$\|\.svn$',
-"\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$|\.pyc$',
 
 map Y y$				" make Y behave like other capitals, yank to end of line
 
@@ -53,6 +51,9 @@ set laststatus=2			" always show status line
 " }}}
 
 " Controls and Commands "{{{
+" copy and paste
+set pastetoggle=<F2>
+set clipboard=unnamed
 " resize horizontal split window
 nmap <C-Up> <C-W>-<C-W>-
 nmap <C-Down> <C-W>+<C-W>+
@@ -74,6 +75,17 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+" easier tab movement
+map <leader>n <esc>:tabprevious<CR>
+map <leader>m <esc>:tabnext<CR>
+
+" sort
+map <leader>s :sort<CR>
+
+" move blocks of code that are highlighted in visual mode
+vnoremap < <gv
+vnoremap > >gv
 
 " absolute / relative line numbers
 function! NumberToggle()
@@ -125,6 +137,7 @@ Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
+"Bundle 'Lokaltog/vim-powerline'
 "Bundle 'vim-django-support'
 "Bundle 'vim_django'
 "Bundle 'django.vim'
@@ -137,6 +150,7 @@ Bundle 'vim-flake8'
 "\ }
 " }}}
 
+" let g:Powerline_symbols = 'fancy'	" powerline
 " Syntastic General"{{{
 let g:syntastic_check_on_open=1
 " }}}

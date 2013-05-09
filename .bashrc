@@ -91,7 +91,7 @@ export PATH="$PATH:/usr/local/leiningen/bin"
 #export NLP_HOME="$STOKGROK_HOME/nlp"
 
 # bunch
-export BUNCH_HOME="$HOME/src/"
+export BUNCH_HOME="$HOME/src"
 
 # intellij
 export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"

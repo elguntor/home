@@ -112,6 +112,7 @@
 .vim/.netrwhist
 .vim/bundle/vundle/.netrwhist
 .viminfo
+.viminfz.tmp
 .visualvm/
 .w3af/
 .wine/
