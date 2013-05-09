@@ -1,6 +1,6 @@
 have_header: checking for ruby.h... -------------------- yes
 
-"gcc -o conftest -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1/x86_64-linux -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1/ruby/backward -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/marshall/.rvm/rubies/ruby-1.9.3-p392/lib -Wl,-R/home/marshall/.rvm/rubies/ruby-1.9.3-p392/lib -L.  -rdynamic -Wl,-export-dynamic     '-Wl,-rpath,/../lib' -Wl,-R -Wl,/home/marshall/.rvm/rubies/ruby-1.9.3-p392/lib -L/home/marshall/.rvm/rubies/ruby-1.9.3-p392/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2  -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -rdynamic -Wl,-export-dynamic     -lruby-1.9.1  -lpthread -lrt -ldl -lcrypt -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -8,7 +8,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -E -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1/x86_64-linux -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1/ruby/backward -I/home/marshall/.rvm/rubies/ruby-1.9.3-p392/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c -o conftest.i"
+"gcc -E -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -D_FORTIFY_SOURCE=2  -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wall -fno-strict-aliasing -fPIC  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"

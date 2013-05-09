@@ -24,8 +24,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias dstat='dstat -cdngylm'
-#alias iin='sudo cp /etc/network/interfaces.isentium /etc/network/interfaces && sudo /etc/init.d/networking restart'
-#alias rin='sudo cp /etc/network/interfaces.reuters /etc/network/interfaces && sudo /etc/init.d/networking restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -48,11 +46,6 @@ alias gpo='git push origin'
 alias gs='git status'
 
 # shh
-#alias sshb='ssh mgunter@backtest.isentium.net'
-#alias sshi='ssh mgunter@itny.isentium.net'
-#alias sshp1='ssh mgunter@prod01.isentium.net'
-#alias sshp2='ssh mgunter@prod02.isentium.net'
-#alias sshs='ssh mgunter@staging.isentium.net'
 alias sshh='ssh marshall@hawk'
 alias sshw='ssh marshall@werewolf'
 alias sshe='ssh marshall@elguntor.dyndns.org'
