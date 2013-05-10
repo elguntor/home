@@ -14,3 +14,5 @@
 	ui = true
 [diff]
 	#external = ~/bin/git_diff.sh
+[github]
+	user = elguntor
