@@ -58,6 +58,9 @@ alias fip='find -name "*.py" | xargs grep'
 # netstat
 alias ng='sudo netstat -pant | grep'
 
+# redis
+alias fa='echo "flushall" | redis-cli'
+
 # moving
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web'
@@ -71,6 +74,8 @@ alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 # current project
 alias cdcp='cd $HOME/Dropbox/src/mysite'
 alias mr='./manage.py runserver'
+alias rs='./bin/django runserver'
+#alias cov='google-chrome coverage/index.html'
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
