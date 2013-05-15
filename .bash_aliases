@@ -69,8 +69,8 @@ alias pgroot='psql -U postgres -w -h localhost postgres'
 alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 
 # current project
-alias cdcp='cd $HOME/Dropbox/src/django-tutorial/mysite'
-#alias cov='google-chrome coverage/index.html'
+alias cdcp='cd $HOME/Dropbox/src/mysite'
+alias mr='./manage.py runserver'
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
