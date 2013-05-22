@@ -36,9 +36,11 @@ alias emacs='emacs -nw'
 alias rs='rspec -fd -c --backtrace'
 
 # git
+alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
 alias gco='git checkout'
+alias gd='git diff'
 alias gm='git merge'
 alias gp='git pull'
 alias gpf='git pull;git fetch --tags'
@@ -64,6 +66,7 @@ alias fa='echo "flushall" | redis-cli'
 # moving
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web'
+alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 
 # postgres root
 alias pgroot='psql -U postgres -w -h localhost postgres'
