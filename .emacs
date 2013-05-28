@@ -8,15 +8,21 @@
 ;; delete trailing whitespace before saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; remap the Meta key to control-x control-m
-(global-set-key "\C-x\C-m" 'execute-extended-command)
+;;(global-set-key "\C-x\C-m" 'execute-extended-command)
+
 ;; remap backward kill word
 ;; (global-set-key "\C-w" 'backward-kill-word)
+
 ;; remap kill region
 (global-set-key "\C-x\C-k" 'kill-region)
 ;; set the default indentation to tabs
-(set-default 'indent-tabs-mode t)
+;;(set-default 'indent-tabs-mode t)
 ;; set the ruby tab indent to 8
-(setq ruby-indent-level 8)
-(add-hook 'ruby-mode-hook (lambda () (setq indent-tabs-mode t)))
+;;(setq ruby-indent-level 8)
+;;(add-hook 'ruby-mode-hook (lambda () (setq indent-tabs-mode t)))
 ;; prevent emacs from making backup files
-(setq make-backup-files nil)
+;;(setq make-backup-files nil)
+
+;; disable highlighting installed by the emacs starter kit
+(remove-hook 'coding-hook 'turn-on-hl-line-mode)
+(remove-hook 'coding-hook 'esk-turn-on-idle-highlight-mode)

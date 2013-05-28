@@ -31,6 +31,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # emacs
 alias emacs='emacs -nw'
+alias em='emacs -nw'
 
 # rspec
 alias rs='rspec -fd -c --backtrace'

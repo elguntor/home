@@ -104,7 +104,8 @@ export STORM_HOME="/usr/local/storm-0.8.2"
 export PATH="$PATH:$STORM_HOME/bin"
 
 # vi bash
-set -o vi
+#set -o vi
+set -o emacs
 
 # gpg tty
 export GPG_TTY=`tty`
