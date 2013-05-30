@@ -1,5 +1,0 @@
-(require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" .
-               )
-(package-initialize)
