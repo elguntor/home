@@ -1,0 +1,25 @@
+
+;; ----- smex-history -----
+(
+ package-install
+ package-refresh-contents
+ eval-buffer
+ list-packages
+ shell
+ shell-script-mode
+ linum-mode
+)
+
+;; ----- smex-data -----
+(
+ (longlines-mode . 1)
+ (linum-mode . 6)
+ (package-list-packages . 2)
+ (replace-string . 2)
+ (shell-script-mode . 3)
+ (list-packages . 2)
+ (shell . 4)
+ (package-install . 2)
+ (eval-buffer . 1)
+ (package-refresh-contents . 1)
+)
