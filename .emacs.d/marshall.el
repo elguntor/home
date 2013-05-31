@@ -22,7 +22,9 @@
 ;;(add-hook 'ruby-mode-hook (lambda () (setq indent-tabs-mode t)))
 ;; prevent emacs from making backup files
 ;;(setq make-backup-files nil)
-
+;; line number separator
+(setq linum-format "%d ")
+(global-linum-mode t)
 ;; disable highlighting installed by the emacs starter kit
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
 (remove-hook 'prog-mode-hook 'idle-highlight-mode)
