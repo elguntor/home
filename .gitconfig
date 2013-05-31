@@ -5,9 +5,19 @@
 	br = branch
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	meld = /home/mgunter/bin/git-meld.pl
+	gpo = git push origin
+	ga = git add
+	gb = git branch
+	gc = git commit
+	gco = git checkout
+	gd = git diff
+	gm = git merge
+	gp = git pull
+	gpf = "git pull;git fetch --tags"
+	gs = git status
 [user]
-	name = Marshall Gunter
-	email = mgunter@isentium.com
+	name = elguntor
+	email = elguntor@gmail.com
 [core]
 	editor = vim
 [color]

@@ -161,8 +161,8 @@ autocmd Filetype html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
-let g:flake8_max_line_length=250
 let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
 " let g:syntastic_python_flake8_args="--max-line-length=160"
 " django support
 " leader dt starts Command T in template directory corresponding to the application

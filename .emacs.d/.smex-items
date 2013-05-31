@@ -1,11 +1,11 @@
 
 ;; ----- smex-history -----
 (
+ list-packages
  shell
  package-install
  package-refresh-contents
  eval-buffer
- list-packages
  shell-script-mode
  linum-mode
 )
@@ -17,7 +17,7 @@
  (package-list-packages . 2)
  (replace-string . 2)
  (shell-script-mode . 3)
- (list-packages . 2)
+ (list-packages . 4)
  (shell . 5)
  (package-install . 2)
  (eval-buffer . 1)

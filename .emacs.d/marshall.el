@@ -24,8 +24,8 @@
 ;;(setq make-backup-files nil)
 
 ;; disable highlighting installed by the emacs starter kit
-(remove-hook 'coding-hook 'turn-on-hl-line-mode)
-(remove-hook 'coding-hook 'esk-turn-on-idle-highlight-mode)
+(remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
+(remove-hook 'prog-mode-hook 'idle-highlight-mode)
 (setq backup-by-copying t)
 
 (defun duplicate-line-or-region (&optional n)
