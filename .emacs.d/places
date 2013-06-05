@@ -1,9 +1,0 @@
-;;; -*- coding: utf-8 -*-
-(("/home/marshall/.emacs" . 655)
- ("/home/marshall/.emacs.d/elpa/elisp-slime-nav-0.2/elisp-slime-nav-autoloads.el" . 795)
- ("/home/marshall/.emacs.d/elpa/starter-kit-lisp-2.0.3/starter-kit-lisp-autoloads.el" . 1916)
- ("/home/marshall/src/stokgrok/Rakefile" . 14318)
- ("/home/marshall/src/stokgrok/common/test/stokgrok_exception_spec.rb" . 433)
- ("/home/marshall/src/stokgrok/data-api/Rakefile" . 1190)
- ("/home/marshall/src/stokgrok/data-api/test/data_api_test_common.rb" . 258)
- ("/home/marshall/src/stokgrok/price-server/src/com/stokgrok/priceserver/trackers/ReutersTracker.java" . 1646))

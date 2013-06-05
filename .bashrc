@@ -86,9 +86,8 @@ export CLOJURE_OPTS="-server"
 # leiningen
 export PATH="$PATH:/usr/local/leiningen/bin"
 
-# stokgrok
-export STOKGROK_HOME="$HOME/src/stokgrok"
-export NLP_HOME="$STOKGROK_HOME/nlp"
+# bunch
+export BUNCH_HOME="$HOME/src"
 
 # intellij
 export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
@@ -105,7 +104,8 @@ export STORM_HOME="/usr/local/storm-0.8.2"
 export PATH="$PATH:$STORM_HOME/bin"
 
 # vi bash
-set -o vi
+#set -o vi
+set -o emacs
 
 # gpg tty
 export GPG_TTY=`tty`
@@ -131,9 +131,9 @@ if [[ "$unamestr" == "Darwin" ]];then
 	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
 fi
 
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-source $HOME/.rvm/scripts/rvm
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

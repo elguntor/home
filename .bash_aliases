@@ -24,8 +24,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias dstat='dstat -cdngylm'
-alias iin='sudo cp /etc/network/interfaces.isentium /etc/network/interfaces && sudo /etc/init.d/networking restart'
-alias rin='sudo cp /etc/network/interfaces.reuters /etc/network/interfaces && sudo /etc/init.d/networking restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -33,14 +31,17 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # emacs
 alias emacs='emacs -nw'
+alias em='emacs -nw'
 
 # rspec
 alias rs='rspec -fd -c --backtrace'
 
 # git
+alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
 alias gco='git checkout'
+alias gd='git diff'
 alias gm='git merge'
 alias gp='git pull'
 alias gpf='git pull;git fetch --tags'
@@ -48,21 +49,37 @@ alias gpo='git push origin'
 alias gs='git status'
 
 # shh
-alias sshb='ssh mgunter@backtest.isentium.net'
-alias sshi='ssh mgunter@itny.isentium.net'
-alias sshp1='ssh mgunter@prod01.isentium.net'
-alias sshp2='ssh mgunter@prod02.isentium.net'
-alias sshs='ssh mgunter@staging.isentium.net'
-alias sshw='ssh mgunter@werewolf'
-alias sshse='ssh marshall@serenity'
+alias sshh='ssh marshall@hawk'
+alias sshw='ssh marshall@werewolf'
+alias sshe='ssh marshall@elguntor.dyndns.org'
 
 # find
 alias fir='find -name "*.rb" | xargs grep'
 alias fij='find -name "*.java" | xargs grep'
+alias fip='find -name "*.py" | xargs grep'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
 
+# redis
+alias fa='echo "flushall" | redis-cli'
+
 # moving
-alias cdsg='cd $STOKGROK_HOME'
-alias cdnlp='cd $NLP_HOME'
+alias cdbi='cd $BUNCH_HOME/bunch-ios'
+alias cdbw='cd $BUNCH_HOME/bunch-web'
+alias cdbn='cd $BUNCH_HOME/bunch-nagios'
+
+# postgres root
+alias pgroot='psql -U postgres -w -h localhost postgres'
+
+# activate python
+alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
+
+# current project
+alias cdcp='cd $HOME/Dropbox/src/mysite'
+alias mr='./manage.py runserver'
+alias rs='./bin/django runserver'
+#alias cov='google-chrome coverage/index.html'
+
+# put this in for git logging
+# git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

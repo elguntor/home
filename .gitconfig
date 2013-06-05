@@ -3,14 +3,19 @@
 	co = checkout
 	ci = commit
 	br = branch
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	meld = /home/mgunter/bin/git-meld.pl
+	po = push origin
+	br = git branch
+	co = git checkout
 [user]
-	name = Marshall Gunter
-	email = mgunter@isentium.com
+	name = elguntor
+	email = elguntor@gmail.com
 [core]
 	editor = vim
 [color]
 	ui = true
 [diff]
 	#external = ~/bin/git_diff.sh
+[github]
+	user = elguntor
