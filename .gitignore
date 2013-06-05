@@ -27,6 +27,7 @@
 .eclipse/
 .efreet/
 .emacs.d/auto-save-list/*
+.emacs.d/backups/*
 .emacs.d/places
 .erlang.cookie
 .esd_auth
