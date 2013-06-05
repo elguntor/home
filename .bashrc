@@ -127,16 +127,13 @@ alias go_c="clang -xc '-' $go_libs $go_flags"
 # Mac OSX
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
-	export PATH=$PATH:/usr/local/mysql/bin
+	export PATH=/usr/local/Cellar/emacs/24.3/bin:$PATH:/usr/local/mysql/bin
 	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
 fi
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# /usr/local/bin
-export PATH=$PATH:/usr/local/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
