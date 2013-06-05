@@ -103,9 +103,9 @@ export PATH="$PATH:$GOBIN"
 export STORM_HOME="/usr/local/storm-0.8.2"
 export PATH="$PATH:$STORM_HOME/bin"
 
-# vi bash
-#set -o vi
-set -o emacs
+# vi / emacs bash
+set -o vi
+#set -o emacs
 
 # gpg tty
 export GPG_TTY=`tty`
@@ -129,6 +129,12 @@ unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
 	export PATH=/usr/local/Cellar/emacs/24.3/bin:$PATH:/usr/local/mysql/bin
 	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
+	# Git branch in prompt.
+	parse_git_branch() {
+		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	}
+	export PS1="\[\e[32;1m\]\u@\h \[\033[00m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+	source $HOME/.bash_aliases
 fi
 
 # RVM
