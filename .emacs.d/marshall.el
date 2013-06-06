@@ -57,4 +57,10 @@ With negative N, comment out original line and use the absolute value."
                     (forward-line 1)
                     (forward-char pos)))))
 (global-set-key [?\C-c ?d] 'duplicate-line-or-region)
-(provide 'marshall);;;
+;;; I prefer cmd key for meta
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+(provide 'marshall)
+

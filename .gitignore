@@ -1,6 +1,9 @@
+.CFUserTextEncoding
+.DS_Store
 .FBReader/
 .ICEauthority
 .IdeaIC11/
+.LD/
 .Skype/
 .VirtualBox/
 .Xauthority
@@ -8,6 +11,7 @@
 .adobe/
 .bash_history
 .bash_logout
+.bash_profile
 .bzr.log
 .cache/
 .cola
@@ -26,6 +30,7 @@
 .eclim/
 .eclipse/
 .efreet/
+.emacs.d/#marshall.el#
 .emacs.d/auto-save-list/*
 .emacs.d/backups/*
 .emacs.d/places
@@ -46,19 +51,24 @@
 .gem/
 .gimp-2.6/
 .gimp-2.8/
+.gitignore_global
 .gitk
 .gnome2/
 .gnupg/
 .goutputstream*
 .goutputstream-J0DAFW
+.gpg-agent-info
 .gstreamer-0.10/
 .gtk-bookmarks
 .gtkrc-2.0
 .gtkrc-2.0-kde4
 .heroku/
+.hgignore_global
+.hgrc
 .hwid
 .icedtea/
 .ido.last
+.irb-history
 .irb_history
 .irbrc
 .ivy2/
@@ -104,6 +114,7 @@
 .sbt.cache.lock
 .scala_history
 .selected_editor
+.serverauth.3683
 .ssh/
 .subversion/
 .subversion_IDEA/
@@ -123,10 +134,22 @@
 .xsession-errors
 .xsession-errors.old
 .zshrc
+Applications/
+Books/
+Calibre Library/
 Calibre_Library/
 Desktop/
+Documents/
 Dropbox/
 Ernest_Cline-Ready_Player_One.epub
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Sites/
+Steve_Jobs_quits.png
+TV/
 Ubuntu One/
 VirtualBox VMs/
 bak/

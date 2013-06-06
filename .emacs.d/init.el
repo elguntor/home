@@ -1,3 +1,4 @@
+;;; package -- init.el
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" .
