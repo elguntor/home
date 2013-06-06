@@ -123,7 +123,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'Conque-Shell'
-"Bundle 'ctrlp.vim'
 Bundle 'Command-T'
 Bundle 'Go-Syntax'
 Bundle 'haml.zip'
@@ -137,20 +136,8 @@ Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
-"Bundle 'Lokaltog/vim-powerline'
-"Bundle 'vim-django-support'
-"Bundle 'vim_django'
-"Bundle 'django.vim'
 " }}}
 
-" CtrlP"{{{
-"let g:ctrlp_custom_ignore = {
-"\ 'dir':  '\.git$\|\.svn$',
-"\ 'file': '\.class$|\.exe$\|\.so$\|\.dll$|\.pyc$',
-"\ }
-" }}}
-
-" let g:Powerline_symbols = 'fancy'	" powerline
 " Syntastic General"{{{
 let g:syntastic_check_on_open=1
 " }}}
@@ -173,3 +160,4 @@ map <Leader>da :VimDjangoCommandTApp<CR>
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 " }}}
+
