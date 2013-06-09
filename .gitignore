@@ -1,3 +1,4 @@
+**.swp
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
@@ -14,6 +15,7 @@
 .bash_profile
 .bzr.log
 .cache/
+.cinnamon/
 .cola
 .compiz-1/
 .compiz/
@@ -53,6 +55,7 @@
 .gimp-2.8/
 .gitignore_global
 .gitk
+.gksu.lock
 .gnome2/
 .gnupg/
 .goutputstream*
@@ -120,6 +123,7 @@
 .subversion_IDEA/
 .sudo_as_admin_successful
 .swt/
+.themes/
 .thumbnails/
 .thunderbird/
 .twitter_oauth
@@ -140,6 +144,7 @@ Calibre Library/
 Calibre_Library/
 Desktop/
 Documents/
+Downloads/
 Dropbox/
 Ernest_Cline-Ready_Player_One.epub
 Library/

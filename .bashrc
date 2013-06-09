@@ -129,13 +129,18 @@ unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
 	export PATH=/usr/local/Cellar/emacs/24.3/bin:$PATH:/usr/local/mysql/bin
 	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
-	# Git branch in prompt.
-	parse_git_branch() {
-		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-	}
-        export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \[\e[0;36m\]\$(parse_git_branch) \$\[\033[00m\] "
 	source $HOME/.bash_aliases
+else
+	# remap caps lock to control
+	setxkbmap -option ctrl:nocaps
 fi
+
+# PS1
+# Git branch in prompt.
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \[\e[0;36m\]\$(parse_git_branch) \$\[\033[00m\] "
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
