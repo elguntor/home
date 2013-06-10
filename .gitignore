@@ -168,3 +168,12 @@ projects/
 src/
 tmp/
 workspace/
+
+# Vundle stuff
+.vim/bundle/*
+#!.vim/bundle/vundle/*
+#!.vim/bundle/vundle/autoload/*
+#!.vim/bundle/vundle/autoload/vundle/*
+#!.vim/bundle/vundle/doc/*
+#!.vim/bundle/vundle/test/*
+#!.vim/bundle/vundle/test/files/*
