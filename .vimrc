@@ -159,5 +159,6 @@ map <Leader>da :VimDjangoCommandTApp<CR>
 
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=slim
 " }}}
 
