@@ -23,10 +23,12 @@ function! g:SyntasticLoclist.New(rawLoclist)
     let newObj._rawLoclist = llist
     let newObj._hasErrorsOrWarningsToDisplay = -1
 
+    let newObj._name = ''
+
     return newObj
 endfunction
 
-function! g:SyntasticLoclist.Current()
+function! g:SyntasticLoclist.current()
     if !exists("b:syntastic_loclist")
         let b:syntastic_loclist = g:SyntasticLoclist.New([])
     endif
@@ -55,8 +57,16 @@ function! g:SyntasticLoclist.isEmpty()
     return empty(self._rawLoclist)
 endfunction
 
-function! g:SyntasticLoclist.length()
+function! g:SyntasticLoclist.getLength()
     return len(self._rawLoclist)
+endfunction
+
+function! g:SyntasticLoclist.getName()
+    return len(self._name)
+endfunction
+
+function! g:SyntasticLoclist.setName(name)
+    let self._name = a:name
 endfunction
 
 function! g:SyntasticLoclist.hasErrorsOrWarningsToDisplay()
@@ -133,13 +143,24 @@ endfunction
 
 "display the cached errors for this buf in the location list
 function! g:SyntasticLoclist.show()
+    call setloclist(0, self.filteredRaw())
     if self.hasErrorsOrWarningsToDisplay()
-        call setloclist(0, self.filteredRaw())
         let num = winnr()
         exec "lopen " . g:syntastic_loc_list_height
         if num != winnr()
             wincmd p
         endif
+
+        " try to find the loclist window and set w:quickfix_title
+        for buf in tabpagebuflist()
+            if buflisted(buf) && bufloaded(buf) && getbufvar(buf, '&buftype') ==# 'quickfix'
+                let win = bufwinnr(buf)
+                let title = getwinvar(win, 'quickfix_title')
+                if title ==# ':setloclist()' || strpart(title, 0, 16) ==# ':SyntasticCheck '
+                    call setwinvar(win, 'quickfix_title', ':SyntasticCheck ' . self._name)
+                endif
+            endif
+        endfor
     endif
 endfunction
 
