@@ -1,3 +1,11 @@
+
+# Vundle stuff
+#!.vim/bundle/vundle/*
+#!.vim/bundle/vundle/autoload/*
+#!.vim/bundle/vundle/autoload/vundle/*
+#!.vim/bundle/vundle/doc/*
+#!.vim/bundle/vundle/test/*
+#!.vim/bundle/vundle/test/files/*
 **.swp
 .CFUserTextEncoding
 .DS_Store
@@ -15,6 +23,7 @@
 .bash_profile
 .bzr.log
 .cache/
+.calibre_calibre GUI.lock
 .cinnamon/
 .cola
 .compiz-1/
@@ -130,9 +139,11 @@
 .twitter_oauth
 .vim/.netrwhist
 .vim/.netrwhist
+.vim/bundle/*
 .vim/bundle/vundle/.netrwhist
 .viminfo
 .viminfz.tmp
+.virtualenvs/
 .visualvm/
 .w3af/
 .wine/
@@ -168,12 +179,3 @@ projects/
 src/
 tmp/
 workspace/
-
-# Vundle stuff
-.vim/bundle/*
-#!.vim/bundle/vundle/*
-#!.vim/bundle/vundle/autoload/*
-#!.vim/bundle/vundle/autoload/vundle/*
-#!.vim/bundle/vundle/doc/*
-#!.vim/bundle/vundle/test/*
-#!.vim/bundle/vundle/test/files/*

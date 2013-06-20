@@ -77,7 +77,7 @@ alias pgroot='psql -U postgres -w -h localhost postgres'
 alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 
 # current project
-alias cdcp='cd $HOME/Dropbox/src/mysite'
+alias cdcp='cd $HOME/src/elscrum'
 alias mr='./manage.py runserver'
 alias rs='./bin/django runserver'
 #alias cov='google-chrome coverage/index.html'

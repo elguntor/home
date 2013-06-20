@@ -123,7 +123,8 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'Conque-Shell'
-Bundle 'Command-T'
+Bundle 'ctrlp.vim'
+"Bundle 'Command-T'
 Bundle 'Go-Syntax'
 Bundle 'haml.zip'
 Bundle 'vim-scala'
@@ -138,24 +139,29 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
 " }}}
 
+" Ctrl P"{{{
+let g:ctrl_map = '<c p>'
+" }}}
+
 " Syntastic General"{{{
 let g:syntastic_check_on_open=1
 " }}}
 
 " Languages "{{{
 " html
-autocmd Filetype html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
 " let g:syntastic_python_flake8_args="--max-line-length=160"
 " django support
 " leader dt starts Command T in template directory corresponding to the application
-map <Leader>dt :VimDjangoCommandTTemplate<CR>
+" map <Leader>dt :VimDjangoCommandTTemplate<CR>
 " leader da starts Command T in the app directory
-map <Leader>da :VimDjangoCommandTApp<CR>
+" map <Leader>da :VimDjangoCommandTApp<CR>
 
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
