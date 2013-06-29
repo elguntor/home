@@ -131,12 +131,17 @@ Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 Bundle 'VimClojure'
 Bundle 'RubySinatra'
 Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
+" }}}
+
+" NerdTree"{{{
+map <C-t> :NERDTreeToggle<CR>
 " }}}
 
 " Ctrl P"{{{
@@ -149,7 +154,7 @@ let g:syntastic_check_on_open=1
 
 " Languages "{{{
 " html
-autocmd BufRead,BufNewFile *.html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
 
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab

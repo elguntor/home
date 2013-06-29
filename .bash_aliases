@@ -71,15 +71,15 @@ alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $BUNCH_HOME/elscrum'
 
 # postgres root
-alias pgroot='psql -U postgres -w -h localhost postgres'
+alias pgroot='psql -U postgres -W -h localhost postgres'
+alias pgel='psql -U elscrum -W -h localhost elscrum_development'
 
 # activate python
 alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
 
 # current project
 alias cdcp='cd $HOME/src/elscrum'
-alias mr='./manage.py runserver'
-alias rs='./bin/django runserver'
+alias rs='./manage.py runserver'
 #alias cov='google-chrome coverage/index.html'
 
 # put this in for git logging
