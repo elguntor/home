@@ -122,6 +122,7 @@ Bundle 'gmarik/vundle'
 " Bundles
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rails'
 Bundle 'Conque-Shell'
 Bundle 'ctrlp.vim'
 "Bundle 'Command-T'
