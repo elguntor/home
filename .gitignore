@@ -1,3 +1,10 @@
+!.vim/bundle/vundle/*
+!.vim/bundle/vundle/autoload/*
+!.vim/bundle/vundle/autoload/vundle/*
+!.vim/bundle/vundle/doc/*
+!.vim/bundle/vundle/test/*
+!.vim/bundle/vundle/test/files/*
+# Vundle stuff
 **.swp
 .CFUserTextEncoding
 .DS_Store
@@ -15,6 +22,7 @@
 .bash_profile
 .bzr.log
 .cache/
+.calibre_calibre GUI.lock
 .cinnamon/
 .cola
 .compiz-1/
@@ -130,9 +138,12 @@
 .twitter_oauth
 .vim/.netrwhist
 .vim/.netrwhist
+.vim/bundle/*
+.vim/bundle/*
 .vim/bundle/vundle/.netrwhist
 .viminfo
 .viminfz.tmp
+.virtualenvs/
 .visualvm/
 .w3af/
 .wine/
@@ -157,23 +168,16 @@ Sites/
 Steve_Jobs_quits.png
 TV/
 Ubuntu One/
+Videos/
 VirtualBox VMs/
 bak/
 bin/
 docs/
 downloads/
 jmeter.log
+libpeerconnection.log
 media/
 projects/
 src/
 tmp/
 workspace/
-
-# Vundle stuff
-.vim/bundle/*
-!.vim/bundle/vundle/*
-!.vim/bundle/vundle/autoload/*
-!.vim/bundle/vundle/autoload/vundle/*
-!.vim/bundle/vundle/doc/*
-!.vim/bundle/vundle/test/*
-!.vim/bundle/vundle/test/files/*
