@@ -145,6 +145,7 @@ let g:syntastic_check_on_open=1
 " Languages "{{{
 " html
 autocmd BufRead,BufNewFile *.html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.handlebars setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=html
 
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
