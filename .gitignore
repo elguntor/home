@@ -1,10 +1,11 @@
+# Vundle stuff
 !.vim/bundle/vundle/*
 !.vim/bundle/vundle/autoload/*
 !.vim/bundle/vundle/autoload/vundle/*
 !.vim/bundle/vundle/doc/*
 !.vim/bundle/vundle/test/*
 !.vim/bundle/vundle/test/files/*
-# Vundle stuff
+.Trash/
 **.swp
 .CFUserTextEncoding
 .DS_Store
@@ -19,7 +20,6 @@
 .adobe/
 .bash_history
 .bash_logout
-.bash_profile
 .bzr.log
 .cache/
 .calibre_calibre GUI.lock
