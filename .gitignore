@@ -1,3 +1,6 @@
+.android
+android-workspace/
+.putty/
 # Vundle stuff
 !.vim/bundle/vundle/*
 !.vim/bundle/vundle/autoload/*

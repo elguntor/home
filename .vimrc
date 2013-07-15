@@ -33,22 +33,6 @@ set noexpandtab
 set backspace=indent,eol,start
 " }}}
 
-" Visual "{{{
-syntax on				" enable syntax
-set background=dark			" black background
-colorscheme Tomorrow			" set the Tomorrow color scheme
-
-set showmatch				" Show matching brackets
-set matchtime=2				" Bracket blinking
-
-set novisualbell			" No blinking
-set noerrorbells			" No noise
-
-set vb t_vb=				" disable any beeps or flashes on error
-
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-set laststatus=2			" always show status line
-" }}}
 
 " Controls and Commands "{{{
 " copy and paste
@@ -139,6 +123,25 @@ Bundle 'ruby.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'bling/vim-airline'
+" }}}
+
+" Visual "{{{
+syntax on				" enable syntax
+set background=dark			" black background
+colorscheme vividchalk			" set the color scheme
+
+set showmatch				" Show matching brackets
+set matchtime=2				" Bracket blinking
+
+set novisualbell			" No blinking
+set noerrorbells			" No noise
+
+set vb t_vb=				" disable any beeps or flashes on error
+
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+set laststatus=2			" always show status line
 " }}}
 
 " NerdTree"{{{
