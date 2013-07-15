@@ -157,7 +157,10 @@ let g:syntastic_check_on_open=1
 " html
 autocmd BufRead,BufNewFile *.html setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
 autocmd BufRead,BufNewFile *.handlebars setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
-
+" javascript
+autocmd BufRead,BufNewFile *.js setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+"json
+autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
