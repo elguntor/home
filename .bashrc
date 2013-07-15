@@ -81,27 +81,41 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # clojure
-export CLOJURE_OPTS="-server"
+#export CLOJURE_OPTS="-server"
 
 # leiningen
-export PATH="$PATH:/usr/local/leiningen/bin"
+#export PATH="$PATH:/usr/local/leiningen/bin"
+
+# intellij
+#export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
+
+# go -- might not need these yet
+#export GOROOT="/usr/local/go"
+#export GOBIN="$GOROOT/bin"
+#export GOARCH="amd64"
+#export GOOS="linux"
+#export PATH="$PATH:$GOBIN"
+
+# storm
+#export STORM_HOME="/usr/local/storm-0.8.2"
+#export PATH="$PATH:$STORM_HOME/bin"
+
+
+# Using the C REPL...use a here document
+# go_c << '---'
+# int main(){printf("Hello\n");}
+# ---
+# ./a.out
+
+# MySQL prompt
+#export MYSQL_PS1=":\\d@\\h> "
 
 # bunch
 export BUNCH_HOME="$HOME/src"
 
-# intellij
-export PATH="$PATH:/usr/local/idea-IC-111.277/bin/"
-
-# go -- might not need these yet
-export GOROOT="/usr/local/go"
-export GOBIN="$GOROOT/bin"
-export GOARCH="amd64"
-export GOOS="linux"
-export PATH="$PATH:$GOBIN"
-
-# storm
-export STORM_HOME="/usr/local/storm-0.8.2"
-export PATH="$PATH:$STORM_HOME/bin"
+# Java
+export JAVA_HOME='/usr/local/jdk1.7.0_25'
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # vi / emacs bash
 set -o vi
@@ -110,19 +124,10 @@ set -o vi
 # gpg tty
 export GPG_TTY=`tty`
 
-# MySQL prompt
-#export MYSQL_PS1=":\\d@\\h> "
-
 # creating a C REPL
 go_libs="-lm"
 go_flags="-g -Wall -include allheads.h -O3"
 alias go_c="clang -xc '-' $go_libs $go_flags"
-
-# Using the C REPL...use a here document
-# go_c << '---'
-# int main(){printf("Hello\n");}
-# ---
-# ./a.out
 
 # Mac OSX
 unamestr=`uname`
