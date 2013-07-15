@@ -104,7 +104,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'Conque-Shell'
@@ -130,7 +130,7 @@ Bundle 'bling/vim-airline'
 " Visual "{{{
 syntax on				" enable syntax
 set background=dark			" black background
-colorscheme vividchalk			" set the color scheme
+colorscheme emacs			" set the color scheme
 
 set showmatch				" Show matching brackets
 set matchtime=2				" Bracket blinking

@@ -1,14 +1,10 @@
-.android
-android-workspace/
-.putty/
-# Vundle stuff
 !.vim/bundle/vundle/*
 !.vim/bundle/vundle/autoload/*
 !.vim/bundle/vundle/autoload/vundle/*
 !.vim/bundle/vundle/doc/*
 !.vim/bundle/vundle/test/*
 !.vim/bundle/vundle/test/files/*
-.Trash/
+# Vundle stuff
 **.swp
 .CFUserTextEncoding
 .DS_Store
@@ -17,10 +13,12 @@ android-workspace/
 .IdeaIC11/
 .LD/
 .Skype/
+.Trash/
 .VirtualBox/
 .Xauthority
 .Xauthority.*
 .adobe/
+.android
 .bash_history
 .bash_logout
 .bzr.log
@@ -120,6 +118,7 @@ android-workspace/
 .psql_history
 .pulse-cookie
 .pulse/
+.putty/
 .recentf
 .recently-used
 .rediscli_history
@@ -141,7 +140,6 @@ android-workspace/
 .twitter_oauth
 .vim/.netrwhist
 .vim/.netrwhist
-.vim/bundle/*
 .vim/bundle/*
 .vim/bundle/vundle/.netrwhist
 .viminfo
@@ -173,6 +171,7 @@ TV/
 Ubuntu One/
 Videos/
 VirtualBox VMs/
+android-workspace/
 bak/
 bin/
 docs/
