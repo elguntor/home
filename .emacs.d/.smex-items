@@ -1,0 +1,26 @@
+
+;; ----- smex-history -----
+(
+ indent-region
+ list-packages
+ linum-mode
+ shell
+ package-install
+ package-refresh-contents
+ eval-buffer
+)
+
+;; ----- smex-data -----
+(
+ (longlines-mode . 1)
+ (linum-mode . 9)
+ (package-list-packages . 2)
+ (replace-string . 2)
+ (shell-script-mode . 3)
+ (list-packages . 5)
+ (shell . 5)
+ (package-install . 2)
+ (eval-buffer . 1)
+ (package-refresh-contents . 1)
+ (indent-region . 1)
+)
