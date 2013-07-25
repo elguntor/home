@@ -108,8 +108,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'Conque-Shell'
-Bundle 'ctrlp.vim'
-"Bundle 'Command-T'
+"Bundle 'ctrlp.vim'
+Bundle 'Command-T'
+Bundle 'Gundo'
 Bundle 'Go-Syntax'
 Bundle 'haml.zip'
 Bundle 'vim-scala'
@@ -144,12 +145,16 @@ set vb t_vb=				" disable any beeps or flashes on error
 set laststatus=2			" always show status line
 " }}}
 
+" Gundo"{{{
+nnoremap <F5> :GundoToggle<CR>
+" }}}
+
 " NerdTree"{{{
 map <C-t> :NERDTreeToggle<CR>
 " }}}
 
 " Ctrl P"{{{
-let g:ctrl_map = '<c p>'
+"let g:ctrl_map = '<c p>'
 " }}}
 
 " Syntastic General"{{{
@@ -166,6 +171,7 @@ autocmd BufRead,BufNewFile *.js setlocal ts=4 softtabstop=4 shiftwidth=4 expandt
 autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
