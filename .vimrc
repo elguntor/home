@@ -107,6 +107,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
+Bundle 'bufexplorer.zip'
 Bundle 'Conque-Shell'
 "Bundle 'ctrlp.vim'
 Bundle 'Command-T'
@@ -145,6 +146,10 @@ set vb t_vb=				" disable any beeps or flashes on error
 set laststatus=2			" always show status line
 " }}}
 
+" BufExplorer"{{{
+nnoremap <F3> :BufExplorer<CR>
+" }}}
+"
 " Gundo"{{{
 nnoremap <F5> :GundoToggle<CR>
 " }}}
