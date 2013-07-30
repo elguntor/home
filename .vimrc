@@ -127,6 +127,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-flake8'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'bling/vim-airline'
+Bundle 'taglist.vim'
 " }}}
 
 " Visual "{{{
@@ -150,6 +151,13 @@ set laststatus=2			" always show status line
 nnoremap <F3> :BufExplorer<CR>
 " }}}
 "
+" Taglist"{{{
+let Tlist_Auto_Highlight_Tag = 0
+let Tlist_Highlight_Tag_On_BufEnter = 0
+let Tlist_GainFocus_On_ToggleOpen = 1
+nnoremap <F4> :TlistToggle<CR>
+" }}}
+
 " Gundo"{{{
 nnoremap <F5> :GundoToggle<CR>
 " }}}
