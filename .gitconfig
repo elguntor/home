@@ -6,6 +6,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	meld = /home/mgunter/bin/git-meld.pl
 	po = push origin
+	d = difftool
 [user]
 	name = elguntor
 	email = elguntor@gmail.com
@@ -17,3 +18,7 @@
 	#external = ~/bin/git_diff.sh
 [github]
 	user = elguntor
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
