@@ -131,6 +131,8 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'bling/vim-airline'
 Bundle 'taglist.vim'
 Bundle 'matchit.zip'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'groenewege/vim-less'
 " }}}
 
 " Visual "{{{
@@ -185,6 +187,8 @@ autocmd BufRead,BufNewFile *.handlebars setlocal ts=4 softtabstop=4 shiftwidth=4
 autocmd BufRead,BufNewFile *.js setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 "json
 autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+"less
+autocmd BufRead,BufNewFile *.less set filetype=less
 " php
 autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
