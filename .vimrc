@@ -35,6 +35,8 @@ set backspace=indent,eol,start
 
 
 " Controls and Commands "{{{
+" matchit!
+runtime macros/matchit.vim
 " copy and paste
 set pastetoggle=<F2>
 set clipboard=unnamed
