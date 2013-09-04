@@ -4,7 +4,7 @@ set nocompatible			" be iMproved
 filetype plugin indent on		" required by Vundle
 
 set encoding=utf-8			" I hate ASCII!
-set tags=./tags;$HOME			" walk directory tree upwards to $HOME looking for tags
+set tags=$HOME/src/ctags
 set ttyfast				" fast terminal
 set nobackup                            " do not back up files every time you :w, faster writes
 set ignorecase				" case insensitive searching
