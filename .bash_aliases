@@ -56,6 +56,7 @@ alias sshe='ssh marshall@elguntor.dyndns.org'
 # find
 alias fir='find -name "*.rb" | xargs grep'
 alias fij='find -name "*.java" | xargs grep'
+alias fijs='find -name "*.js" | xargs grep'
 alias fip='find -name "*.py" | xargs grep'
 
 # netstat

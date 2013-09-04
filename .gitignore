@@ -130,6 +130,7 @@
 .selected_editor
 .serverauth.3683
 .ssh/
+.steam*
 .subversion/
 .subversion_IDEA/
 .sudo_as_admin_successful
