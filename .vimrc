@@ -177,6 +177,9 @@ map <C-t> :NERDTreeToggle<CR>
 
 " Syntastic General"{{{
 let g:syntastic_check_on_open=1
+let g:syntastic_python_checkers=['flake8']
+" let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
+let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 " }}}
 
 " Languages "{{{
@@ -195,9 +198,6 @@ autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
-" let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
 " django support
 " leader dt starts Command T in template directory corresponding to the application
 " map <Leader>dt :VimDjangoCommandTTemplate<CR>
