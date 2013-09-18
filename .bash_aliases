@@ -54,9 +54,10 @@ alias sshw='ssh marshall@werewolf'
 alias sshe='ssh marshall@elguntor.dyndns.org'
 
 # find
-alias fir='find -name "*.rb" | xargs grep'
+alias fih='find -name "*.html" | xargs grep'
 alias fij='find -name "*.java" | xargs grep'
 alias fijs='find -name "*.js" | xargs grep'
+alias fir='find -name "*.rb" | xargs grep'
 alias fip='find -name "*.py" | xargs grep'
 alias fih='find -name "*.html" | xargs grep'
 
@@ -68,7 +69,7 @@ alias fa='echo "flushall" | redis-cli'
 
 # moving
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
-alias cdbw='cd $BUNCH_HOME/bunch-web'
+alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $BUNCH_HOME/elscrum'
 
