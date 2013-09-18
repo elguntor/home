@@ -58,6 +58,7 @@ alias fir='find -name "*.rb" | xargs grep'
 alias fij='find -name "*.java" | xargs grep'
 alias fijs='find -name "*.js" | xargs grep'
 alias fip='find -name "*.py" | xargs grep'
+alias fih='find -name "*.html" | xargs grep'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
