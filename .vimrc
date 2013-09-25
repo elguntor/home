@@ -137,7 +137,7 @@ Bundle 'groenewege/vim-less'
 
 " Visual "{{{
 syntax on				" enable syntax
-set background=dark			" black background
+set background=dark			" dark background
 colorscheme emacs			" set the color scheme
 
 set showmatch				" Show matching brackets
