@@ -35,6 +35,9 @@ set backspace=indent,eol,start
 
 
 " Controls and Commands "{{{
+" save
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
 " matchit!
 runtime macros/matchit.vim
 " copy and paste
@@ -191,7 +194,7 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 softtabstop=2 shiftwidth=2 expandt
 "json
 autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 "less
-autocmd BufRead,BufNewFile *.less set filetype=less
+autocmd BufRead,BufNewFile *.less setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 " php
 autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
