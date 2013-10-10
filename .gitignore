@@ -119,6 +119,7 @@
 .pulse-cookie
 .pulse/
 .putty/
+.pylint.d/
 .recentf
 .recently-used
 .rediscli_history
