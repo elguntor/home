@@ -188,7 +188,7 @@ let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
 " Languages "{{{
 " html
 autocmd BufRead,BufNewFile *.html setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
-autocmd BufRead,BufNewFile *.handlebars setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
+autocmd BufRead,BufNewFile *.handlebars setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
 " javascript
 autocmd BufRead,BufNewFile *.js setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 "json
