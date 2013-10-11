@@ -86,5 +86,10 @@ alias runs='bin/django runserver 0.0.0.0:8000'
 alias elrun='./manage.py runserver 0.0.0.0:8000'
 #alias cov='google-chrome coverage/index.html'
 
+# vim
+vimit() {
+	vim `find -name $1`
+}
+alias vf=vimit
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
