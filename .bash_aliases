@@ -54,12 +54,12 @@ alias sshw='ssh marshall@werewolf'
 alias sshe='ssh marshall@elguntor.dyndns.org'
 
 # find
-alias fih='find -name "*.html" | xargs grep'
-alias fij='find -name "*.java" | xargs grep'
-alias fijs='find -name "*.js" | xargs grep'
-alias fir='find -name "*.rb" | xargs grep'
-alias fip='find -name "*.py" | xargs grep'
-alias fil='find -name "*.less" | xargs grep'
+alias fih='find -name "*.html" | xargs grep -n'
+alias fij='find -name "*.java" | xargs grep -n'
+alias fijs='find -name "*.js" | xargs grep -n'
+alias fir='find -name "*.rb" | xargs grep -n'
+alias fip='find -name "*.py" | xargs grep -n'
+alias fil='find -name "*.less" | xargs grep -n'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
