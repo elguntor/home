@@ -181,8 +181,8 @@ map <C-t> :NERDTreeToggle<CR>
 " Syntastic General"{{{
 let g:syntastic_check_on_open=1
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
-" let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
+"let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
+let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 " }}}
 
 " Languages "{{{
