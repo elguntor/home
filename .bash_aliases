@@ -71,7 +71,7 @@ alias fa='echo "flushall" | redis-cli'
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
-alias cdel='cd $BUNCH_HOME/elminer'
+alias cdel='cd $BUNCH_HOME/elminer/elminer'
 
 # postgres root
 alias pgroot='psql -U postgres -W -h localhost postgres'
