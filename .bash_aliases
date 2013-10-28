@@ -75,7 +75,7 @@ alias cdel='cd $BUNCH_HOME/elminer/elminer'
 
 # postgres root
 alias pgroot='psql -U postgres -W -h localhost postgres'
-alias pgel='psql -U elscrum -W -h localhost elscrum'
+alias pgel='psql -U elminer -W -h localhost elminer'
 
 # activate python
 # alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
@@ -94,7 +94,7 @@ alias v.cd='cdvirtualenv'
 alias v.lssitepackages='lssitepackages'
 
 # current project
-alias cdcp='cd $HOME/src/elscrum'
+alias cdcp='cd $HOME/src/elminer'
 alias runs='bin/django runserver 0.0.0.0:8000'
 alias elrun='./manage.py runserver 0.0.0.0:8000'
 #alias cov='google-chrome coverage/index.html'
