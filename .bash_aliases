@@ -88,7 +88,7 @@ alias elrun='./manage.py runserver 0.0.0.0:8000'
 
 # vim
 vimit() {
-	vim `find -name $1`
+	vim `find -name $1 | head -n 1`
 }
 alias vf=vimit
 # put this in for git logging
