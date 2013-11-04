@@ -1,33 +1,33 @@
 " General "{{{
-autocmd! bufwritepost .vimrc source %	" auto reload .vimrc
-set nocompatible			" be iMproved
-filetype plugin indent on		" required by Vundle
+autocmd! bufwritepost .vimrc source %   " auto reload .vimrc
+set nocompatible                        " be iMproved
+filetype plugin indent on               " required by Vundle
 
-set encoding=utf-8			" I hate ASCII!
+set encoding=utf-8                      " I hate ASCII!
 set tags=$HOME/src/ctags
-set ttyfast				" fast terminal
+set ttyfast                             " fast terminal
 set nobackup                            " do not back up files every time you :w, faster writes
-set ignorecase				" case insensitive searching
-set smartcase				" unless the search contains a capital letter
-set incsearch				" show matches while typing
+set ignorecase                          " case insensitive searching
+set smartcase                           " unless the search contains a capital letter
+set incsearch                           " show matches while typing
 
-set number				" show line numbers
-set wildignore=*.o,*.obj,*.bak,*.exe	" tab complete ignores these
+set number                              " show line numbers
+set wildignore=*.o,*.obj,*.bak,*.exe    " tab complete ignores these
 set wildignore+=*.pyc,*.class,*.so,*.exe
 set wildignore+=.git/*,.svn/*,*.dll
 
-map Y y$				" make Y behave like other capitals, yank to end of line
+map Y y$                                " make Y behave like other capitals, yank to end of line
 
-let mapleader = ","			" change mapleader to ,
+let mapleader = ","                     " change mapleader to ,
 
-" set hlsearch				" highlight search
-" nnoremap <CR> :noh<CR><CR>		" clear search by hitting return
+" set hlsearch                          " highlight search
+" nnoremap <CR> :noh<CR><CR>            " clear search by hitting return
 " }}}
 
 " Formatting {{{
-set ts=8				" tab size equals 8 spaces, Linux kernel style
-set softtabstop=8
-set shiftwidth=8
+set ts=4                                " tab size equals 4 spaces
+set softtabstop=4
+set shiftwidth=4
 set noexpandtab
 
 set backspace=indent,eol,start
@@ -139,20 +139,20 @@ Bundle 'groenewege/vim-less'
 " }}}
 
 " Visual "{{{
-syntax on				" enable syntax
-set background=dark			" dark background
-colorscheme emacs			" set the color scheme
+syntax on                   " enable syntax
+set background=dark         " dark background
+colorscheme emacs           " set the color scheme
 
-set showmatch				" Show matching brackets
-set matchtime=2				" Bracket blinking
+set showmatch               " Show matching brackets
+set matchtime=2	            " Bracket blinking
 
-set novisualbell			" No blinking
-set noerrorbells			" No noise
+set novisualbell            " No blinking
+set noerrorbells            " No noise
 
-set vb t_vb=				" disable any beeps or flashes on error
+set vb t_vb=                " disable any beeps or flashes on error
 
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-set laststatus=2			" always show status line
+set laststatus=2            " always show status line
 " }}}
 
 " BufExplorer"{{{
@@ -193,7 +193,8 @@ autocmd BufRead,BufNewFile *.handlebars setlocal ts=2 softtabstop=2 shiftwidth=2
 autocmd BufRead,BufNewFile *.js setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 "json
 autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
-"less
+"css, less
+autocmd BufRead,BufNewFile *.css setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.less setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 " php
 autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab

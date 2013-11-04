@@ -71,14 +71,27 @@ alias fa='echo "flushall" | redis-cli'
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
-alias cdel='cd $BUNCH_HOME/elscrum'
+alias cdel='cd $BUNCH_HOME/elminer/elminer'
 
 # postgres root
 alias pgroot='psql -U postgres -W -h localhost postgres'
 alias pgel='psql -U elscrum -W -h localhost elscrum'
 
 # activate python
-alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
+# alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
+
+# virtualenv aliases
+# http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
+alias v='workon'
+alias v.deactivate='deactivate'
+alias v.mk='mkvirtualenv --no-site-packages'
+alias v.mk_withsitepackages='mkvirtualenv'
+alias v.rm='rmvirtualenv'
+alias v.switch='workon'
+alias v.add2virtualenv='add2virtualenv'
+alias v.cdsitepackages='cdsitepackages'
+alias v.cd='cdvirtualenv'
+alias v.lssitepackages='lssitepackages'
 
 # current project
 alias cdcp='cd $HOME/src/elscrum'
@@ -91,5 +104,6 @@ vimit() {
 	vim `find -name $1 | head -n 1`
 }
 alias vf=vimit
+
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
