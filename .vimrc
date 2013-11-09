@@ -3,6 +3,7 @@ autocmd! bufwritepost .vimrc source %   " auto reload .vimrc
 set nocompatible                        " be iMproved
 filetype plugin indent on               " required by Vundle
 
+set hidden                              " not sure why this isn't on by default
 set encoding=utf-8                      " I hate ASCII!
 set tags=$HOME/src/ctags
 set ttyfast                             " fast terminal
@@ -136,6 +137,7 @@ Bundle 'taglist.vim'
 Bundle 'matchit.zip'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
+Bundle 'Valloric/YouCompleteMe'
 " }}}
 
 " Visual "{{{
