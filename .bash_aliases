@@ -72,6 +72,7 @@ alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $BUNCH_HOME/elminer/elminer'
+alias cdt='cd $BUNCH_HOME/twister'
 
 # postgres root
 alias pgroot='psql -U postgres -W -h localhost postgres'
