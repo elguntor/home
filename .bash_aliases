@@ -67,13 +67,6 @@ alias ng='sudo netstat -pant | grep'
 # redis
 alias fa='echo "flushall" | redis-cli'
 
-# moving
-alias cdbi='cd $BUNCH_HOME/bunch-ios'
-alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
-alias cdbn='cd $BUNCH_HOME/bunch-nagios'
-alias cdel='cd $BUNCH_HOME/elminer/elminer'
-alias cdt='cd $BUNCH_HOME/twister'
-
 # postgres root
 alias pgroot='psql -U postgres -W -h localhost postgres'
 alias pgel='psql -U elminer -W -h localhost elminer'
@@ -94,8 +87,14 @@ alias v.cdsitepackages='cdsitepackages'
 alias v.cd='cdvirtualenv'
 alias v.lssitepackages='lssitepackages'
 
-# current project
-alias cdcp='cd $HOME/src/elminer'
+# moving
+alias cdbi='cd $BUNCH_HOME/bunch-ios'
+alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
+alias cdbn='cd $BUNCH_HOME/bunch-nagios'
+alias cdel='cd $BUNCH_HOME/elminer/elminer && workon elminer'
+alias cdt='cd $BUNCH_HOME/twister && workon twister'
+
+# elminer project
 alias runs='bin/django runserver 0.0.0.0:8000'
 alias elrun='./manage.py runserver 0.0.0.0:8000'
 #alias cov='google-chrome coverage/index.html'
