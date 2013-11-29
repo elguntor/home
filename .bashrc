@@ -132,7 +132,7 @@ alias go_c="clang -xc '-' $go_libs $go_flags"
 # Mac OSX
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
-	export PATH=/usr/local/Cellar/emacs/24.3/bin:$PATH:/usr/local/mysql/bin
+	export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin
 	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
 	source $HOME/.bash_aliases
 else
