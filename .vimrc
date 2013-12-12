@@ -29,7 +29,7 @@ let mapleader = ","                     " change mapleader to ,
 set ts=4                                " tab size equals 4 spaces
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 set backspace=indent,eol,start
 " }}}

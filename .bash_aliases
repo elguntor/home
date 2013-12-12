@@ -92,10 +92,12 @@ alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $BUNCH_HOME/elminer/elminer && workon elminer'
-alias cdt='cd $BUNCH_HOME/twister && workon twister'
+alias cdt='cd $BUNCH_HOME/twister/web_site && workon twister'
+
+# Bunch
+alias runs='bin/django runserver 0.0.0.0:8000'
 
 # elminer project
-alias runs='bin/django runserver 0.0.0.0:8000'
 alias elrun='./manage.py runserver 0.0.0.0:8000'
 #alias cov='google-chrome coverage/index.html'
 
