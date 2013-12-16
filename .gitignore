@@ -1,3 +1,4 @@
+.vagrant.d/
 !.vim/bundle/vundle/*
 !.vim/bundle/vundle/autoload/*
 !.vim/bundle/vundle/autoload/vundle/*
