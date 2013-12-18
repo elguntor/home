@@ -1,4 +1,3 @@
-.vagrant.d/
 !.vim/bundle/vundle/*
 !.vim/bundle/vundle/autoload/*
 !.vim/bundle/vundle/autoload/vundle/*
@@ -12,6 +11,7 @@
 .FBReader/
 .ICEauthority
 .IdeaIC11/
+.IdeaIC13/
 .LD/
 .Skype/
 .Trash/
@@ -68,6 +68,7 @@
 .gksu.lock
 .gnome2/
 .gnupg/
+.googleearth/
 .goutputstream*
 .goutputstream-J0DAFW
 .gpg-agent-info
@@ -141,6 +142,7 @@
 .thumbnails/
 .thunderbird/
 .twitter_oauth
+.vagrant.d/
 .vim/.netrwhist
 .vim/.netrwhist
 .vim/bundle/*
