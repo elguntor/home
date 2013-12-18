@@ -188,7 +188,8 @@ let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E12
 " }}}
 
 " Languages "{{{
-" html
+" html, xml
+autocmd BufRead,BufNewFile *.xml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.html setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
 autocmd BufRead,BufNewFile *.handlebars setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
 " javascript
