@@ -215,6 +215,7 @@ autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4
 
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.erb setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=slim
 " }}}
 
