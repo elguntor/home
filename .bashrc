@@ -48,6 +48,9 @@ set -o vi
 # gpg tty
 export GPG_TTY=`tty`
 
+# Linux Mint terminal 256 colour support
+TERM=xterm-256color
+
 # Mac OSX
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
@@ -72,15 +75,13 @@ parse_git_branch() {
 }
 export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \[\e[0;36m\]\$(parse_git_branch) \$\[\033[00m\] "
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # python virtualenvs
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Linux Mint terminal 256 colour support
-TERM=xterm-256color
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
