@@ -138,6 +138,8 @@ Bundle 'matchit.zip'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'yankstack'
+Bundle 'amdt/vim-niji'
 " }}}
 
 " Visual "{{{
