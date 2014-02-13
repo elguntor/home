@@ -79,7 +79,7 @@ vnoremap > >gv
 
 " absolute / relative line numbers
 function! NumberToggle()
-	if(&relativenumber ==1)
+	if(&relativenumber == 1)
 		set number
 	else
 		set relativenumber
