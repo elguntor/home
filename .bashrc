@@ -27,6 +27,12 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# bunch
+export BUNCH_HOME="$HOME/src"
+
+# codified
+export HIPYARD_HOME="$HOME/src"
+
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -38,9 +44,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# bunch
-export BUNCH_HOME="$HOME/src"
 
 # vi bash
 set -o vi
