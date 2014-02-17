@@ -140,6 +140,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'yankstack'
 Bundle 'amdt/vim-niji'
+Bundle 'rking/ag.vim'
 " }}}
 
 " Visual "{{{
