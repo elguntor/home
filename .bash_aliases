@@ -71,9 +71,6 @@ alias fa='echo "flushall" | redis-cli'
 alias pgroot='psql -U postgres -W -h localhost postgres'
 alias pgel='psql -U elminer -W -h localhost elminer'
 
-# activate python
-# alias ap='source $HOME/Dropbox/src/python-django/bin/activate'
-
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
 alias v='workon'
@@ -107,6 +104,17 @@ vimit() {
 	vim `find -name $1 | head -n 1`
 }
 alias vf=vimit
+
+# ruby
+alias be='bundle exec'
+alias ber="bundle exec rake"
+alias bers="bundle exec rake spec"
+alias berc="bundle exec rails console"
+alias bes="bundle exec rspec"
+alias r="bundle exec rails"
+alias rs="bundle exec rails s"
+alias psp="rake parallel:create; rake parallel:prepare; rake parallel:spec"
+alias psps="rake parallel:spec"
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

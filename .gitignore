@@ -76,6 +76,7 @@
 .gtk-bookmarks
 .gtkrc-2.0
 .gtkrc-2.0-kde4
+.guard_history
 .heroku/
 .hgignore_global
 .hgrc
