@@ -122,6 +122,7 @@
 .pulse/
 .putty/
 .pylint.d/
+.rbenv/
 .recentf
 .recently-used
 .rediscli_history
@@ -143,7 +144,6 @@
 .thunderbird/
 .twitter_oauth
 .vagrant.d/
-.vim/.netrwhist
 .vim/.netrwhist
 .vim/bundle/*
 .vim/bundle/vundle/.netrwhist
