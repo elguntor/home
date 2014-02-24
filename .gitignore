@@ -36,6 +36,7 @@
 .directory
 .dmrc
 .dropbox-dist/
+.dropbox-master/
 .dropbox/
 .dvdcss/
 .e/
@@ -117,6 +118,7 @@
 .pgpass
 .pip/
 .pki/
+.pow
 .profile
 .psql_history
 .pulse-cookie

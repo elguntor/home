@@ -58,7 +58,7 @@ TERM=xterm-256color
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
 	export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin
-	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
+	#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
 	source $HOME/.bash_aliases
 else
 	# remap caps lock to control
