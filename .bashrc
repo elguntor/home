@@ -67,9 +67,10 @@ fi
 
 # Java
 export JAVA_HOME="/usr/local/jdk1.7.0_45"
+export ANT_HOME="/usr/local/apache-ant-1.9.3"
 export M2_HOME="/usr/local/apache-maven-3.1.1"
 export M2="$M2_HOME/bin"
-export PATH="$JAVA_HOME/bin:$M2:$PATH"
+export PATH="$JAVA_HOME/bin:$M2:$ANT_HOME/bin:$PATH"
 
 # PS1
 # Git branch in prompt.

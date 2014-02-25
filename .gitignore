@@ -110,6 +110,7 @@
 .nbprofiler/
 .netbeans/
 .netrc
+.npm/
 .nv/
 .nvidia-settings-rc
 .openoffice.org/
