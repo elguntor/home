@@ -17,6 +17,8 @@ elif [[ "$unamestr" == "Darwin" ]]; then
 	alias grep='grep --color=auto'
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
+
+	alias tree='tree -C'
 fi
 
 # some more ls aliases
@@ -89,6 +91,7 @@ alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $HIPYARD_HOME/elminer/elminer && workon elminer'
+alias cdha='cd $HIPYARD_HOME/hipyard-android'
 alias cdhw='cd $HIPYARD_HOME/hipyard-web'
 alias cdt='cd $HIPYARD_HOME/twister/web_site && workon twister'
 
