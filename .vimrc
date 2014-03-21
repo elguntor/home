@@ -195,8 +195,8 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " Languages "{{{
 " html, xml
 autocmd BufRead,BufNewFile *.xml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd BufRead,BufNewFile *.html setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
-autocmd BufRead,BufNewFile *.handlebars setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=htmldjango
+autocmd BufRead,BufNewFile *.html setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.handlebars setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 " javascript
 autocmd BufRead,BufNewFile *.js setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 "json
@@ -220,5 +220,7 @@ autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.erb setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=slim
+" yaml
+autocmd Filetype yaml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 " }}}
 
