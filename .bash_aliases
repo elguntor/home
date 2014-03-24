@@ -6,26 +6,25 @@ if [[ "$unamestr" == "Linux" ]];then
 		alias ls='ls --color=auto'
 		alias dir='dir --color=auto'
 		alias vdir='vdir --color=auto'
-
-		alias grep='grep --color=auto'
-		alias fgrep='fgrep --color=auto'
-		alias egrep='egrep --color=auto'
 	fi
 elif [[ "$unamestr" == "Darwin" ]]; then
 	alias ls='ls -G'
-
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
-
 	alias tree='tree -C'
 fi
 
-# some more ls aliases
+# catdir!
+alias catdir='find . -type f -exec cat {} +'
+
+# ls
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias dstat='dstat -cdngylm'
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -59,9 +58,9 @@ alias sshe='ssh marshall@elguntor.dyndns.org'
 alias fih='find -name "*.html" | xargs grep -n'
 alias fij='find -name "*.java" | xargs grep -n'
 alias fijs='find -name "*.js" | xargs grep -n'
-alias fir='find -name "*.rb" | xargs grep -n'
-alias fip='find -name "*.py" | xargs grep -n'
 alias fil='find -name "*.less" | xargs grep -n'
+alias fip='find -name "*.py" | xargs grep -n'
+alias fir='find -name "*.rb" | xargs grep -n'
 
 # netstat
 alias ng='sudo netstat -pant | grep'
@@ -75,18 +74,24 @@ alias pgel='psql -U elminer -W -h localhost elminer'
 
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
-alias v='workon'
-alias v.deactivate='deactivate'
-alias v.mk='mkvirtualenv --no-site-packages'
-alias v.mk_withsitepackages='mkvirtualenv'
-alias v.rm='rmvirtualenv'
-alias v.switch='workon'
-alias v.add2virtualenv='add2virtualenv'
-alias v.cdsitepackages='cdsitepackages'
-alias v.cd='cdvirtualenv'
-alias v.lssitepackages='lssitepackages'
+#alias v='workon'
+#alias v.deactivate='deactivate'
+#alias v.mk='mkvirtualenv --no-site-packages'
+#alias v.mk_withsitepackages='mkvirtualenv'
+#alias v.rm='rmvirtualenv'
+#alias v.switch='workon'
+#alias v.add2virtualenv='add2virtualenv'
+#alias v.cdsitepackages='cdsitepackages'
+#alias v.cd='cdvirtualenv'
+#alias v.lssitepackages='lssitepackages'
 
-# moving
+# vagrant aliases
+alias vd='vagrant destroy'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+alias vu='vagrant up'
+
+# moving around
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
@@ -94,13 +99,6 @@ alias cdel='cd $HIPYARD_HOME/elminer/elminer && workon elminer'
 alias cdha='cd $HIPYARD_HOME/hipyard-android'
 alias cdhw='cd $HIPYARD_HOME/hipyard-web'
 alias cdt='cd $HIPYARD_HOME/twister/web_site && workon twister'
-
-# Bunch
-alias runs='bin/django runserver 0.0.0.0:8000'
-
-# elminer project
-alias elrun='./manage.py runserver 0.0.0.0:8000'
-#alias cov='google-chrome coverage/index.html'
 
 # vim
 vimit() {

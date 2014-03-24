@@ -13,6 +13,7 @@ set smartcase                           " unless the search contains a capital l
 set incsearch                           " show matches while typing
 
 set number                              " show line numbers
+set mouse=a                             " turn on the mouse for Macs
 set wildignore=*.o,*.obj,*.bak,*.exe    " tab complete ignores these
 set wildignore+=*.pyc,*.class,*.so,*.exe
 set wildignore+=.git/*,.svn/*,*.dll
@@ -141,6 +142,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'yankstack'
 Bundle 'amdt/vim-niji'
 Bundle 'rking/ag.vim'
+Bundle 'puppetlabs/puppet-syntax-vim'
 " }}}
 
 " Visual "{{{
@@ -223,4 +225,5 @@ autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expan
 " yaml
 autocmd Filetype yaml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 " }}}
+
 
