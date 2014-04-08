@@ -8,6 +8,7 @@ if [[ "$unamestr" == "Linux" ]];then
 		alias vdir='vdir --color=auto'
 	fi
 elif [[ "$unamestr" == "Darwin" ]]; then
+    alias find='find .'
 	alias ls='ls -G'
 	alias tree='tree -C'
 fi
@@ -96,7 +97,7 @@ alias cdbi='cd $BUNCH_HOME/bunch-ios'
 alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $HIPYARD_HOME/elminer/elminer && workon elminer'
-alias cdha='cd $HIPYARD_HOME/hipyard-android'
+alias cdha='cd $HIPYARD_HOME/hipyard-ansible'
 alias cdhw='cd $HIPYARD_HOME/hipyard-web'
 alias cdt='cd $HIPYARD_HOME/twister/web_site && workon twister'
 

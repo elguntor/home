@@ -6,6 +6,7 @@
 !.vim/bundle/vundle/test/files/*
 # Vundle stuff
 **.swp
+*.retry
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
