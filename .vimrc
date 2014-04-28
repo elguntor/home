@@ -13,7 +13,6 @@ set smartcase                           " unless the search contains a capital l
 set incsearch                           " show matches while typing
 
 set number                              " show line numbers
-set mouse=a                             " turn on the mouse for Macs
 set wildignore=*.o,*.obj,*.bak,*.exe    " tab complete ignores these
 set wildignore+=*.pyc,*.class,*.so,*.exe
 set wildignore+=.git/*,.svn/*,*.dll
@@ -24,6 +23,14 @@ let mapleader = ","                     " change mapleader to ,
 
 " set hlsearch                          " highlight search
 " nnoremap <CR> :noh<CR><CR>            " clear search by hitting return
+"
+" Mac stuff
+if has("unix")
+    let s:uname = system("echo -n \"$(uname)\"")
+    if !v:shell_error && s:uname == "Darwin"
+        set mouse=a
+    endif
+endif
 " }}}
 
 " Formatting {{{
