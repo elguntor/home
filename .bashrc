@@ -51,7 +51,7 @@ set -o vi
 # gpg tty
 export GPG_TTY=`tty`
 
-# Linux Mint terminal 256 colour support
+# terminal 256 colour support
 TERM=xterm-256color
 
 # Mac OSX

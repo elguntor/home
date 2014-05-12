@@ -211,6 +211,7 @@ autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufRead,BufNewFile *.j2 setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " django support
 " leader dt starts Command T in template directory corresponding to the application
