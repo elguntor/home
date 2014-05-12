@@ -99,6 +99,7 @@ alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
 alias cdbn='cd $BUNCH_HOME/bunch-nagios'
 alias cdel='cd $HIPYARD_HOME/elminer/elminer && workon elminer'
 alias cdha='cd $HIPYARD_HOME/hipyard-ansible'
+alias cdhd='cd $HIPYARD_HOME/hipyard-devops'
 alias cdhw='cd $HIPYARD_HOME/hipyard-web'
 alias cdt='cd $HIPYARD_HOME/twister/web_site && workon twister'
 
