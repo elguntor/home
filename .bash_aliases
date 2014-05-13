@@ -91,7 +91,6 @@ alias vd='vagrant destroy'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
-alias smp='ssh marshall@piwik'
 
 # moving around
 alias cdbi='cd $BUNCH_HOME/bunch-ios'
