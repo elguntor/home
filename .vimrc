@@ -7,7 +7,7 @@ set hidden                              " not sure why this isn't on by default
 set encoding=utf-8                      " I hate ASCII!
 set tags=$HOME/src/ctags
 set ttyfast                             " fast terminal
-set nobackup                            " do not back up files every time you :w, faster writes
+set nobackup                            " do not back up files every time you :w, hate tildes
 set ignorecase                          " case insensitive searching
 set smartcase                           " unless the search contains a capital letter
 set incsearch                           " show matches while typing
@@ -233,5 +233,4 @@ autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expan
 " yaml
 autocmd Filetype yaml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 " }}}
-
 

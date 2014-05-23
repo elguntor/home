@@ -85,6 +85,6 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \[\e[0;36m\]\$(parse_git_bran
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby ruby-2.1.2

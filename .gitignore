@@ -133,6 +133,7 @@
 .recently-used
 .rediscli_history
 .rnd
+.rubies/
 .rvm/
 .sabnzbd/
 .sbt.cache.lock
