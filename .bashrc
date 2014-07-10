@@ -60,6 +60,7 @@ if [[ "$unamestr" == "Darwin" ]];then
 	export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin
 	#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
 	source $HOME/.bash_aliases
+    source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
 else
 	# remap caps lock to control
 	setxkbmap -option ctrl:nocaps
