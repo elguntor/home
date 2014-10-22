@@ -88,4 +88,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby ruby-2.1.2
+chruby ruby-2.1.3
