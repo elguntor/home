@@ -9,8 +9,9 @@ if [[ "$unamestr" == "Linux" ]];then
 	fi
 elif [[ "$unamestr" == "Darwin" ]]; then
     alias find='find .'
-	alias ls='ls -G'
 	alias tree='tree -C'
+    export CLICOLOR=1
+    export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 fi
 
 # catdir!

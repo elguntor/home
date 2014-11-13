@@ -16,6 +16,7 @@
 .LD/
 .Skype/
 .Trash/
+.Ultimate/
 .VirtualBox/
 .Xauthority
 .Xauthority.*
@@ -83,6 +84,7 @@
 .heroku/
 .hgignore_global
 .hgrc
+.histfile
 .hwid
 .icedtea/
 .ido.last
@@ -105,6 +107,7 @@
 .m2/
 .macromedia/
 .mission-control/
+.mono/
 .mozilla/
 .mplayer/
 .my.cnf
@@ -115,6 +118,7 @@
 .npm/
 .nv/
 .nvidia-settings-rc
+.oh-my-zsh/
 .openoffice.org/
 .opera/
 .pam_environment
@@ -162,7 +166,13 @@
 .wine/
 .xsession-errors
 .xsession-errors.old
-.zshrc
+.z
+.zcompdump
+.zcompdump-werewolf-5.0.7
+.zsh-update
+.zsh_history
+.zshrc-e
+.zshrc.pre-oh-my-zsh
 Applications/
 Books/
 Calibre Library/
