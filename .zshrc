@@ -90,3 +90,7 @@ export KEYTIMEOUT=1
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_aliases
+
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby ruby-2.1.3
