@@ -86,3 +86,11 @@ else
     /usr/local/share/ruby-install/ruby-install.sh
 fi
 chruby ruby-2.1.3
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+if [[ "$unamestr" == "Darwin" ]];then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+else
+    [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
+fi

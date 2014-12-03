@@ -95,6 +95,7 @@
 .ivy2/
 .java/
 .java_history
+.jenv/
 .jline-clojure.main.history
 .kchmviewer/
 .kde/
