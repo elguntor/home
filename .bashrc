@@ -27,12 +27,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# bunch
-export BUNCH_HOME="$HOME/src"
-
-# codified
-export HIPYARD_HOME="$HOME/src"
-
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -54,12 +48,10 @@ export GPG_TTY=`tty`
 # terminal 256 colour support
 TERM=xterm-256color
 
-# Mac OSX
+# Mac OSX - z
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
-	export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin
 	#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/mysql/lib
-	source $HOME/.bash_aliases
     source /usr/local/Cellar/z/1.8/etc/profile.d/z.sh
 else
 	# remap caps lock to control
@@ -87,5 +79,10 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \[\e[0;36m\]\$(parse_git_bran
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+if [[ "$unamestr" == "Darwin" ]];then
+    source /usr/local/opt/chruby/share/chruby/chruby.sh
+else
+    source /usr/local/share/chruby/chruby.sh
+    /usr/local/share/ruby-install/ruby-install.sh
+fi
 chruby ruby-2.1.3

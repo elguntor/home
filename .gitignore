@@ -70,6 +70,7 @@
 .gitignore_global
 .gitk
 .gksu.lock
+.gnome/
 .gnome2/
 .gnupg/
 .googleearth/
@@ -168,6 +169,7 @@
 .xsession-errors.old
 .z
 .zcompdump
+.zcompdump-serenity-5.0.2
 .zcompdump-werewolf-5.0.7
 .zsh-update
 .zsh_history
@@ -198,6 +200,7 @@ bak/
 bin/
 docs/
 downloads/
+examples.desktop
 jmeter.log
 libpeerconnection.log
 media/

@@ -75,8 +75,22 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# z
-source `brew --prefix`/etc/profile.d/z.sh
+# Mac OSX
+unamestr=`uname`
+if [[ "$unamestr" == "Darwin" ]];then
+    source `brew --prefix`/etc/profile.d/z.sh
+    # chruby
+    source /usr/local/opt/chruby/share/chruby/chruby.sh
+else
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+    /usr/local/share/ruby-install/ruby-install.sh
+	# remap caps lock to control
+	setxkbmap -option ctrl:nocaps
+fi
+
+# chruby
+chruby ruby-2.1.3
 
 # vi bindings
 export EDITOR='vim'
@@ -93,6 +107,6 @@ export KEYTIMEOUT=1
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_aliases
 
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby ruby-2.1.3
+
+# terminal 256 colour support
+TERM=xterm-256color
