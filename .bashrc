@@ -80,7 +80,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # chruby
 if [[ "$unamestr" == "Darwin" ]];then
-    source /usr/local/opt/chruby/share/chruby/chruby.sh
+    source /usr/local/share/chruby/chruby.sh
 else
     source /usr/local/share/chruby/chruby.sh
     /usr/local/share/ruby-install/ruby-install.sh

@@ -80,7 +80,7 @@ unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
     source `brew --prefix`/etc/profile.d/z.sh
     # chruby
-    source /usr/local/opt/chruby/share/chruby/chruby.sh
+    source /usr/local/share/chruby/chruby.sh
 else
     # chruby
     source /usr/local/share/chruby/chruby.sh
