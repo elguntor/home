@@ -64,7 +64,6 @@ export ANT_HOME="/usr/local/apache-ant-1.9.3"
 export M2_HOME="/usr/local/apache-maven-3.1.1"
 export M2="$M2_HOME/bin"
 export PATH="$JAVA_HOME/bin:$M2:$ANT_HOME/bin:$PATH"
-export ANDROID_HOME="/Users/marshall/src/android-sdks/"
 # PS1
 # Git branch in prompt.
 parse_git_branch() {
@@ -91,6 +90,9 @@ chruby ruby-2.1.3
 if [[ "$unamestr" == "Darwin" ]];then
     export PATH="$HOME/.jenv/bin:$PATH"
     if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+    export HOMEBREW_GITHUB_API_TOKEN="926a4042d1dc6f9ce8c9b3cdaf5d7b001c3712ba"
+    export PATH="$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/"
+    export ANDROID_HOME="$HOME/src/android-sdk-macosx/"
 else
     [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
 fi
