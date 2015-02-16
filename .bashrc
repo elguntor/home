@@ -84,7 +84,7 @@ else
     source /usr/local/share/chruby/chruby.sh
     /usr/local/share/ruby-install/ruby-install.sh
 fi
-chruby ruby-2.1.3
+chruby ruby-2.1.5
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then
@@ -96,3 +96,9 @@ if [[ "$unamestr" == "Darwin" ]];then
 else
     [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
 fi
+
+# Android automation
+export ANDROID_HOME=$HOME/src/android-sdk-macosx
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/
