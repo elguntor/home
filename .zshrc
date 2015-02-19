@@ -127,3 +127,6 @@ export ANDROID_HOME=$HOME/src/android-sdk-macosx
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/
+
+# history search
+bindkey '^R' history-incremental-search-backward

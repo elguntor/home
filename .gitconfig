@@ -3,7 +3,7 @@
 	co = checkout
 	ci = commit
 	br = branch
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	meld = /home/mgunter/bin/git-meld.pl
 	po = push origin
 	d = difftool
