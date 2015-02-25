@@ -24,6 +24,7 @@
 .android
 .bash_history
 .bash_logout
+.brew_token
 .bzr.log
 .cache/
 .calibre_calibre GUI.lock

@@ -90,9 +90,9 @@ chruby ruby-2.1.5
 if [[ "$unamestr" == "Darwin" ]];then
     export PATH="$HOME/.jenv/bin:$PATH"
     if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-    export HOMEBREW_GITHUB_API_TOKEN="926a4042d1dc6f9ce8c9b3cdaf5d7b001c3712ba"
     export PATH="$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/"
     export ANDROID_HOME="$HOME/src/android-sdk-macosx/"
+    source .brew_token
 else
     [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
 fi
