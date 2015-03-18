@@ -175,14 +175,18 @@ nnoremap <F3> :BufExplorer<CR>
 " }}}
 "
 " Taglist"{{{
-let Tlist_Auto_Highlight_Tag = 0
-let Tlist_Highlight_Tag_On_BufEnter = 0
-let Tlist_GainFocus_On_ToggleOpen = 1
-nnoremap <F4> :TlistToggle<CR>
+"let Tlist_Auto_Highlight_Tag = 0
+"let Tlist_Highlight_Tag_On_BufEnter = 0
+"let Tlist_GainFocus_On_ToggleOpen = 1
+"nnoremap <F4> :TlistToggle<CR>
 " }}}
 
 " Gundo"{{{
 nnoremap <F5> :GundoToggle<CR>
+" }}}
+
+" CommandTFlush"{{{
+nnoremap <F8> :CommandTFlush<CR>
 " }}}
 
 " NerdTree"{{{
@@ -197,7 +201,6 @@ map <C-t> :NERDTreeToggle<CR>
 let g:syntastic_java_checkers=[]
 let g:syntastic_check_on_open=1
 let g:syntastic_python_checkers=['flake8']
-" let g:syntastic_python_flake8_args='--ignore=E124,E126,E127,E128'
 let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }}}

@@ -55,14 +55,15 @@ source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export EDITOR='vim'
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -70,10 +71,11 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Mac OSX
 unamestr=`uname`
@@ -129,4 +131,16 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/
 
 # history search
-bindkey '^R' history-incremental-search-backward
+bindkey "^R" history-incremental-search-backward
+
+# python configuration
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+gpip3(){
+    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+source /usr/local/bin/virtualenvwrapper.sh
+# upgrading global installs command
+# gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper

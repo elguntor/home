@@ -43,6 +43,8 @@ alias rs='rspec -fd -c --backtrace'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
 alias gco='git checkout'
 alias gd='git diff'
 alias gm='git merge'
@@ -52,7 +54,6 @@ alias gpo='git push origin'
 alias gs='git status'
 
 # shh
-alias sshh='ssh marshall@hawk'
 alias sshw='ssh marshall@werewolf'
 alias sshe='ssh marshall@elguntor.dyndns.org'
 
@@ -76,16 +77,16 @@ alias pgel='psql -U elminer -W -h localhost elminer'
 
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
-#alias v='workon'
-#alias v.deactivate='deactivate'
-#alias v.mk='mkvirtualenv --no-site-packages'
-#alias v.mk_withsitepackages='mkvirtualenv'
-#alias v.rm='rmvirtualenv'
-#alias v.switch='workon'
-#alias v.add2virtualenv='add2virtualenv'
-#alias v.cdsitepackages='cdsitepackages'
-#alias v.cd='cdvirtualenv'
-#alias v.lssitepackages='lssitepackages'
+alias v='workon'
+alias v.deactivate='deactivate'
+alias v.mk='mkvirtualenv --no-site-packages'
+alias v.mk_withsitepackages='mkvirtualenv'
+alias v.rm='rmvirtualenv'
+alias v.switch='workon'
+alias v.add2virtualenv='add2virtualenv'
+alias v.cdsitepackages='cdsitepackages'
+alias v.cd='cdvirtualenv'
+alias v.lssitepackages='lssitepackages'
 
 # vagrant aliases
 alias vd='vagrant destroy'
@@ -94,14 +95,9 @@ alias vs='vagrant ssh'
 alias vu='vagrant up'
 
 # moving around
-alias cdbi='cd $BUNCH_HOME/bunch-ios'
-alias cdbw='cd $BUNCH_HOME/bunch-web/bunch'
-alias cdbn='cd $BUNCH_HOME/bunch-nagios'
-alias cdel='cd $HIPYARD_HOME/elminer/elminer && workon elminer'
 alias cdha='cd $HIPYARD_HOME/hipyard-ansible'
 alias cdhd='cd $HIPYARD_HOME/hipyard-devops'
 alias cdhw='cd $HIPYARD_HOME/hipyard-web'
-alias cdt='cd $HIPYARD_HOME/twister/web_site && workon twister'
 
 # vim
 vimit() {
@@ -121,6 +117,19 @@ alias r="bundle exec rails"
 alias rs="bundle exec rails s"
 alias psp="rake parallel:create; rake parallel:prepare; rake parallel:spec"
 alias psps="rake parallel:spec"
+
+# python
+alias pm="python manage.py"
+alias pmcs="python manage.py collectstatic --noinput"
+alias pmdbsh="python manage.py dbshell"
+alias pmdd="python manage.py dumpdata"
+alias pmld="python manage.py loaddata"
+alias pmm="python manage.py migrate"
+alias pmsh="python manage.py shell"
+alias pmsm="python manage.py schemamigration"
+alias pmsync="python manage.py syncdb --noinput"
+alias pmt="python manage.py test"
+alias pmrs="python manage.py runserver"
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

@@ -10,6 +10,7 @@
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
+.Genymobile/
 .ICEauthority
 .IdeaIC11/
 .IdeaIC13/
@@ -35,6 +36,7 @@
 .config/
 .csshrc
 .cups/
+.dbshell
 .dbus/
 .dia/
 .directory
@@ -68,6 +70,7 @@
 .gem/
 .gimp-2.6/
 .gimp-2.8/
+.github-stats/
 .gitignore_global
 .gitk
 .gksu.lock
@@ -110,6 +113,7 @@
 .m2/
 .macromedia/
 .mission-control/
+.mongorc.js
 .mono/
 .mozilla/
 .mplayer/
@@ -126,6 +130,7 @@
 .opera/
 .pam_environment
 .pgpass
+.pia_manager/
 .pip/
 .pki/
 .pow
@@ -135,6 +140,7 @@
 .pulse/
 .putty/
 .pylint.d/
+.python_history
 .rbenv/
 .recentf
 .recently-used
@@ -147,6 +153,7 @@
 .scala_history
 .selected_editor
 .serverauth.3683
+.sqlite_history
 .ssh/
 .steam*
 .subversion/
@@ -171,6 +178,7 @@
 .xsession-errors.old
 .z
 .zcompdump
+.zcompdump-bigfoot-5.0.7
 .zcompdump-serenity-5.0.2
 .zcompdump-werewolf-5.0.7
 .zsh-update
@@ -179,6 +187,7 @@
 .zshrc.pre-oh-my-zsh
 Applications/
 Books/
+Bunch-t4s.zip
 Calibre Library/
 Calibre_Library/
 Desktop/
@@ -187,6 +196,8 @@ Downloads/
 Dropbox/
 Ernest_Cline-Ready_Player_One.epub
 Library/
+Marshall Gunter 2013 RL.pdf
+Marshall Gunter 2013 T4.pdf
 Movies/
 Music/
 Pictures/
@@ -206,8 +217,13 @@ examples.desktop
 jmeter.log
 libpeerconnection.log
 media/
+open_startup_programs.scpt
 photos/
 projects/
 src/
+start-mongo.sh
+stop-mongo.sh
+td.txt
 tmp/
+wifi.txt
 workspace/
