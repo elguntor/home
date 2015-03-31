@@ -147,7 +147,6 @@ Bundle 'matchit.zip'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'yankstack'
 Bundle 'amdt/vim-niji'
 Bundle 'rking/ag.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
@@ -156,7 +155,8 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 " Visual "{{{
 syntax on                   " enable syntax
 set background=dark         " dark background
-colorscheme emacs           " set the color scheme
+colorscheme monokai " set the color scheme
+" colorscheme vividchalk      " set the color scheme
 
 set showmatch               " Show matching brackets
 set matchtime=2	            " Bracket blinking
