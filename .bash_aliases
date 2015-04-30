@@ -131,5 +131,8 @@ alias pmsync="python manage.py syncdb --noinput"
 alias pmt="python manage.py test"
 alias pmrs="python manage.py runserver"
 
+# thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
+
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
