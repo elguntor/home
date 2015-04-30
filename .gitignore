@@ -6,6 +6,7 @@
 !.vim/bundle/vundle/test/files/*
 # Vundle stuff
 **.swp
+*.pdf
 *.retry
 .CFUserTextEncoding
 .DS_Store
@@ -14,6 +15,7 @@
 .ICEauthority
 .IdeaIC11/
 .IdeaIC13/
+.IdeaIC14/
 .LD/
 .Skype/
 .Trash/
@@ -131,10 +133,12 @@
 .pam_environment
 .pgpass
 .pia_manager/
+.pia_manager_crash.log
 .pip/
 .pki/
 .pow
 .profile
+.pry_history
 .psql_history
 .pulse-cookie
 .pulse/

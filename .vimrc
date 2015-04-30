@@ -28,7 +28,8 @@ let mapleader = ","                     " change mapleader to ,
 if has("unix")
     let s:uname = system("echo -n \"$(uname)\"")
     if !v:shell_error && s:uname == "Darwin"
-        set mouse=a
+        "set mouse=a
+        set mouse=nicr
     endif
 endif
 " }}}
@@ -155,7 +156,9 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 " Visual "{{{
 syntax on                   " enable syntax
 set background=dark         " dark background
-colorscheme monokai " set the color scheme
+" colorscheme monokai " set the color scheme
+colorscheme molokai " set the color scheme
+let g:molokai_original = 1
 " colorscheme vividchalk      " set the color scheme
 
 set showmatch               " Show matching brackets
@@ -197,12 +200,16 @@ map <C-t> :NERDTreeToggle<CR>
 "let g:ctrl_map = '<c p>'
 " }}}
 
-" Syntastic General"{{{
+" Syntastic General "{{{
 let g:syntastic_java_checkers=[]
 let g:syntastic_check_on_open=1
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" }}}
+
+" YouCompleteMe "{{{
+let g:ycm_extra_conf_globlist = ['~/src/*']
 " }}}
 
 " Languages "{{{
