@@ -51,9 +51,12 @@
 .eclim/
 .eclipse/
 .efreet/
+.emacs.d/#init.el#
 .emacs.d/#marshall.el#
 .emacs.d/auto-save-list/*
 .emacs.d/backups/*
+.emacs.d/elpa/
+.emacs.d/init.el~
 .emacs.d/places
 .erlang.cookie
 .esd_auth
@@ -92,6 +95,7 @@
 .hgignore_global
 .hgrc
 .histfile
+.htoprc
 .hwid
 .icedtea/
 .ido.last
@@ -164,6 +168,7 @@
 .subversion_IDEA/
 .sudo_as_admin_successful
 .swt/
+.thefuck/
 .themes/
 .thumbnails/
 .thunderbird/

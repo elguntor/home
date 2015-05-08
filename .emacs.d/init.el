@@ -3,7 +3,8 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
 (defvar my-packages '(paredit ido-ubiquitous magit smex scpaste
-                        evil evil-jumper evil-matchit color-theme-monokai))
+                        evil evil-jumper evil-matchit evil-leader
+                        helm smart-mode-line smart-mode-line-powerline-theme monokai-theme))
 (package-initialize)
 
 (dolist (p my-packages)
@@ -13,9 +14,11 @@
 
 ;; hide the menu bar
 (menu-bar-mode 0)
+;; remap the Meta key to control-x control-m
+(global-set-key "\C-x\C-m" 'execute-extended-command)
 ;; delete trailing whitespace before saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-;; scroll one line at a time (less "jumpy" than defaults)
+;; mouse scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
@@ -25,3 +28,60 @@
 (global-linum-mode t)
 ;;; shut magit up
 (setq magit-last-seen-setup-instructions "1.4.0")
+;;; turn on the debugger if an error happens on start
+(setq debug-on-error t)
+;;; smart-mode-line (powerline like tool)
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'powerline)
+(sml/setup)
+;;;(require 'powerline)
+;;;(powerline-evil-vim-color-theme)
+;;;(display-time-mode t)
+
+;;; personal settings
+;;; email address
+(setq user-mail-address "elguntor@gmail.com")
+
+;;; Calendar settings
+;; you can use M-x sunrise-sunset to get the sun time
+(setq calendar-latitude 43.7)
+(setq calendar-longitude 79.4)
+(setq calendar-location-name "Toronto, Canada")
+
+;;; Time related settings
+;; show time in 24hours format
+(setq display-time-24hr-format t)
+;; show time and date
+(setq display-time-and-date t)
+;; time change interval
+(setq display-time-interval 10)
+;; show time
+(display-time-mode t)
+
+;;; evil mode! - this has to come last in the load sequence
+(require 'evil)
+(evil-mode 1)
+
+;;; evil-leader
+(require 'evil-leader)
+(setq evil-leader/in-all-states 1)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+ "e" 'find-file
+ "b" 'switch-to-buffer
+ "k" 'kill-buffer)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("d1dbd38c2fef808a27bb411ecff76a0a8026856a16cb2a1fb8820bedeb45740a" "0c49a9e22e333f260126e4a48539a7ad6e8209ddda13c0310c8811094295b3a3" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
