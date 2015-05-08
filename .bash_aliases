@@ -12,6 +12,8 @@ elif [[ "$unamestr" == "Darwin" ]]; then
 	alias tree='tree -C'
     export CLICOLOR=1
     export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+    alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
+    alias hstop="/usr/local/Cellar/hadoop/2.6.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/stop-dfs.sh"
 fi
 
 # catdir!
