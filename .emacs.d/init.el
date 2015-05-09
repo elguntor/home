@@ -14,8 +14,12 @@
 
 ;; hide the menu bar
 (menu-bar-mode 0)
-;; remap the Meta key to control-x control-m
+
+;;; keybinding
+;; remap the M-x to control-x control-m
 (global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key (kbd "<f3>") 'list-buffers)
+
 ;; delete trailing whitespace before saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; mouse scroll one line at a time (less "jumpy" than defaults)
@@ -33,6 +37,10 @@
 ;;; powerline
 (require 'powerline)
 (powerline-default-theme)
+;;; helm
+(require 'helm-config)
+(helm-mode 1)
+(setq helm-locate-fuzzy-match t)
 
 ;;; personal settings
 ;;; email address
@@ -54,13 +62,6 @@
 ;; show time
 (display-time-mode t)
 
-;;; keybinding
-(global-set-key (kbd "<f3>") 'list-buffers)
-
-;;; helm
-(require 'helm-config)
-(helm-mode 1)
-(setq helm-locate-fuzzy-match t)
 
 ;;; evil mode! - this has to come last in the load sequence
 (require 'evil)
