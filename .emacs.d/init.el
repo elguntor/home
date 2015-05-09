@@ -4,7 +4,7 @@
 (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
 (defvar my-packages '(paredit ido-ubiquitous magit smex scpaste
                         evil evil-jumper evil-matchit evil-leader
-                        helm smart-mode-line smart-mode-line-powerline-theme monokai-theme))
+                        helm powerline monokai-theme))
 (package-initialize)
 
 (dolist (p my-packages)
@@ -30,13 +30,9 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 ;;; turn on the debugger if an error happens on start
 (setq debug-on-error t)
-;;; smart-mode-line (powerline like tool)
-(setq sml/no-confirm-load-theme t)
-(setq sml/theme 'powerline)
-(sml/setup)
-;;;(require 'powerline)
-;;;(powerline-evil-vim-color-theme)
-;;;(display-time-mode t)
+;;; powerline
+(require 'powerline)
+(powerline-default-theme)
 
 ;;; personal settings
 ;;; email address
@@ -58,6 +54,14 @@
 ;; show time
 (display-time-mode t)
 
+;;; keybinding
+(global-set-key (kbd "<f3>") 'list-buffers)
+
+;;; helm
+(require 'helm-config)
+(helm-mode 1)
+(setq helm-locate-fuzzy-match t)
+
 ;;; evil mode! - this has to come last in the load sequence
 (require 'evil)
 (evil-mode 1)
@@ -70,6 +74,7 @@
 (evil-leader/set-key
  "e" 'find-file
  "b" 'switch-to-buffer
+ "t" 'helm-find-files
  "k" 'kill-buffer)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
