@@ -14,6 +14,11 @@
 
 ;; hide the menu bar
 (menu-bar-mode 0)
+;; no backups
+(setq make-backup-files nil)
+
+;; Use Emacs terminfo, not system terminfo
+(setq system-uses-terminfo nil)
 
 ;;; keybinding
 ;; remap the M-x to control-x control-m
@@ -37,6 +42,7 @@
 ;;; powerline
 (require 'powerline)
 (powerline-default-theme)
+
 ;;; helm
 (require 'helm-config)
 (helm-mode 1)
@@ -61,7 +67,6 @@
 (setq display-time-interval 10)
 ;; show time
 (display-time-mode t)
-
 
 ;;; evil mode! - this has to come last in the load sequence
 (require 'evil)

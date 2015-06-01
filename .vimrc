@@ -44,6 +44,10 @@ set backspace=indent,eol,start
 " }}}
 
 
+" Spelling "{{{
+" set spell spelllang=en_gb
+" }}}
+
 " Controls and Commands "{{{
 " save
 map <C-s> <esc>:w<CR>
@@ -156,9 +160,9 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 " Visual "{{{
 syntax on                   " enable syntax
 set background=dark         " dark background
-" colorscheme monokai " set the color scheme
-colorscheme molokai " set the color scheme
-let g:molokai_original = 1
+colorscheme emacs " set the color scheme
+" colorscheme molokai " set the color scheme
+" let g:molokai_original = 1
 " colorscheme vividchalk      " set the color scheme
 
 set showmatch               " Show matching brackets

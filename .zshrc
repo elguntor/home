@@ -61,6 +61,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
@@ -111,7 +112,7 @@ source ~/.bash_aliases
 
 
 # terminal 256 colour support
-TERM=xterm-256color
+export TERM=xterm-256color
 
 # Android automation
 export ANDROID_HOME=$HOME/src/android-sdk-macosx
@@ -134,11 +135,18 @@ source /usr/local/bin/virtualenvwrapper.sh
 # upgrading global installs command
 # gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
 
+# golang configuration
+export GOPATH=$HOME/src/go
+export GOROOT=/usr/local/opt/go
+export PATH=$PATH:$GOROOT/libexec/bin:$GOPATH/bin
+
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
     export PATH="$JAVA_HOME/bin:$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/"
     export ANDROID_HOME="$HOME/src/android-sdk-macosx/"
+    export SCALA_HOME=/usr/local/bin/scala
+    export PATH=$PATH:$SCALA_HOME/bin
     source "$HOME/.brew_token"
 else
     [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
