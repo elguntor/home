@@ -137,8 +137,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # golang configuration
 export GOPATH=$HOME/src/go
-export GOROOT=/usr/local/opt/go
-export PATH=$PATH:$GOROOT/libexec/bin:$GOPATH/bin
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then

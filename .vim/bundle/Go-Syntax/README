@@ -1,7 +1,0 @@
-This is a mirror of http://www.vim.org/scripts/script.php?script_id=2867
-
-I am new to syntaxes, but this is a first-attempt at hacking up some Go syntax support.
-
-I started with the existing C syntax file and just hacked it up until it looked ok.
-
-Improvements are welcome.
