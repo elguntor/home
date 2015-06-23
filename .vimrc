@@ -1,7 +1,7 @@
 " General "{{{
 autocmd! bufwritepost .vimrc source %   " auto reload .vimrc
 set nocompatible                        " be iMproved
-filetype plugin indent on               " required by Vundle
+filetype off                            " required by Vundle
 
 set hidden                              " not sure why this isn't on by default
 set encoding=utf-8                      " I hate ASCII!
@@ -116,43 +116,46 @@ let g:EasyMotion_leader_key='<Leader><Leader>'
 " }}}
 
 " Vundle "{{{
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " load Vundle...required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-" Bundles
-Bundle 'The-NERD-Commenter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
-Bundle 'bufexplorer.zip'
-"Bundle 'ctrlp.vim'
-Bundle 'Command-T'
-Bundle 'Gundo'
-Bundle 'faith/vim-go'
-Bundle 'haml.zip'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-jsbeautify'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'VimClojure'
-Bundle 'RubySinatra'
-Bundle 'ruby.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-flake8'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'bling/vim-airline'
-Bundle 'taglist.vim'
-Bundle 'matchit.zip'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'groenewege/vim-less'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'amdt/vim-niji'
-Bundle 'rking/ag.vim'
-Bundle 'derekwyatt/vim-scala'
+" Plugins
+Plugin 'The-NERD-Commenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-rails'
+Plugin 'bufexplorer.zip'
+"Plugin 'ctrlp.vim'
+Plugin 'Command-T'
+Plugin 'Gundo'
+Plugin 'faith/vim-go'
+Plugin 'haml.zip'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'vim-jsbeautify'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'VimClojure'
+Plugin 'RubySinatra'
+Plugin 'ruby.vim'
+Plugin 'slim-template/vim-slim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-flake8'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'bling/vim-airline'
+Plugin 'taglist.vim'
+Plugin 'matchit.zip'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'amdt/vim-niji'
+Plugin 'rking/ag.vim'
+Plugin 'derekwyatt/vim-scala'
+
+call vundle#end()
+filetype plugin indent on              " required by Vundle
 " }}}
 
 " Visual "{{{
