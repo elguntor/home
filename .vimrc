@@ -134,7 +134,6 @@ Bundle 'Command-T'
 Bundle 'Gundo'
 Bundle 'faith/vim-go'
 Bundle 'haml.zip'
-Bundle 'vim-scala'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-jsbeautify'
 Bundle 'scrooloose/syntastic'
@@ -155,6 +154,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'amdt/vim-niji'
 Bundle 'rking/ag.vim'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'derekwyatt/vim-scala'
 " }}}
 
 " Visual "{{{
