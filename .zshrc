@@ -130,7 +130,8 @@ gpip3(){
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+#export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
 source /usr/local/bin/virtualenvwrapper.sh
 # upgrading global installs command
 # gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
@@ -139,6 +140,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH=$HOME/src/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# Apache Spark
+export SPARK_HOME=$HOME/src/spark-1.4.0-bin-hadoop2.6
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then

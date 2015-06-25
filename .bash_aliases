@@ -53,6 +53,7 @@ alias gm='git merge'
 alias gp='git pull'
 alias gpf='git pull;git fetch --tags'
 alias gpo='git push origin'
+alias gpom='git push origin master'
 alias gs='git status'
 
 # shh
