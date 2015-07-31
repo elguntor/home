@@ -81,7 +81,7 @@ alias pgel='psql -U elminer -W -h localhost elminer'
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
 alias v='workon'
-alias v.deactivate='deactivate'
+alias v.d='deactivate'
 alias v.mk='mkvirtualenv --no-site-packages'
 alias v.mk_withsitepackages='mkvirtualenv'
 alias v.rm='rmvirtualenv'

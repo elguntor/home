@@ -215,6 +215,7 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 " YouCompleteMe "{{{
 let g:ycm_extra_conf_globlist = ['~/src/*']
+" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 " }}}
 
 " Languages "{{{
