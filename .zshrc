@@ -126,12 +126,15 @@ bindkey "^R" history-incremental-search-backward
 # python configuration
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
+gpip(){
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 gpip3(){
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 export WORKON_HOME=$HOME/.virtualenvs
-#export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
-export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
+export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+#export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
 source /usr/local/bin/virtualenvwrapper.sh
 # upgrading global installs command
 # gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
