@@ -128,11 +128,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
 Plugin 'bufexplorer.zip'
+Plugin 'klen/python-mode'
 "Plugin 'ctrlp.vim'
 Plugin 'Command-T'
 Plugin 'Gundo'
 Plugin 'faith/vim-go'
 Plugin 'haml.zip'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-jsbeautify'
 Plugin 'scrooloose/syntastic'
@@ -149,8 +151,7 @@ Plugin 'taglist.vim'
 Plugin 'matchit.zip'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'amdt/vim-niji'
+Plugin 'losingkeys/vim-niji'
 Plugin 'rking/ag.vim'
 Plugin 'derekwyatt/vim-scala'
 
@@ -181,6 +182,9 @@ set laststatus=2            " always show status line
 " BufExplorer"{{{
 nnoremap <F3> :BufExplorer<CR>
 " }}}
+" Jedi "{{{
+let g:jedi#force_py_version = 3
+" }}}
 "
 " Taglist"{{{
 "let Tlist_Auto_Highlight_Tag = 0
@@ -190,6 +194,7 @@ nnoremap <F3> :BufExplorer<CR>
 " }}}
 
 " Gundo"{{{
+let g:gundo_prefer_python3 = 1
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
@@ -208,14 +213,19 @@ map <C-t> :NERDTreeToggle<CR>
 " Syntastic General "{{{
 let g:syntastic_java_checkers=[]
 let g:syntastic_check_on_open=1
+let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }}}
 
+" python-mode "{{{
+let g:pymode_python = 'python3'
+" }}}
+
 " YouCompleteMe "{{{
-let g:ycm_extra_conf_globlist = ['~/src/*']
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+" let g:ycm_extra_conf_globlist = ['~/src/*']
+" let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 " }}}
 
 " Languages "{{{

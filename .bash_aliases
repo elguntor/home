@@ -80,16 +80,9 @@ alias pgel='psql -U elminer -W -h localhost elminer'
 
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
-alias v='workon'
-alias v.d='deactivate'
-alias v.mk='mkvirtualenv --no-site-packages'
-alias v.mk_withsitepackages='mkvirtualenv'
-alias v.rm='rmvirtualenv'
-alias v.switch='workon'
-alias v.add2virtualenv='add2virtualenv'
-alias v.cdsitepackages='cdsitepackages'
-alias v.cd='cdvirtualenv'
-alias v.lssitepackages='lssitepackages'
+alias v='pyenv activate'
+alias v.d='pyenv deactivate'
+alias v.mk='pyenv virtualenv --no-site-packages'
 
 # vagrant aliases
 alias vd='vagrant destroy'
@@ -121,7 +114,7 @@ alias rs="bundle exec rails s"
 alias psp="rake parallel:create; rake parallel:prepare; rake parallel:spec"
 alias psps="rake parallel:spec"
 
-# python
+# django
 alias pm="python manage.py"
 alias pmcs="python manage.py collectstatic --noinput"
 alias pmdbsh="python manage.py dbshell"

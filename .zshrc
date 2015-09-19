@@ -118,7 +118,7 @@ export TERM=xterm-256color
 export ANDROID_HOME=$HOME/src/android-sdk-macosx
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/
+export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
 
 # history search
 bindkey "^R" history-incremental-search-backward
@@ -133,11 +133,13 @@ gpip3(){
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+#export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
 #export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 # upgrading global installs command
 # gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # golang configuration
 export GOPATH=$HOME/src/go
@@ -150,7 +152,7 @@ export SPARK_HOME=$HOME/src/spark-1.4.0-bin-hadoop2.6
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
-    export PATH="$JAVA_HOME/bin:$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/"
+    export PATH="$JAVA_HOME/bin:$PATH"
     export ANDROID_HOME="$HOME/src/android-sdk-macosx/"
     export SCALA_HOME=/usr/local/bin/scala
     export PATH=$PATH:$SCALA_HOME/bin
@@ -158,3 +160,6 @@ if [[ "$unamestr" == "Darwin" ]];then
 else
     [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
 fi
+
+#thefuck
+eval "$(thefuck --alias)"
