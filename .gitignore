@@ -9,6 +9,7 @@
 .IdeaIC11/
 .IdeaIC13/
 .IdeaIC14/
+.IntelliJIdea14/
 .LD/
 .Skype/
 .Trash/
@@ -79,6 +80,7 @@
 .goutputstream*
 .goutputstream-J0DAFW
 .gpg-agent-info
+.gradle/
 .gstreamer-0.10/
 .gtk-bookmarks
 .gtkrc-2.0
@@ -140,6 +142,7 @@
 .pulse-cookie
 .pulse/
 .putty/
+.pyenv/
 .pylint.d/
 .python_history
 .rbenv/
@@ -181,6 +184,7 @@
 .xsession-errors.old
 .z
 .zcompdump
+.zcompdump*
 .zcompdump-bigfoot-5.0.7
 .zcompdump-serenity-5.0.2
 .zcompdump-werewolf-5.0.7
