@@ -84,6 +84,7 @@ if [[ "$unamestr" == "Darwin" ]];then
     source `brew --prefix`/etc/profile.d/z.sh
     # chruby
     source /usr/local/share/chruby/chruby.sh
+    chruby ruby-2.1.5
 else
     # chruby
     source /usr/local/share/chruby/chruby.sh
@@ -91,9 +92,6 @@ else
 	# remap caps lock to control
 	setxkbmap -option ctrl:nocaps
 fi
-
-# chruby
-chruby ruby-2.1.5
 
 # vi bindings
 export EDITOR='vim'
@@ -115,10 +113,12 @@ source ~/.bash_aliases
 export TERM=xterm-256color
 
 # Android automation
-export ANDROID_HOME=$HOME/src/android-sdk-macosx
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
+if [[ "$unamestr" == "Darwin" ]];then
+    export ANDROID_HOME=$HOME/src/android-sdk-macosx
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
+fi
 
 # history search
 bindkey "^R" history-incremental-search-backward
@@ -134,16 +134,22 @@ gpip3(){
 }
 export WORKON_HOME=$HOME/.virtualenvs
 #export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
-#export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
 #source /usr/local/bin/virtualenvwrapper.sh
 # upgrading global installs command
 # gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [[ "$unamestr" == "Darwin" ]];then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+else
+    [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
+fi
 
 # golang configuration
+if [[ "$unamestr" == "Darwin" ]];then
+    export GOROOT=/usr/local/opt/go/libexec
+fi
 export GOPATH=$HOME/src/go
-export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 # Apache Spark
@@ -157,9 +163,13 @@ if [[ "$unamestr" == "Darwin" ]];then
     export SCALA_HOME=/usr/local/bin/scala
     export PATH=$PATH:$SCALA_HOME/bin
     source "$HOME/.brew_token"
-else
-    [[ -s "/home/marshall/.jenv/bin/jenv-init.sh" ]] && source "/home/marshall/.jenv/bin/jenv-init.sh" && source "/home/marshall/.jenv/commands/completion.sh"
-fi
 
-#thefuck
-eval "$(thefuck --alias)"
+    #thefuck
+    eval "$(thefuck --alias)"
+else
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+    export M2_HOME="/usr/local/apache-maven-3.3.3"
+    export PATH="$M2_HOME/bin:$PATH"
+    export JDK_HOME="/usr/local/jdk1.7.0_79"
+fi
