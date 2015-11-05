@@ -134,7 +134,7 @@ Plugin 'Command-T'
 Plugin 'Gundo'
 Plugin 'faith/vim-go'
 Plugin 'haml.zip'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-jsbeautify'
 Plugin 'scrooloose/syntastic'
@@ -194,7 +194,7 @@ let g:jedi#force_py_version = 3
 " }}}
 
 " Gundo"{{{
-let g:gundo_prefer_python3 = 1
+" let g:gundo_prefer_python3 = 1
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
@@ -213,14 +213,16 @@ map <C-t> :NERDTreeToggle<CR>
 " Syntastic General "{{{
 let g:syntastic_java_checkers=[]
 let g:syntastic_check_on_open=1
-let g:syntastic_python_python_exec = 'python3'
+"let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }}}
 
 " python-mode "{{{
-let g:pymode_python = 'python3'
+"let g:pymode_python = 'python3'
+let g:pymode_folding = 0
+let g:pymode_options_max_line_length = 160
 " }}}
 
 " YouCompleteMe "{{{
