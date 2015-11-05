@@ -155,6 +155,12 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 # Apache Spark
 export SPARK_HOME=$HOME/src/spark-1.4.0-bin-hadoop2.6
 
+#thefuck
+eval "$(thefuck --alias)"
+
+#homebrew
+export PATH=/usr/local/sbin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
