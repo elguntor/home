@@ -78,21 +78,6 @@ export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# Mac OSX
-unamestr=`uname`
-if [[ "$unamestr" == "Darwin" ]];then
-    source `brew --prefix`/etc/profile.d/z.sh
-    # chruby
-    source /usr/local/share/chruby/chruby.sh
-    chruby ruby-2.1.5
-else
-    # chruby
-    source /usr/local/share/chruby/chruby.sh
-    /usr/local/share/ruby-install/ruby-install.sh
-	# remap caps lock to control
-	setxkbmap -option ctrl:nocaps
-fi
-
 # vi bindings
 export EDITOR='vim'
 bindkey -v
@@ -108,17 +93,8 @@ export KEYTIMEOUT=1
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.bash_aliases
 
-
 # terminal 256 colour support
 export TERM=xterm-256color
-
-# Android automation
-if [[ "$unamestr" == "Darwin" ]];then
-    export ANDROID_HOME=$HOME/src/android-sdk-macosx
-    export PATH=$PATH:$ANDROID_HOME/tools
-    export PATH=$PATH:$ANDROID_HOME/platform-tools
-    export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
-fi
 
 # history search
 bindkey "^R" history-incremental-search-backward
@@ -133,10 +109,38 @@ gpip3(){
     PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 export WORKON_HOME=$HOME/.virtualenvs
-#export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
-#source /usr/local/bin/virtualenvwrapper.sh
-# upgrading global installs command
-# gpip install --upgrade --no-use-wheel pip3 setuptools virtualenv virtualenvwrapper
+
+# golang configuration
+export GOPATH=$HOME/src/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+# Mac OSX
+unamestr=`uname`
+if [[ "$unamestr" == "Darwin" ]];then
+    # homebrew
+    source `brew --prefix`/etc/profile.d/z.sh
+    export PATH=/usr/local/sbin:$PATH
+    source "$HOME/.brew_token"
+
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+    chruby ruby-2.1.5
+else
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+    /usr/local/share/ruby-install/ruby-install.sh
+	# remap caps lock to control
+	setxkbmap -option ctrl:nocaps
+fi
+
+# Android automation
+if [[ "$unamestr" == "Darwin" ]];then
+    export ANDROID_HOME=$HOME/src/android-sdk-macosx
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
+fi
+
 if [[ "$unamestr" == "Darwin" ]];then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
@@ -149,33 +153,28 @@ fi
 if [[ "$unamestr" == "Darwin" ]];then
     export GOROOT=/usr/local/opt/go/libexec
 fi
-export GOPATH=$HOME/src/go
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
-# Apache Spark
-export SPARK_HOME=$HOME/src/spark-1.4.0-bin-hadoop2.6
-
-#thefuck
-eval "$(thefuck --alias)"
-
-#homebrew
-export PATH=/usr/local/sbin:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 if [[ "$unamestr" == "Darwin" ]];then
+    # jenv
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
     export PATH="$JAVA_HOME/bin:$PATH"
-    export ANDROID_HOME="$HOME/src/android-sdk-macosx/"
+
+    # scala
     export SCALA_HOME=/usr/local/bin/scala
     export PATH=$PATH:$SCALA_HOME/bin
-    source "$HOME/.brew_token"
 
-    #thefuck
+    # thefuck
     eval "$(thefuck --alias)"
 else
+    # jenv
     export PATH="$HOME/.jenv/bin:$PATH"
     eval "$(jenv init -)"
+
+    # maven
     export M2_HOME="/usr/local/apache-maven-3.3.3"
     export PATH="$M2_HOME/bin:$PATH"
+
+    # jdk
     export JDK_HOME="/usr/local/jdk1.7.0_79"
 fi

@@ -10,6 +10,7 @@
 .IdeaIC13/
 .IdeaIC14/
 .IntelliJIdea14/
+.IntelliJIdea15/
 .LD/
 .Skype/
 .Trash/
@@ -129,6 +130,7 @@
 .oh-my-zsh/
 .openoffice.org/
 .opera/
+.oracle_jre_usage/
 .pam_environment
 .pgpass
 .pia_manager/
@@ -192,6 +194,8 @@
 .zsh_history
 .zshrc-e
 .zshrc.pre-oh-my-zsh
+.zshrc_linux
+.zshrc_osx
 Applications/
 Books/
 Bunch-t4s.zip
