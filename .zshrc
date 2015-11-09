@@ -122,59 +122,53 @@ if [[ "$unamestr" == "Darwin" ]];then
     export PATH=/usr/local/sbin:$PATH
     source "$HOME/.brew_token"
 
+    # thefuck
+    eval "$(thefuck --alias)"
+
     # chruby
     source /usr/local/share/chruby/chruby.sh
     chruby ruby-2.1.5
-else
-    # chruby
-    source /usr/local/share/chruby/chruby.sh
-    /usr/local/share/ruby-install/ruby-install.sh
-	# remap caps lock to control
-	setxkbmap -option ctrl:nocaps
-fi
 
-# Android automation
-if [[ "$unamestr" == "Darwin" ]];then
+    # Android automation
     export ANDROID_HOME=$HOME/src/android-sdk-macosx
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/platform-tools
     export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
-fi
 
-if [[ "$unamestr" == "Darwin" ]];then
+    # pyenv
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
-else
-    [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
-    export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
-fi
 
-# golang configuration
-if [[ "$unamestr" == "Darwin" ]];then
+    # golang
     export GOROOT=/usr/local/opt/go/libexec
-fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
-if [[ "$unamestr" == "Darwin" ]];then
-    # jenv
-    if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
-    export PATH="$JAVA_HOME/bin:$PATH"
 
     # scala
     export SCALA_HOME=/usr/local/bin/scala
     export PATH=$PATH:$SCALA_HOME/bin
 
-    # thefuck
-    eval "$(thefuck --alias)"
+    # jenv
+    if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
+    export PATH="$JAVA_HOME/bin:$PATH"
 else
+	# remap caps lock to control
+	setxkbmap -option ctrl:nocaps
+
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+    /usr/local/share/ruby-install/ruby-install.sh
+
+    # python
+    [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
+
     # jenv
     export PATH="$HOME/.jenv/bin:$PATH"
     eval "$(jenv init -)"
 
+    # jdk
+    export JDK_HOME="/usr/local/jdk1.7.0_79"
+
     # maven
     export M2_HOME="/usr/local/apache-maven-3.3.3"
     export PATH="$M2_HOME/bin:$PATH"
-
-    # jdk
-    export JDK_HOME="/usr/local/jdk1.7.0_79"
 fi
