@@ -65,6 +65,9 @@ export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+# vi bindings
+bindkey -v
+export KEYTIMEOUT=1
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -77,11 +80,6 @@ export ARCHFLAGS="-arch x86_64"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-# vi bindings
-export EDITOR='vim'
-bindkey -v
-export KEYTIMEOUT=1
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -98,6 +96,11 @@ export TERM=xterm-256color
 
 # history search
 bindkey "^R" history-incremental-search-backward
+
+# include a file if it exists
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
 
 # python configuration
 # pip should only run if there is a virtualenv currently activated
@@ -118,7 +121,7 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
     # homebrew
-    source `brew --prefix`/etc/profile.d/z.sh
+	include `brew --prefix`/etc/profile.d/z.sh
     export PATH=/usr/local/sbin:$PATH
     source "$HOME/.brew_token"
 
@@ -126,8 +129,8 @@ if [[ "$unamestr" == "Darwin" ]];then
     eval "$(thefuck --alias)"
 
     # chruby
-    source /usr/local/share/chruby/chruby.sh
-    chruby ruby-2.1.5
+    include /usr/local/share/chruby/chruby.sh
+    type chruby &> /dev/null && chruby ruby-2.1.5
 
     # Android automation
     export ANDROID_HOME=$HOME/src/android-sdk-macosx
@@ -136,8 +139,11 @@ if [[ "$unamestr" == "Darwin" ]];then
     export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
 
     # pyenv
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    type penv &> /dev/null
+    if [ $? -eq 0 ]; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+    fi
 
     # golang
     export GOROOT=/usr/local/opt/go/libexec
