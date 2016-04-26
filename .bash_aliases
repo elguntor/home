@@ -66,6 +66,7 @@ alias fij='find -name "*.java" | xargs grep -n'
 alias fijs='find -name "*.js" | xargs grep -n'
 alias fil='find -name "*.less" | xargs grep -n'
 alias fip='find -name "*.py" | xargs grep -n'
+alias fiphp='find -name "*.php" | xargs grep -n'
 alias fir='find -name "*.rb" | xargs grep -n'
 
 # netstat

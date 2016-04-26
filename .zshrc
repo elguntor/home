@@ -129,8 +129,9 @@ if [[ "$unamestr" == "Darwin" ]];then
     eval "$(thefuck --alias)"
 
     # chruby
-    include /usr/local/share/chruby/chruby.sh
-    type chruby &> /dev/null && chruby ruby-2.1.5
+    #include /usr/local/share/chruby/chruby.sh
+    #type chruby &> /dev/null && chruby ruby-2.1.5
+    eval "$(rbenv init -)"
 
     # Android automation
     export ANDROID_HOME=$HOME/src/android-sdk-macosx
@@ -139,7 +140,7 @@ if [[ "$unamestr" == "Darwin" ]];then
     export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
 
     # pyenv
-    type penv &> /dev/null
+    type pyenv &> /dev/null
     if [ $? -eq 0 ]; then
         eval "$(pyenv init -)"
         eval "$(pyenv virtualenv-init -)"
@@ -160,8 +161,9 @@ else
 	setxkbmap -option ctrl:nocaps
 
     # chruby
-    source /usr/local/share/chruby/chruby.sh
-    /usr/local/share/ruby-install/ruby-install.sh
+    #source /usr/local/share/chruby/chruby.sh
+    #/usr/local/share/ruby-install/ruby-install.sh
+    eval "$(rbenv init -)"
 
     # python
     [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
