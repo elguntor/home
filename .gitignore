@@ -20,9 +20,12 @@
 .Xauthority.*
 .adobe/
 .android
+.aws/
 .bash_history
 .bash_logout
+.bash_sessions/
 .brew_token
+.bundle/
 .bzr.log
 .cache/
 .calibre_calibre GUI.lock
@@ -30,6 +33,7 @@
 .cola
 .compiz-1/
 .compiz/
+.composer/
 .config/
 .csshrc
 .cups/
@@ -45,6 +49,7 @@
 .e/
 .eclim/
 .eclipse/
+.editrc
 .efreet/
 .emacs.d/#init.el#
 .emacs.d/#marshall.el#
@@ -103,6 +108,7 @@
 .java_history
 .jenv/
 .jline-clojure.main.history
+.jspm/
 .kchmviewer/
 .kde/
 .kderc
@@ -124,6 +130,7 @@
 .nbprofiler/
 .netbeans/
 .netrc
+.node-gyp/
 .npm/
 .nv/
 .nvidia-settings-rc
@@ -153,6 +160,7 @@
 .rediscli_history
 .rnd
 .rubies/
+.ruby-version
 .rvm/
 .sabnzbd/
 .sbt.cache.lock
@@ -181,6 +189,7 @@
 .virtualenvs/
 .visualvm/
 .w3af/
+.wget-hsts
 .wine/
 .xsession-errors
 .xsession-errors.old
@@ -219,6 +228,7 @@ TV/
 Ubuntu One/
 Videos/
 VirtualBox VMs/
+\#.spacemacs\#
 android-workspace/
 bak/
 bin/

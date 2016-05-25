@@ -1,98 +1,30 @@
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/"))
-(defvar my-packages '(paredit ido-ubiquitous magit smex scpaste
-                        evil evil-jumper evil-matchit evil-leader
-                        helm powerline monokai-theme))
-(package-initialize)
+;;; init.el --- Spacemacs Initialization File
+;;
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Sylvain Benner <sylvain.benner@gmail.com>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-(package-initialize)
+;; Without this comment emacs25 adds (package-initialize) here
+;; (package-initialize)
 
-;; hide the menu bar
-(menu-bar-mode 0)
-;; no backups
-(setq make-backup-files nil)
+(setq gc-cons-threshold 100000000)
+(defconst spacemacs-version         "0.105.20" "Spacemacs version.")
+(defconst spacemacs-emacs-min-version   "24.3" "Minimal version of Emacs.")
 
-;; Use Emacs terminfo, not system terminfo
-(setq system-uses-terminfo nil)
-
-;;; keybinding
-;; remap the M-x to control-x control-m
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key (kbd "<f3>") 'list-buffers)
-
-;; delete trailing whitespace before saving
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-;; mouse scroll one line at a time (less "jumpy" than defaults)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
-;; line number separator
-(setq linum-format "%d ")
-(global-linum-mode t)
-;;; shut magit up
-(setq magit-last-seen-setup-instructions "1.4.0")
-;;; turn on the debugger if an error happens on start
-(setq debug-on-error t)
-;;; powerline
-(require 'powerline)
-(powerline-default-theme)
-
-;;; helm
-(require 'helm-config)
-(helm-mode 1)
-(setq helm-locate-fuzzy-match t)
-
-;;; personal settings
-;;; email address
-(setq user-mail-address "elguntor@gmail.com")
-
-;;; Calendar settings
-;; you can use M-x sunrise-sunset to get the sun time
-(setq calendar-latitude 43.7)
-(setq calendar-longitude 79.4)
-(setq calendar-location-name "Toronto, Canada")
-
-;;; Time related settings
-;; show time in 24hours format
-(setq display-time-24hr-format t)
-;; show time and date
-(setq display-time-and-date t)
-;; time change interval
-(setq display-time-interval 10)
-;; show time
-(display-time-mode t)
-
-;;; evil mode! - this has to come last in the load sequence
-(require 'evil)
-(evil-mode 1)
-
-;;; evil-leader
-(require 'evil-leader)
-(setq evil-leader/in-all-states 1)
-(global-evil-leader-mode)
-(evil-leader/set-leader ",")
-(evil-leader/set-key
- "e" 'find-file
- "b" 'switch-to-buffer
- "t" 'helm-find-files
- "k" 'kill-buffer)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("d1dbd38c2fef808a27bb411ecff76a0a8026856a16cb2a1fb8820bedeb45740a" "0c49a9e22e333f260126e4a48539a7ad6e8209ddda13c0310c8811094295b3a3" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(if (not (version<= spacemacs-emacs-min-version emacs-version))
+    (message (concat "Your version of Emacs (%s) is too old. "
+                     "Spacemacs requires Emacs version %d or above.")
+             emacs-version spacemacs-emacs-min-version)
+  (load-file (concat user-emacs-directory "core/core-load-paths.el"))
+  (require 'core-spacemacs)
+  (spacemacs/init)
+  (spacemacs/maybe-install-dotfile)
+  (configuration-layer/sync)
+  (spacemacs/setup-startup-hook)
+  (require 'server)
+  (unless (server-running-p) (server-start)))

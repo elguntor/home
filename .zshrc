@@ -128,16 +128,14 @@ if [[ "$unamestr" == "Darwin" ]];then
     # thefuck
     eval "$(thefuck --alias)"
 
-    # chruby
-    #include /usr/local/share/chruby/chruby.sh
-    #type chruby &> /dev/null && chruby ruby-2.1.5
+    # rbenv
     eval "$(rbenv init -)"
 
     # Android automation
-    export ANDROID_HOME=$HOME/src/android-sdk-macosx
-    export PATH=$PATH:$ANDROID_HOME/tools
-    export PATH=$PATH:$ANDROID_HOME/platform-tools
-    export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
+    #export ANDROID_HOME=$HOME/src/android-sdk-macosx
+    #export PATH=$PATH:$ANDROID_HOME/tools
+    #export PATH=$PATH:$ANDROID_HOME/platform-tools
+    #export PATH=$PATH:/Applications/Appium.app/Contents/Resources/node_modules/appium/bin
 
     # pyenv
     type pyenv &> /dev/null
@@ -149,29 +147,23 @@ if [[ "$unamestr" == "Darwin" ]];then
     # golang
     export GOROOT=/usr/local/opt/go/libexec
 
-    # scala
-    export SCALA_HOME=/usr/local/bin/scala
-    export PATH=$PATH:$SCALA_HOME/bin
-
-    # jenv
+    # jenv and java
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
     export PATH="$JAVA_HOME/bin:$PATH"
 else
 	# remap caps lock to control
 	setxkbmap -option ctrl:nocaps
 
-    # chruby
-    #source /usr/local/share/chruby/chruby.sh
-    #/usr/local/share/ruby-install/ruby-install.sh
+    # rbenv
     eval "$(rbenv init -)"
 
     # python
     [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
     export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
 
-    # jenv
-    export PATH="$HOME/.jenv/bin:$PATH"
-    eval "$(jenv init -)"
+    # jenv and java
+    if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
+    export PATH="$JAVA_HOME/bin:$PATH"
 
     # jdk
     export JDK_HOME="/usr/local/jdk1.7.0_79"

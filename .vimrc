@@ -126,7 +126,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'The-NERD-Commenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-"Plugin 'ruby.vim'
+Plugin 'ruby.vim'
 "Plugin 'RubySinatra'
 "Plugin 'tpope/vim-rails'
 "Plugin 'slim-template/vim-slim'
@@ -153,7 +153,9 @@ Plugin 'matchit.zip'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
 Plugin 'rking/ag.vim'
+Plugin 'php.vim'
 "Plugin 'derekwyatt/vim-scala'
+Plugin 'dracula/vim'
 
 call vundle#end()
 filetype plugin indent on              " required by Vundle
@@ -162,7 +164,8 @@ filetype plugin indent on              " required by Vundle
 " Visual "{{{
 syntax on                   " enable syntax
 set background=dark         " dark background
-colorscheme emacs " set the color scheme
+" colorscheme emacs " set the color scheme
+color dracula " set the color scheme
 " colorscheme molokai " set the color scheme
 " let g:molokai_original = 1
 " colorscheme vividchalk      " set the color scheme
@@ -243,7 +246,7 @@ autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expan
 autocmd BufRead,BufNewFile *.css setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.less setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 " php
-autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
+" autocmd Filetype php setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 " python
 autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
