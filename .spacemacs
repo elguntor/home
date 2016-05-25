@@ -18,28 +18,41 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     ;; never remove emacs-lisp
+     emacs-lisp
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     ;; better-defaults
-     emacs-lisp
+     dash
      git
-     markdown
-     php
-     gtags
-     ruby
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     syntax-checking
-     version-control
+     github
      osx
+     shell-scripts
+     (shell :variables
+            shell-default-shell 'shell 
+            shell-default-height 30
+            shell-default-position 'bottom)
+     syntax-checking
      themes-megapack
+     vagrant
+     version-control
+     ;; languages
+     clojure
+     html
+     gtags
+     markdown
+     (ruby :variables
+           ruby-test-runner 'rspec)
+     php
+     python
+     sql
+     yaml
+     ;; better-defaults
+     ;; org
+     ;; spell-checking
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -256,12 +269,14 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 ;;This disables almost all themes
 ;;  (while custom-enabled-themes
-;;        (disable-theme (car custom-enabled-themes)))
-  (load-theme 'grandshell)
+;;    (disable-theme (car custom-enabled-themes)))
+;;  (load-theme 'grandshell)
+;;  (set-background-color "black")
+  (load-theme 'alect-black-alt)
   ;; do not highlight the current line
   (global-hl-line-mode -1)
   ;; linum mode and separator
-  (setq linum-format "%d ")
+  (setq linum-format "%4d \u2502")
   (global-linum-mode)
   )
 
@@ -274,10 +289,12 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("cedd3b4295ac0a41ef48376e16b4745c25fa8e7b4f706173083f16d5792bb379" "71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "7356632cebc6a11a87bc5fcffaa49bae528026a78637acd03cae57c091afd9b9" "f0d8af755039aa25cd0792ace9002ba885fd14ac8e8807388ab00ec84c9497d7" default))))
+    ("ab586dbc6f96c923ddf3770024ab3d3712856dc60d1fb73d64c778de0ba5bb54" "49840ed5aa745ce8fd8328aee1d8b37cca2004521d6411f795b78dae29e4b82a" "8f29c2d9552f28b2386e82bd23abc43e0c6fc658d2084aa1ee7a56a2713616ab" "b571f92c9bfaf4a28cb64ae4b4cdbda95241cd62cf07d942be44dc8f46c491f4" "6df30cfb75df80e5808ac1557d5cc728746c8dbc9bc726de35b15180fa6e0ad9" "cedd3b4295ac0a41ef48376e16b4745c25fa8e7b4f706173083f16d5792bb379" "71ecffba18621354a1be303687f33b84788e13f40141580fa81e7840752d31bf" "7356632cebc6a11a87bc5fcffaa49bae528026a78637acd03cae57c091afd9b9" "f0d8af755039aa25cd0792ace9002ba885fd14ac8e8807388ab00ec84c9497d7" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil)))))
+ '(default ((t (:background nil))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

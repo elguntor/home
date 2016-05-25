@@ -181,6 +181,7 @@
 .thumbnails/
 .thunderbird/
 .twitter_oauth
+.v8flags*
 .vagrant.d/
 .vim/.netrwhist
 .vim/bundle/*
