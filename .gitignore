@@ -1,6 +1,7 @@
 **.swp
 *.pdf
 *.retry
+.AMD/
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
