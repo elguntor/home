@@ -121,7 +121,7 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
     # homebrew
-	include `brew --prefix`/etc/profile.d/z.sh
+    include `brew --prefix`/etc/profile.d/z.sh
     export PATH=/usr/local/sbin:$PATH
     source "$HOME/.brew_token"
 
@@ -150,6 +150,9 @@ if [[ "$unamestr" == "Darwin" ]];then
     # jenv and java
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
     export PATH="$JAVA_HOME/bin:$PATH"
+
+    # php
+    export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 else
 	# remap caps lock to control
 	setxkbmap -option ctrl:nocaps
