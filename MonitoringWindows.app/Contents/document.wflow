@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		# Open applications	# if application "Google Chrome" is not running then	tell application "/Applications/Google Chrome.app"		launch		open location "http://www.gmail.com"		open location "http://www.google.com/calendar"	end tell	# end if	tell application "/Applications/Slack.app" to launch	tell application "/Applications/Evernote.app" to launch	tell application "/Applications/Messages.app" to launch		# get width of desktop	# wide:	# 1 monitor  = 1440	# 2 monitors = 3360	# 3 monitors = 3840	# tell application "Finder"	#	set bnds to bounds of window of desktop	#	set wide to item 3 of bnds	#end tell		# multiple monitor setups	#if wide is in {1920, 3360, 3840} then	#	tell application "Google Chrome"	#		set bounds of window 1 to {0, 0, 1438, 900}	#	end tell	#	tell application "Messages"	#		set bounds of window 1 to {-699, 30, -8, 642}	#	end tell	#		#	delay 4 # can't figure out a better way to do this	#	tell application "System Events" to tell application process "HipChat"	#		tell window 1	#			set {size, position} to {{200, 700}, {-1000, 200}}	#		end tell	#	end tell	#end if		return inputend run</string>
+					<string>on run {input, parameters}		tell application "/Applications/Google Chrome.app"		tell (make new window)			open location "https://rpm.newrelic.com/accounts/707365/applications/4772852"			open location "https://rpm.newrelic.com/accounts/707365/applications/4772625"			open location "https://rpm.newrelic.com/accounts/707365/applications/3985244"			open location "https://rpm.newrelic.com/accounts/707365/applications/3987006"			open location "https://console.aws.amazon.com/rds/home?region=us-east-1#dbinstances:"		end tell	end tell	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -68,15 +68,15 @@
 				<key>Class Name</key>
 				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>A5C145E2-DAB5-4D64-A708-854018DFF554</string>
+				<string>E00B2112-4434-4802-A619-04EBA4F5A5F9</string>
 				<key>Keywords</key>
 				<array>
 					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>7F0D7C40-2566-4A4E-85DA-A4F8C1A058CC</string>
+				<string>ED1FCF8B-F3EE-466A-A428-974E0E4ACB11</string>
 				<key>UUID</key>
-				<string>D9DFF827-A5E2-4097-B037-9302213CD599</string>
+				<string>108BFF85-830D-4E55-8293-71D4D432D725</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -102,10 +102,12 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>426.000000:574.000000</string>
+				<string>426.000000:486.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
