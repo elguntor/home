@@ -90,6 +90,17 @@ map <leader>s :sort<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Simple re-format for minified Javascript
+command! UnMinify call UnMinify()
+function! UnMinify()
+    %s/{\ze[^\r\n]/{\r/g
+    %s/){/) {/g
+    %s/};\?\ze[^\r\n]/\0\r/g
+    %s/;\ze[^\r\n]/;\r/g
+    %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
+    normal ggVG=
+endfunction
+
 " absolute / relative line numbers
 function! NumberToggle()
 	if(&relativenumber == 1)
@@ -164,8 +175,8 @@ filetype plugin indent on              " required by Vundle
 " Visual "{{{
 syntax on                   " enable syntax
 set background=dark         " dark background
-" colorscheme emacs " set the color scheme
-color dracula " set the color scheme
+colorscheme emacs " set the color scheme
+" color dracula " set the color scheme
 " colorscheme molokai " set the color scheme
 " let g:molokai_original = 1
 " colorscheme vividchalk      " set the color scheme

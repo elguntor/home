@@ -32,7 +32,7 @@ values."
      osx
      shell-scripts
      (shell :variables
-            shell-default-shell 'shell 
+            shell-default-shell 'shell
             shell-default-height 30
             shell-default-position 'bottom)
      syntax-checking
@@ -40,8 +40,9 @@ values."
      vagrant
      version-control
      ;; languages
-     clojure
+     ;; clojure
      html
+     javascript
      gtags
      markdown
      (ruby :variables
@@ -102,7 +103,8 @@ values."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   ;; dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 'random
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
@@ -115,15 +117,19 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(alect-black
-                         tronesque
-                         )
+   dotspacemacs-themes '(alect-black-alt
+                         dracula
+                         spolsky
+                         toxi
+   ;;                    tronesque
+                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
+   ;; dotspacemacs-default-font '("Monaco"
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -194,7 +200,7 @@ values."
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -204,7 +210,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -222,7 +228,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -246,7 +252,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'trailing
    ))
 
 (defun dotspacemacs/user-init ()
@@ -268,8 +274,12 @@ you should place your code here."
   ;; do not highlight the current line
   (global-hl-line-mode -1)
   ;; linum mode and separator
-  (setq linum-format "%4d \u2502")
-  (global-linum-mode)
+  ;; (setq linum-format "%4d \u2502")
+  ;; (global-linum-mode)
+  ;; Set the font to Monaco. The Spacemacs default-font settings are not working currently.
+  ;; (set-face-attribute 'default nil :family "Monaco")
+  ;; (set-face-attribute 'default nil :family "Source Code Pro")
+  (set-face-attribute 'default nil :height 145)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
