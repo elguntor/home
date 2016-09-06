@@ -23,7 +23,11 @@ let mapleader = ","                     " change mapleader to ,
 
 " set hlsearch                          " highlight search
 " nnoremap <CR> :noh<CR><CR>            " clear search by hitting return
-"
+
+" turn off ex mode
+map q: <nop>
+nnoremap Q <nop>
+
 " Mac stuff
 if has("unix")
     let s:uname = system("echo -n \"$(uname)\"")

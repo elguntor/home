@@ -5,10 +5,21 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="mh"
-# ZSH_THEME="gallois"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="mh"
+#ZSH_THEME="gallois"
 ZSH_THEME="tonotdo"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# powerlevel9k config
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_STATUS_VERBOSE=false
+# POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m.%y}"
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+export DEFAULT_USER="$USER"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
