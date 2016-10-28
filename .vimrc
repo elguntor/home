@@ -169,6 +169,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
 Plugin 'rking/ag.vim'
 Plugin 'php.vim'
+Plugin 'evidens/vim-twig'
 "Plugin 'derekwyatt/vim-scala'
 Plugin 'dracula/vim'
 

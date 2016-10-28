@@ -2,6 +2,7 @@
 *.pdf
 *.retry
 .AMD/
+.AndroidStudio2.1/
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
@@ -22,6 +23,7 @@
 .adobe/
 .android
 .aws/
+.babel.json
 .bash_history
 .bash_logout
 .bash_sessions/
@@ -59,6 +61,7 @@
 .emacs.d/elpa/*
 .emacs.d/init.el~
 .emacs.d/places
+.emulator_console_auth_token
 .erlang.cookie
 .esd_auth
 .everpad/
@@ -79,6 +82,7 @@
 .github-stats/
 .gitignore_global
 .gitk
+.gitkraken/
 .gksu.lock
 .gnome/
 .gnome2/
@@ -101,6 +105,7 @@
 .hwid
 .icedtea/
 .ido.last
+.insert-shebang.log
 .irb-history
 .irb_history
 .irbrc
@@ -109,6 +114,7 @@
 .java_history
 .jenv/
 .jline-clojure.main.history
+.jshintrc
 .jspm/
 .kchmviewer/
 .kde/
@@ -207,6 +213,7 @@
 .zshrc.pre-oh-my-zsh
 .zshrc_linux
 .zshrc_osx
+AndroidStudioProjects/
 Applications/
 Books/
 Bunch-t4s.zip
@@ -230,23 +237,40 @@ TV/
 Ubuntu One/
 Videos/
 VirtualBox VMs/
+Work/
 \#.spacemacs\#
+add-stores.sql
 android-workspace/
+aws-credentials.csv
 bak/
 bin/
+dbtunnels.sh
+dnd-notes.txt
 docs/
 downloads/
+dropbox-codes.txt
 examples.desktop
+foo
+full-stack-description.txt
+jack-ponte-notes.txt
 jmeter.log
 libpeerconnection.log
 me.txt
 media/
+motivational-notes.txt
+new-store.sql
+onboarding-notes.txt
+overage-notes.txt
 photos/
 projects/
+qa-notes.txt
+salesfloor_admin.txt
+skus.sh
 src/
 start-mongo.sh
 stop-mongo.sh
 td.txt
 tmp/
+vincent-pw.txt
 wifi.txt
 workspace/
