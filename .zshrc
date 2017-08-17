@@ -60,7 +60,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew)
+plugins=(git brew thefuck)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -137,12 +137,13 @@ if [[ "$unamestr" == "Darwin" ]];then
     source "$HOME/.brew_token"
 
     # thefuck
-    eval "$(thefuck --alias)"
+    #eval "$(thefuck --alias)"
 
     # rbenv
     eval "$(rbenv init -)"
 
     # Android automation
+    export ANDROID_HOME=/Users/marshall/Library/Android/sdk
     #export ANDROID_HOME=$HOME/src/android-sdk-macosx
     #export PATH=$PATH:$ANDROID_HOME/tools
     #export PATH=$PATH:$ANDROID_HOME/platform-tools

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>419</string>
+	<string>428</string>
 	<key>AMApplicationVersion</key>
-	<string>2.6</string>
+	<string>2.7</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,8 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		# Open applications	# if application "Google Chrome" is not running then	tell application "/Applications/Google Chrome.app"		launch		open location "http://www.gmail.com"		open location "http://www.google.com/calendar"
-		open location "https://docs.google.com/spreadsheets/d/1GF3I6oCaYi0klQA2nA0rCI5dwknTDX1YvGX_MRa2WYE/edit#gid=0"	end tell	# end if	tell application "/Applications/Slack.app" to launch	tell application "/Applications/Microsoft OneNote.app" to launch	tell application "/Applications/Messages.app" to launch		# get width of desktop	# wide:	# 1 monitor  = 1440	# 2 monitors = 3360	# 3 monitors = 3840	# tell application "Finder"	#	set bnds to bounds of window of desktop	#	set wide to item 3 of bnds	#end tell		# multiple monitor setups	#if wide is in {1920, 3360, 3840} then	#	tell application "Google Chrome"	#		set bounds of window 1 to {0, 0, 1438, 900}	#	end tell	#	tell application "Messages"	#		set bounds of window 1 to {-699, 30, -8, 642}	#	end tell	#		#	delay 4 # can't figure out a better way to do this	#	tell application "System Events" to tell application process "HipChat"	#		tell window 1	#			set {size, position} to {{200, 700}, {-1000, 200}}	#		end tell	#	end tell	#end if		return inputend run</string>
+					<string>on run {input, parameters}		# Open applications	# if application "Google Chrome" is not running then	tell application "/Applications/Google Chrome.app"		launch		open location "http://www.gmail.com"		open location "http://www.google.com/calendar"	end tell	# end if	tell application "/Applications/Slack.app" to launch	tell application "/Applications/Simplenote.app" to launch	tell application "/Applications/Messages.app" to launch		# get width of desktop	# wide:	# 1 monitor  = 1440	# 2 monitors = 3360	# 3 monitors = 3840	# tell application "Finder"	#	set bnds to bounds of window of desktop	#	set wide to item 3 of bnds	#end tell		# multiple monitor setups	#if wide is in {1920, 3360, 3840} then	#	tell application "Google Chrome"	#		set bounds of window 1 to {0, 0, 1438, 900}	#	end tell	#	tell application "Messages"	#		set bounds of window 1 to {-699, 30, -8, 642}	#	end tell	#		#	delay 4 # can't figure out a better way to do this	#	tell application "System Events" to tell application process "HipChat"	#		tell window 1	#			set {size, position} to {{200, 700}, {-1000, 200}}	#		end tell	#	end tell	#end if		return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -106,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>426.000000:583.000000</string>
+				<string>767.000000:590.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
