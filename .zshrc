@@ -79,17 +79,11 @@ export EDITOR='vim'
 # vi bindings
 bindkey -v
 export KEYTIMEOUT=1
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -162,6 +156,10 @@ if [[ "$unamestr" == "Darwin" ]];then
     # jenv and java
     if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
     export PATH="$JAVA_HOME/bin:$PATH"
+
+    # nvm
+    export NVM_DIR="$HOME/.nvm"
+    source $(brew --prefix nvm)/nvm.sh
 
     # php
     export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
