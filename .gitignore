@@ -219,6 +219,8 @@
 .zcompdump-bigfoot-5.0.7
 .zcompdump-serenity-5.0.2
 .zcompdump-werewolf-5.0.7
+.zhistory
+.zprezto/
 .zsenv
 .zsh-update
 .zsh_history
