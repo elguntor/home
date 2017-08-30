@@ -9,7 +9,7 @@ if [[ "$unamestr" == "Linux" ]];then
 	fi
 elif [[ "$unamestr" == "Darwin" ]]; then
     alias find='find .'
-	alias tree='tree -C'
+	  alias tree='tree -C'
     export CLICOLOR=1
     export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
     alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"
@@ -80,22 +80,11 @@ alias fa='echo "flushall" | redis-cli'
 alias pgroot='psql -U postgres -W -h localhost postgres'
 alias pgel='psql -U elminer -W -h localhost elminer'
 
-# virtualenv aliases
-# http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
-alias v='pyenv activate'
-alias v.d='pyenv deactivate'
-alias v.mk='pyenv virtualenv --no-site-packages'
-
 # vagrant aliases
 alias vd='vagrant destroy'
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
-
-# moving around
-alias cdha='cd $HIPYARD_HOME/hipyard-ansible'
-alias cdhd='cd $HIPYARD_HOME/hipyard-devops'
-alias cdhw='cd $HIPYARD_HOME/hipyard-web'
 
 # vim
 vimit() {
@@ -116,6 +105,12 @@ alias rs="bundle exec rails s"
 alias psp="rake parallel:create; rake parallel:prepare; rake parallel:spec"
 alias psps="rake parallel:spec"
 
+# python virtualenv aliases
+# https://doughellmann.com/blog/2010/01/12/virtualenvwrapper-tips-and-tricks/
+alias v='pyenv activate'
+alias v.d='pyenv deactivate'
+alias v.mk='pyenv virtualenv --no-site-packages'
+
 # django
 alias pm="python manage.py"
 alias pmcs="python manage.py collectstatic --noinput"
@@ -135,5 +130,6 @@ alias fuck='$(thefuck $(fc -ln -1))'
 # react native
 alias rn='react-native'
 alias rni='react-native run-ios'
+
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
