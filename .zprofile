@@ -1,1 +1,1 @@
-/Users/marshall/.zprezto/runcoms/zprofile
+/home/marshall/.zprezto/runcoms/zprofile

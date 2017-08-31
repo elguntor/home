@@ -1,1 +1,1 @@
-/Users/marshall/.zprezto/runcoms/zlogout
+/home/marshall/.zprezto/runcoms/zlogout
