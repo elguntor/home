@@ -108,6 +108,7 @@ alias psps="rake parallel:spec"
 # python virtualenv aliases
 # https://doughellmann.com/blog/2010/01/12/virtualenvwrapper-tips-and-tricks/
 alias v='pyenv activate'
+alias v.ld='pyenv activate levenshtein_distance'
 alias v.d='pyenv deactivate'
 alias v.mk='pyenv virtualenv --no-site-packages'
 

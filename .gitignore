@@ -152,6 +152,7 @@
 .openoffice.org/
 .opera/
 .oracle_jre_usage/
+.p2/
 .pam_environment
 .pgpass
 .pia_manager/
@@ -194,6 +195,7 @@
 .themes/
 .thumbnails/
 .thunderbird/
+.tooling/
 .twitter_oauth
 .v8flags*
 .vagrant.d/
@@ -208,6 +210,7 @@
 .wakatime.cfg
 .wakatime.db
 .wakatime.log
+.webclipse.properties
 .wget-hsts
 .wine/
 .xsession-errors

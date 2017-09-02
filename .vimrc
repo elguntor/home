@@ -17,6 +17,8 @@ set wildignore=*.o,*.obj,*.bak,*.exe    " tab complete ignores these
 set wildignore+=*.pyc,*.class,*.so,*.exe
 set wildignore+=.git/*,.svn/*,*.dll
 
+set completeopt=menu                    " shut down the annoying auto opening help window
+
 map Y y$                                " make Y behave like other capitals, yank to end of line
 
 let mapleader = ","                     " change mapleader to ,
@@ -147,7 +149,7 @@ Plugin 'ruby.vim'
 "Plugin 'slim-template/vim-slim'
 "Plugin 'kchmck/vim-coffee-script'
 Plugin 'bufexplorer.zip'
-Plugin 'klen/python-mode'
+Plugin 'python-mode/python-mode'
 "Plugin 'ctrlp.vim'
 Plugin 'Command-T'
 Plugin 'Gundo'
@@ -213,7 +215,7 @@ let g:jedi#force_py_version = 3
 " }}}
 
 " Gundo"{{{
-" let g:gundo_prefer_python3 = 1
+let g:gundo_prefer_python3 = 1
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
@@ -232,16 +234,17 @@ map <C-t> :NERDTreeToggle<CR>
 " Syntastic General "{{{
 let g:syntastic_java_checkers=[]
 let g:syntastic_check_on_open=1
-"let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args="--max-line-length=160 --ignore=E124,E126,E127,E128"
+let g:syntastic_python_flake8_args="--max-line-length=220 --ignore=E124,E126,E127,E128"
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_html_tidy_exec = 'tidy5'
 " }}}
 
 " python-mode "{{{
-"let g:pymode_python = 'python3'
+let g:pymode_python = 'python3'
 let g:pymode_folding = 0
-let g:pymode_options_max_line_length = 160
+let g:pymode_options_max_line_length = 220
 " }}}
 
 " YouCompleteMe "{{{
