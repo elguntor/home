@@ -92,6 +92,7 @@ if [[ "$unamestr" == "Darwin" ]];then
 
     # Android automation
     export ANDROID_HOME=/Users/marshall/Library/Android/sdk
+    export PATH="$PATH:$ANDROID_HOME/platform-tools/"
 
     # pyenv
     type pyenv &> /dev/null

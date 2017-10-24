@@ -130,7 +130,11 @@ alias fuck='$(thefuck $(fc -ln -1))'
 
 # react native
 alias rn='react-native'
+alias rna='react-native run-android'
 alias rni='react-native run-ios'
+alias rnjsbundle='react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ./ios/release/main.jsbundle --assets-dest ./ios/release/main.jsbundle'
+# before running rnadroidbundle, you must mkdir -p android/app/src/main/assets
+alias rnandroidbundle='react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res'
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
