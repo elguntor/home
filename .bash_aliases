@@ -131,6 +131,9 @@ alias fuck='$(thefuck $(fc -ln -1))'
 # react native
 alias rn='react-native'
 alias rni='react-native run-ios'
+alias rna='react-native run-android'
+alias rncc='watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache clean && npm install && npm start -- --reset-cache'
+alias rnkill='kill $(lsof -t -i tcp:8081)'
 
 # put this in for git logging
 # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

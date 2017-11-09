@@ -104,17 +104,16 @@ if [[ "$unamestr" == "Darwin" ]];then
     export NVM_DIR="$HOME/.nvm"
     source $(brew --prefix nvm)/nvm.sh
 else
-	  # remap caps lock to control
-	  setxkbmap -option ctrl:nocaps
+    # Android automation
+    export ANDROID_HOME=$HOME/Android/Sdk
+    export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+	# remap caps lock to control
+	setxkbmap -option ctrl:nocaps
 
     # python
-    [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
-    export VIRTUALENVWRAPPER_PYTHON="$(command \which python)"
-
-    # jdk
-    export JDK_HOME="/usr/local/jdk1.7.0_79"
-
-    # maven
-    export M2_HOME="/usr/local/apache-maven-3.3.3"
-    export PATH="$M2_HOME/bin:$PATH"
+	export PYENV_ROOT="$HOME/.pyenv"
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
