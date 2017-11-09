@@ -83,9 +83,6 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
-# fzf - fuzzy finding
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Mac OSX
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
@@ -104,9 +101,8 @@ if [[ "$unamestr" == "Darwin" ]];then
         eval "$(pyenv virtualenv-init -)"
     fi
 
-    # nvm
     export NVM_DIR="$HOME/.nvm"
-    source $(brew --prefix nvm)/nvm.sh
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 else
     # Android automation
     export ANDROID_HOME=$HOME/Android/Sdk
@@ -120,4 +116,7 @@ else
 	export PATH="$PYENV_ROOT/bin:$PATH"
 	eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
+
+    # fzf - fuzzy file finder
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi

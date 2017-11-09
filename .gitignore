@@ -200,6 +200,7 @@
 .themes/
 .thumbnails/
 .thunderbird/
+.tig_history
 .tooling/
 .twitter_oauth
 .v8flags*
