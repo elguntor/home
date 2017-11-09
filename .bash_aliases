@@ -132,6 +132,8 @@ alias fuck='$(thefuck $(fc -ln -1))'
 alias rn='react-native'
 alias rna='react-native run-android'
 alias rni='react-native run-ios'
+alias rncc='watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache clean && npm install && npm start -- --reset-cache'
+alias rnkill='kill $(lsof -t -i tcp:8081)'
 alias rnjsbundle='react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ./ios/release/main.jsbundle --assets-dest ./ios/release/main.jsbundle'
 # before running rnadroidbundle, you must mkdir -p android/app/src/main/assets
 alias rnandroidbundle='react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res'

@@ -3,6 +3,7 @@
 *.retry
 .AMD/
 .AndroidStudio2.1/
+.AndroidStudio2.3/
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
@@ -143,6 +144,7 @@
 .netbeans/
 .netrc
 .node-gyp/
+.node_repl_history
 .npm/
 .nuget/
 .nv/
@@ -208,6 +210,8 @@
 .viminfz.tmp
 .virtualenvs/
 .visualvm/
+.vscode-react-native/
+.vscode/
 .w3af/
 .wakatime.cfg
 .wakatime.db
@@ -234,6 +238,7 @@
 .zshrc_linux
 .zshrc_osx
 1-shot-dnd.txt
+Android/
 AndroidStudioProjects/
 Applications/
 Blizzard/
@@ -307,6 +312,7 @@ projects/
 qa-notes.txt
 salesfloor_admin.txt
 skus.sh
+snap/
 src/
 start-mongo.sh
 stop-mongo.sh

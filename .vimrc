@@ -130,6 +130,11 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+" map easy motion to <Leader><Leader>
+" let g:EasyMotion_leader_key='<Leader><Leader>'
+" }}}
+map <Leader>w <Plug>(easymotion-bd-w)
+
 " Vundle "{{{
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

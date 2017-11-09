@@ -11,6 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source $HOME/.zprofile
 
 # aliases
 source $HOME/.bash_aliases
