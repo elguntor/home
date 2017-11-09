@@ -38,6 +38,9 @@ if has("unix")
         set mouse=nicr
         " fzf
         set rtp+=/usr/local/opt/fzf
+    else
+        " fzf
+        set rtp+=~/.fzf
     endif
 endif
 " }}}

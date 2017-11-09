@@ -15,3 +15,5 @@ source $HOME/.zprofile
 
 # aliases
 source $HOME/.bash_aliases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
