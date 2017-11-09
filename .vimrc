@@ -258,5 +258,7 @@ autocmd BufRead,BufNewFile *.erb setlocal ts=2 softtabstop=2 shiftwidth=2 expand
 autocmd BufRead,BufNewFile *.slim setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab syntax=slim
 " yaml
 autocmd Filetype yaml setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
+" zwo Zwift workout file
+autocmd BufRead,BufNewFile *.zwo setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=xml
 " }}}
 
