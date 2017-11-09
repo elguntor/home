@@ -3,6 +3,7 @@
 *.retry
 .AMD/
 .AndroidStudio2.1/
+.AndroidStudio2.3/
 .CFUserTextEncoding
 .DS_Store
 .FBReader/
@@ -69,6 +70,7 @@
 .erlang.cookie
 .esd_auth
 .everpad/
+.expo/
 .face
 .face.icon
 .fctsslvpnhistory
@@ -142,6 +144,7 @@
 .netbeans/
 .netrc
 .node-gyp/
+.node_repl_history
 .npm/
 .nuget/
 .nv/
@@ -173,6 +176,7 @@
 .recentf
 .recently-used
 .rediscli_history
+.rncache/
 .rnd
 .rubies/
 .ruby-version
@@ -206,6 +210,8 @@
 .viminfz.tmp
 .virtualenvs/
 .visualvm/
+.vscode-react-native/
+.vscode/
 .w3af/
 .wakatime.cfg
 .wakatime.db
@@ -232,6 +238,7 @@
 .zshrc_linux
 .zshrc_osx
 1-shot-dnd.txt
+Android/
 AndroidStudioProjects/
 Applications/
 Blizzard/
@@ -265,6 +272,8 @@ Work/
 accountant.txt
 add-stores.sql
 android-workspace/
+angela-notes.txt
+angela.txt
 aws-credentials.csv
 bak/
 bike-stuff.txt
@@ -282,6 +291,7 @@ estimates.txt
 examples.desktop
 foo
 full-stack-description.txt
+hitchens-quote.txt
 jack-ponte-notes.txt
 jmeter.log
 leads.txt
@@ -302,6 +312,7 @@ projects/
 qa-notes.txt
 salesfloor_admin.txt
 skus.sh
+snap/
 src/
 start-mongo.sh
 stop-mongo.sh

@@ -83,6 +83,9 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
+# fzf - fuzzy finding
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Mac OSX
 unamestr=`uname`
 if [[ "$unamestr" == "Darwin" ]];then
@@ -92,6 +95,7 @@ if [[ "$unamestr" == "Darwin" ]];then
 
     # Android automation
     export ANDROID_HOME=/Users/marshall/Library/Android/sdk
+    export PATH="$PATH:$ANDROID_HOME/platform-tools/"
 
     # pyenv
     type pyenv &> /dev/null
