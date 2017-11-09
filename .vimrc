@@ -36,6 +36,8 @@ if has("unix")
     if !v:shell_error && s:uname == "Darwin"
         "set mouse=a
         set mouse=nicr
+        " fzf
+        set rtp+=/usr/local/opt/fzf
     endif
 endif
 " }}}
@@ -128,10 +130,6 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
-" map easy motion to <Leader><Leader>
-let g:EasyMotion_leader_key='<Leader><Leader>'
-" }}}
-
 " Vundle "{{{
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -144,24 +142,14 @@ Plugin 'The-NERD-Commenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'ruby.vim'
-"Plugin 'RubySinatra'
-"Plugin 'tpope/vim-rails'
-"Plugin 'slim-template/vim-slim'
-"Plugin 'kchmck/vim-coffee-script'
 Plugin 'bufexplorer.zip'
 Plugin 'python-mode/python-mode'
-"Plugin 'ctrlp.vim'
-Plugin 'Command-T'
 Plugin 'Gundo'
-" Plugin 'faith/vim-go'
 Plugin 'haml.zip'
-"Plugin 'davidhalter/jedi-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-jsbeautify'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'VimClojure'
-"Plugin 'losingkeys/vim-niji'
 Plugin 'vim-flake8'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'bling/vim-airline'
@@ -172,8 +160,8 @@ Plugin 'groenewege/vim-less'
 Plugin 'rking/ag.vim'
 Plugin 'php.vim'
 Plugin 'evidens/vim-twig'
-"Plugin 'derekwyatt/vim-scala'
 Plugin 'dracula/vim'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on              " required by Vundle
@@ -200,18 +188,16 @@ set vb t_vb=                " disable any beeps or flashes on error
 set laststatus=2            " always show status line
 " }}}
 
+" EasyMotion{{{
+let g:EasyMotion_leader_key='<Leader><Leader>'
+" }}}
+
+" fzf{{{
+nmap <Leader>t :Files<CR>
+" }}}
+
 " BufExplorer"{{{
 nnoremap <F3> :BufExplorer<CR>
-" }}}
-" Jedi "{{{
-let g:jedi#force_py_version = 3
-" }}}
-"
-" Taglist"{{{
-"let Tlist_Auto_Highlight_Tag = 0
-"let Tlist_Highlight_Tag_On_BufEnter = 0
-"let Tlist_GainFocus_On_ToggleOpen = 1
-"nnoremap <F4> :TlistToggle<CR>
 " }}}
 
 " Gundo"{{{
@@ -219,16 +205,8 @@ let g:gundo_prefer_python3 = 1
 nnoremap <F5> :GundoToggle<CR>
 " }}}
 
-" CommandTFlush"{{{
-nnoremap <F8> :CommandTFlush<CR>
-" }}}
-
 " NerdTree"{{{
 map <C-t> :NERDTreeToggle<CR>
-" }}}
-
-" Ctrl P"{{{
-"let g:ctrl_map = '<c p>'
 " }}}
 
 " Syntastic General "{{{
@@ -245,11 +223,6 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 let g:pymode_python = 'python3'
 let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 220
-" }}}
-
-" YouCompleteMe "{{{
-" let g:ycm_extra_conf_globlist = ['~/src/*']
-" let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 " }}}
 
 " Languages "{{{
@@ -271,12 +244,6 @@ autocmd Filetype python setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.j2 setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
-" django support
-" leader dt starts Command T in template directory corresponding to the application
-" map <Leader>dt :VimDjangoCommandTTemplate<CR>
-" leader da starts Command T in the app directory
-" map <Leader>da :VimDjangoCommandTApp<CR>
-
 " ruby
 autocmd Filetype ruby setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.erb setlocal ts=2 softtabstop=2 shiftwidth=2 expandtab
