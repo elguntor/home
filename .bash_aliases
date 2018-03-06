@@ -8,8 +8,8 @@ if [[ "$unamestr" == "Linux" ]];then
 		alias vdir='vdir --color=auto'
 	fi
 elif [[ "$unamestr" == "Darwin" ]]; then
-    alias find='find .'
-	  alias tree='tree -C'
+    #alias find='find .'
+	alias tree='tree -C'
     export CLICOLOR=1
     export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
     alias hstart="/usr/local/Cellar/hadoop/2.6.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.6.0/sbin/start-yarn.sh"

@@ -170,6 +170,7 @@ Plugin 'php.vim'
 Plugin 'evidens/vim-twig'
 Plugin 'dracula/vim'
 Plugin 'junegunn/fzf.vim'
+Plugin 'PProvost/vim-ps1'
 
 call vundle#end()
 filetype plugin indent on              " required by Vundle
@@ -231,6 +232,7 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 let g:pymode_python = 'python3'
 let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 220
+let g:pymode_rope = 0
 " }}}
 
 " Languages "{{{
@@ -246,6 +248,7 @@ autocmd BufRead,BufNewFile *.json setlocal ts=4 softtabstop=4 shiftwidth=4 expan
 autocmd BufRead,BufNewFile *.css setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.less setlocal filetype=less ts=2 softtabstop=2 shiftwidth=2 expandtab
 " python
+autocmd BufRead,BufNewFile *.py setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.feature setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufRead,BufNewFile *.j2 setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab syntax=htmldjango
 autocmd BufRead,BufNewFile buildout.cfg setlocal ts=4 softtabstop=4 shiftwidth=4 expandtab

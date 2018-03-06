@@ -72,7 +72,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 bindkey "^R" history-incremental-search-backward
 
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # jenv and java
 if which jenv > /dev/null; then export PATH="$HOME/.jenv/bin:$PATH" && eval "$(jenv init -)"; fi
