@@ -139,43 +139,39 @@ autocmd BufWritePre * :%s/\s\+$//e
 " }}}
 map <Leader>w <Plug>(easymotion-bd-w)
 
-" Vundle "{{{
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim plug
+call plug#begin('~/.vim/plugged')
 
-" load Vundle...required
-Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'The-NERD-Commenter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'ruby.vim'
-Plugin 'bufexplorer.zip'
-Plugin 'python-mode/python-mode'
-Plugin 'Gundo'
-Plugin 'haml.zip'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'vim-jsbeautify'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-flake8'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'bling/vim-airline'
-Plugin 'taglist.vim'
-Plugin 'matchit.zip'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'groenewege/vim-less'
-Plugin 'rking/ag.vim'
-Plugin 'php.vim'
-Plugin 'evidens/vim-twig'
-Plugin 'dracula/vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'PProvost/vim-ps1'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vividchalk'
+Plug 'tpope/vim-haml'
+Plug 'vim-ruby/vim-ruby'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'python-mode/python-mode'
+Plug 'vim-scripts/Gundo'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'nvie/vim-flake8'
+Plug 'bling/vim-airline'
+Plug 'vim-scripts/taglist.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'groenewege/vim-less'
+Plug 'rking/ag.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'evidens/vim-twig'
+Plug 'dracula/vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'PProvost/vim-ps1'
 
-call vundle#end()
-filetype plugin indent on              " required by Vundle
-" }}}
+call plug#end()
 
 " Visual "{{{
 syntax on                   " enable syntax
