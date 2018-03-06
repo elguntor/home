@@ -57,6 +57,7 @@ set backspace=indent,eol,start
 
 " Spelling "{{{
 " set spell spelllang=en_gb
+set spelllang=en_gb
 " }}}
 
 " Controls and Commands "{{{
@@ -115,9 +116,9 @@ endfunction
 " absolute / relative line numbers
 function! NumberToggle()
 	if(&relativenumber == 1)
-		set number
+		set number norelativenumber
 	else
-		set relativenumber
+		set number relativenumber
 	endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
