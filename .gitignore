@@ -20,6 +20,7 @@
 .Skype/
 .Trash/
 .Ultimate/
+.VSCodeVim/
 .VirtualBox/
 .Xauthority
 .Xauthority.*
@@ -38,6 +39,8 @@
 .calc_history
 .calibre_calibre GUI.lock
 .cinnamon/
+.codemix.properties
+.codemix/
 .cola
 .compiz-1/
 .compiz/
@@ -50,6 +53,7 @@
 .dia/
 .directory
 .dmrc
+.docker/
 .dropbox-dist/
 .dropbox-master/
 .dropbox/
@@ -105,6 +109,7 @@
 .gtkrc-2.0-kde4
 .guard_history
 .heroku/
+.heron/
 .hgignore_global
 .hgrc
 .histfile
@@ -158,6 +163,7 @@
 .oracle_jre_usage/
 .p2/
 .pam_environment
+.pex/
 .pgpass
 .pia_manager/
 .pia_manager_crash.log
@@ -183,6 +189,7 @@
 .ruby-version
 .rvm/
 .sabnzbd/
+.samza/
 .sbt.cache.lock
 .scala_history
 .selected_editor
@@ -208,8 +215,10 @@
 .vim/.netrwhist
 .vim/bundle/*
 .vim/bundle/vundle/.netrwhist
+.vim/plugged/
 .viminfo
 .viminfz.tmp
+.virtualenvs
 .virtualenvs/
 .visualvm/
 .vscode-react-native/
@@ -221,10 +230,12 @@
 .webclipse.properties
 .wget-hsts
 .wine/
+.wtf/
 .xsession-errors
 .xsession-errors.old
 .yarnrc
 .z
+.zcompcache/
 .zcompdump
 .zcompdump*
 .zcompdump-bigfoot-5.0.7
@@ -296,6 +307,7 @@ full-stack-description.txt
 hitchens-quote.txt
 jack-ponte-notes.txt
 jmeter.log
+job.id
 leads.txt
 libpeerconnection.log
 me.txt
@@ -305,8 +317,10 @@ motivational-notes.txt
 myc.sh
 new-store.sql
 node_modules/
+obama-jesus-quote.txt
 onboarding-notes.txt
 overage-notes.txt
+person-tracking-mall-1080.json
 photos/
 power-meters.txt
 probs.sh
@@ -317,9 +331,12 @@ skus.sh
 snap/
 src/
 start-mongo.sh
+stefany.txt
 stop-mongo.sh
 td.txt
 tmp/
+twitter_handles.txt
 vincent-pw.txt
 wifi.txt
+will.txt
 workspace/

@@ -95,7 +95,6 @@ alias vf=vimit
 # ruby
 alias be='bundle exec'
 alias beg='bundle exec guard'
-alias befs='cd $HIPYARD_HOME/hipyard-web && bundle exec foreman start'
 alias ber="bundle exec rake"
 alias bers="bundle exec rake spec"
 alias berc="bundle exec rails console"
